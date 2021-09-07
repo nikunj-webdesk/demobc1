@@ -1,0 +1,19 @@
+{{#if category}}
+	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?t6c14x" hide-content="#searchspring-content, #searchspring-sidebar" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query" category="{{#each breadcrumbs}}{{#unless @first}}{{name}}{{#unless @last}}>{{/unless}}{{/unless}}{{/each}}" name="{{ category.name }}"></script>
+{{else if brand}}
+	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?t6c14x" hide-content="#searchspring-content, #searchspring-sidebar" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query" brand="{{ brand.name }}"></script>
+{{else}}
+	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?t6c14x" hide-content="#searchspring-content, #searchspring-sidebar" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query"{{#if page.title "!=" 'Search Results'}} defer{{/if}}></script>
+{{/if}}
+
+<style>
+	.ss-finder-disabled {
+		opacity: 0.3;
+		pointer-events: none;
+	}
+
+	.ss-finder-disabled a {
+		cursor: not-allowed !important;
+		pointer-events: none;
+	}
+</style>

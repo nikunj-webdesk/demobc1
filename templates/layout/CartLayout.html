@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ locale_name }}">
+    <head>
+        <title>{{ head.title }}</title>
+        {{{ resourceHints }}}
+        {{{ head.meta_tags }}}
+        {{{ head.config }}}
+        {{#block "head"}} {{/block}}
+        <link href="{{ head.favicon }}" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <script>
+            document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        </script>
+        {{ getFontsCollection }}
+        {{{stylesheet '/assets/css/theme.css'}}}
+        {{#if page_type '==' 'product' }}
+            {{{stylesheet '/assets/css/product.css'}}}
+        {{/if}}
+        {{{head.scripts}}}
+        {{{head.rsslinks}}}
+        {{inject 'themeSettings' theme_settings}}
+        {{inject 'genericError' (lang 'common.generic_error')}}
+        {{inject 'maintenanceMode' settings.maintenance}}
+        {{inject 'urls' urls}}
+        {{inject 'secureBaseUrl' settings.secure_base_url}}
+        {{inject 'cartId' cart_id}}
+        {{inject 'template' template}}
+        <link rel="stylesheet" href="https://use.typekit.net/woi1sri.css">
+        
+        <!-- Searchspring Script Tag -->
+        {{#if category}}
+        	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?6bir78" token="{{settings.storefront_api.token}}" hide-content="#searchspring-content, #searchspring-sidebar" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query" category="{{#each breadcrumbs}}{{#unless @first}}{{name}}{{#unless @last}}>{{/unless}}{{/unless}}{{/each}}" name="{{ category.name }}" {{#if customer.id}}logged-in{{/if}}></script>
+        {{else if brand}}
+        	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?6bir78" token="{{settings.storefront_api.token}}" hide-content="#searchspring-content, #searchspring-sidebar" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query" brand="{{ brand.name }}" {{#if customer.id}}logged-in{{/if}}></script>
+        {{else if product}}
+        	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?6bir78" token="{{settings.storefront_api.token}}" hide-content="#searchspring-content, #searchspring-sidebar" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query" size="{{#each product.custom_fields}}{{#if name '===' 'Size'}}{{ value }}{{/if}}{{/each}}"  model="{{#each product.custom_fields}}{{#if name '===' 'Model'}}{{ value }}{{/if}}{{/each}}" {{#if customer.id}}logged-in{{/if}}></script>
+        {{else}}
+        	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?6bir78" token="{{settings.storefront_api.token}}" hide-content="#searchspring-content, #searchspring-sidebar, .page-heading, #searchspring-vehicle-sizes-finder-left, #searchspring-vehicle-sizes-finder-right" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query"{{#if page.title "!=" 'Search Results'}} defer{{/if}} {{#if page.title "==" 'Vehicle Search Multi'}} vehicle-search{{/if}} {{#if customer.id}}logged-in{{/if}}></script>
+        {{/if}}
+    </head>
+    <body class="custom_{{page_type}}">
+        <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
+    	{{#and settings.privacy_cookie settings.is_eu_ip_address}}
+    		{{> components/common/cookie}}
+    	{{/and}}
+        <header class="header Cart">
+            <div class="HeaderWrap">
+                <div class="Header-Left">
+                    <a href="/" class="Back-To-Home">CONTINUE SHOPPING</a>
+                    <a href="/" class="Back-To-Cart">Back to Cart</a></div>
+                <div class="header-logo">
+                    <a href="{{urls.home}}"><img class="header-logo-image-unknown-size" src="{{getImage settings.store_logo.image}}" alt="{{settings.store_logo.title}}" title="{{settings.store_logo.title}}"></a>
+                </div>
+                <div class="Header-Right">
+                    <ul class="navUser-section navUser-section--right">
+                        <li class="navUser-item navUser-item--account">
+                            {{#if customer}}
+                                <i class="fas fa-user"></i>
+                                <a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a>/<a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+                            {{else}}
+                                <i class="fas fa-user"></i>
+                                <a class="navUser-action" href="{{urls.auth.login}}">{{lang 'common.login'}}</a>/{{#if settings.account_creation_enabled}}<a class="navUser-action" href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a>
+                                {{/if}}
+                            {{/if}}
+                        </li>
+                    </ul>
+                    <ul class="navUser-section navUser-section--left">
+                        <li class="navUser-item navUser-item--call">
+                            <i class="fas fa-phone"></i><a class="navUser-action" href="tel:866-480-8477"><span>Questions?</span> 866-480-8477</a>
+                        </li>
+                        <li class="navUser-item navUser-item--chat">
+                            <i class="fas fa-comments"></i><a class="navUser-action" href="javascript:void(0)" onclick="MyLiveChat_OpenDialog()">Live Chat</a>  
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+                    <span class="mobileMenu-toggleIcon">Toggle menu</span>
+                </a>
+            </div>
+            <div class="navPages-container" id="menu" data-menu>
+                {{> components/common/mobilelayouts/mobilemenumain}}
+            </div>
+            <div class="mobVehicleWrap menuWrapMob" style="display: none;">
+                {{> components/common/mobilelayouts/mobVehicle}}
+            </div>
+            <div class="mobSizeWrap menuWrapMob" style="display: none;">
+                {{> components/common/mobilelayouts/mobSize}}
+            </div>
+            <div class="mobTypeWrap menuWrapMob" style="display: none;">
+                {{> components/common/mobilelayouts/mobType}}
+            </div>    
+        </header> 
+        {{> components/common/body }}
+        <footer class="Cat_Footer">
+            <div class="container">
+                <div class="Cat_Footer_Right">
+                    <div class="Top"><img src="/content/trusted-factors-footer-retina.png" alt=""/></div>
+                    <div class="Bottom">
+                        <a name="trustlink" href="https://secure.trust-guard.com/business/13401" rel="nofollow" target="_blank" onclick="var nonwin=navigator.appName!='Microsoft Internet Explorer'?'yes':'no'; window.open(this.href,'welcome','location='+nonwin+',scrollbars=yes,width=517,height='+screen.availHeight+',menubar=no,toolbar=no'); return false;" oncontextmenu="var d = new Date(); alert('Copying Prohibited by Law - This image and all included logos are copyrighted by trust-guard \251 '+d.getFullYear()+'.'); return false;"><img name="trustseal" alt="Business Verified" style="border: 0;" src="//secure.trust-guard.com/seals/newbiz/13401-lg.gif"></a>
+                        <a name="trustlink" href="https://secure.trust-guard.com/security/13401" rel="nofollow" target="_blank" onclick="var nonwin=navigator.appName!='Microsoft Internet Explorer'?'yes':'no'; window.open(this.href,'welcome','location='+nonwin+',scrollbars=yes,width=517,height='+screen.availHeight+',menubar=no,toolbar=no'); return false;" oncontextmenu="var d = new Date(); alert('Copying Prohibited by Law - This image and all included logos are copyrighted by trust-guard \251 '+d.getFullYear()+'.'); return false;"><img name="trustseal" alt="Turst Guard Security Seal" style="border: 0;" src="//secure.trust-guard.com/seals/security/13401-small.gif"></a>
+                    </div>
+                </div>
+                <div class="Cat_Footer_Left"><p class="powered-by">{{moment format="YYYY"}} {{settings.store_name}}. All Rights Reserved</p></div>
+            </div>
+        </footer>
+    	<script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
+    	<script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
+    	<script>
+    		window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+    	</script>
+    	<div class="megamenu_bg_black"></div>
+        {{{footer.scripts}}} 
+        {{#unless customer}}
+            {{> components/custom/popup-login-window-modal }}
+        {{/unless}}
+            <script>
+                $(".mobileMenu-toggle").click(function () {
+                    $(".BackToMenu").trigger('click');
+                });
+            </script>
+    </body>
+</html>

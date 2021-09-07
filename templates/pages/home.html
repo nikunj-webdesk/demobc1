@@ -1,0 +1,46 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+blog:
+    recent_posts:
+        limit: 3
+---
+
+{{!-- {{#partial "hero"}} 
+    {{#if carousel}}
+        {{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows}}
+    {{/if}}
+{{/partial}} --}}
+
+
+{{#partial "page"}}
+<div class="container">
+    {{#each shipping_messages}}
+        {{> components/common/alert-info message}} 
+    {{/each}}
+</div>
+<div style="width:100%; float:left;">{{> components/common/homepagesection/HomepageHero}}</div>
+<div class="body_outer">
+    <div class="mobSearchWidget_mn">
+        <div class="container">
+            {{> components/common/mobilelayouts/mobSearchWidget}} 
+        </div>
+    </div>
+    {{> components/common/homepagesection/RiskFreeBuying}}
+    {{> components/common/homepagesection/DealsPromotions}}
+    {{!> components/common/homepagesection/SignUp}}
+    {{> components/common/homepagesection/HowitWorks}}
+    {{!> components/common/homepagesection/MostPopularTireSizes}}
+    {{> components/common/homepagesection/ShopByType}}
+    {{> components/common/homepagesection/OurCustomers}}
+    {{> components/common/homepagesection/Support}}
+    {{> components/common/homepagesection/ReceiveExclusiveDiscounts}}
+</div>
+{{/partial}}
+{{> layout/base}}

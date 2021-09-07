@@ -1,0 +1,14 @@
+{{#partial "page"}}{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}<main class="page Cms-Content FAQS-CONTENT"> <div class="page-content page-content--centered"> <h1 class="page-heading">{{ page.title }}</h1> <div>{{{page.content}}}</div> </div></main>{{/partial}}{{> layout/base}}<script type="text/javascript">$('#prodAccordion .Block h2').click(function() { $(this).css('outline','none'); if($(this).parent().hasClass('current')) { $(this).siblings('div').slideUp('slow',function() { $(this).parent().removeClass('current'); }); }else{ $('#prodAccordion .Block .prodAccordionContent').slideUp('slow',function() { $(this).parent().removeClass('current'); }); $(this).siblings('div').slideToggle('slow',function() { $(this).parent().toggleClass('current'); }); } return false; });</script><script>$(document).ready( function(){var NewURL = window.location.href;FAQActive(NewURL);});$('#navPages-Help-Center .HelpRight .HelpFQA ul li a').on('click' , function(){$('#navPages-Help-Center').prev('a')[0].click(); console.log('trigger');var NewURL = $(this).attr('href');FAQActive(NewURL);});function FAQActive(NewURL){var RedirectURL = NewURL.split('#');$('#' + RedirectURL[1]).trigger('click');$('html, body').animate({ scrollTop: ($('#' + RedirectURL[1]).offset().top - 40)},500); }</script>  
+<style>
+    .footer {
+        margin: 0px;
+    }
+    @media screen and (max-width: 991px){
+        .footer .footerBottom .FooterLeft ul{
+            margin: 0px;
+        }
+        .footer .footerBottom{
+            padding-bottom: 0px;
+        }
+    }
+</style>

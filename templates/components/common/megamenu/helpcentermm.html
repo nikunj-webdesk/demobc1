@@ -1,0 +1,61 @@
+<a href="javascript:void(0)" data-collapsible="navPages-Help-Center" class="has-subMenu">Help Center <i class="fas fa-chevron-down"></i></a>
+<div class="navPage-subMenu" id="navPages-Help-Center" aria-hidden="true" tabindex="-1">
+	<div class="menu_inner">
+		<div class="HelpLeft">
+			<div class="OurGuide">
+				<h3>Our Guides</h3>
+				<p>Guides to help you in all your questions and concerns about your tires</p>
+				<ul>
+					<li><a href="/blog/understanding-tire-size//"><p>How do I pick the right sized tire?</p><span>View guide</span></a></li>
+					<li><a href="/blog/tread-depth-made-easyish/-depth/"><p>What kind of tires are best for me?</p><span>View guide</span></a></li>
+					<li><a href="/blog/do-i-need-new-tires-here-are-the-signs/"><p>What are signs I need new tires for my vehicle?</p><span>View guide</span></a></li>
+				</ul>
+			</div>
+			<div class="HelpFAQ">
+				<h3>Our Most Frequently Asked Questions</h3>
+				<ul>
+					<li><a href="/faqs/#ARETHE">Are the tires for sale new or used?</a></li>
+					<li><a href="/faqs/#WILLTHIS">Will this tire fit my vehicle?</a></li>
+					<li><a href="/faqs/#DOYOU">Do you provide a warranty on your tires?</a></li>
+					<li><a href="/faqs/#WHATARE">What are run flat tires?</a></li>
+				</ul>
+				<a href="/faqs/">VIEW ALL FAQS</a>
+			</div>
+			<div class="HelpContact">
+				<h3>Want to talk with Us?</h3>
+				<ul>
+					<li class="EmialBtn"><a href="mailto:info@prioritytire.com">Email Us</a></li>
+					<li class="CallBtn"><a href="tel:866-440-0177">Call Us: 866-440-0177</a></li>
+					<li class="ChatBtn"><a href="javascript:void(0)" onclick="MyLiveChat_OpenDialog()">Live Chat</a></li>
+				</ul>
+				<p>Monday through Saturday 8am - 6pm EST |  Closed Sunday</p>
+			</div>
+		</div>
+		<div class="HelpRight">
+			<div class="Financing">
+				<div class="Financing_Inner">
+					<h3>Financing</h3>
+					<p>Get Affordable, Low Monthly Payments!</p>
+					<a href="/financing/" class="Button">LEARN MORE</a>
+				</div>
+			</div>
+			<div class="RightBloginner">   
+				<div class="HelpFQA">
+					{{#if blog.recent_posts}}
+						<h3>Our Latest Articles</h3>
+						<div class="bg_all_pt">
+						   <ul>
+							   {{#each blog.recent_posts}}
+								<li>
+									<a href="{{url}}"><span class="Articles_img"><img src="{{getImage thumbnail 'productgallery_size'}}" alt="{{thumbnail.alt}}"></span><span class="title"><span>{{title}}</span><i class="right_arrow"></i></span></a>
+								</li>
+							   {{/each}}              
+						   </ul>
+						</div>
+					{{/if}}
+					<a href="/blog/" class="ViewBlog">View Blog</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

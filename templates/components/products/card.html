@@ -1,0 +1,661 @@
+<article class="card" data-product-category="{{#each category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{brand.name}}" data-sku="{{sku}}" data-product-id={{id}} data-url="{{url}}">
+
+	{{!-- {{#each custom_fields}}
+	{{#if name '===' 'BC Condition'}}
+	<div class="Tire-Badge-outer Prod_{{snakecase (lowercase value)}}">
+		<span class="Tire-Badge">{{{value}}}</span>
+	</div>
+	{{/if}}
+	{{#if name '===' 'Badge'}}
+	<span class="Sale-Badge">{{{value}}}</span>
+	{{/if}}
+	{{/each}} --}}
+	<div class="Top-Card">
+		<div class="card-body">
+			<div class="card-body-left">
+				<div class="card-body-left-inner">
+				<figure class="card-figure"> 
+						{{#if demo}}
+						<div class="card-img-container">
+							<img class="card-image lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{name}}" title="{{name}}">
+						</div>
+						{{else}}
+						<a href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
+							<div class="card-img-container">
+								<img class="card-image lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{name}}" title="{{name}}"> 
+							</div>
+						</a>
+						{{/if}} 
+						{{!--
+							{{#or price.non_sale_price_with_tax price.non_sale_price_without_tax}}
+							{{#if theme_settings.product_sale_badges '===' 'sash'}}
+							<div class="sale-flag-sash">
+								<span class="sale-text">On Sale!</span>
+							</div>
+							{{else if theme_settings.product_sale_badges '===' 'topleft'}}
+							<div class="sale-flag-side">
+								<span class="sale-text">On Sale!</span>
+							</div>
+							{{else if theme_settings.product_sale_badges '===' 'burst'}}
+							<div class="starwrap">
+								<div class="sale-text-burst">On Sale!</div>
+								<div class="sale-flag-star"></div>
+							</div>
+							{{/if}}
+							{{/or}}
+							--}}
+							<figcaption class="card-figcaption">
+								<div class="card-figcaption-body">
+								    {{!--
+									{{#unless hide_product_quick_view}}
+									{{#if theme_settings.show_product_quick_view}}
+									{{#unless demo}}
+									{{#if settings.data_tag_enabled}}
+									<a class="button button--small card-figcaption-button quickview" data-event-type="product-click" data-product-id="{{id}}">{{lang 'products.quick_view'}}</a>
+									{{else}}
+									<a class="button button--small card-figcaption-button quickview" data-product-id="{{id}}">{{lang 'products.quick_view'}}</a>
+									{{/if}}
+									{{/unless}}
+									{{/if}}
+									{{/unless}}
+									--}}
+									{{#if show_compare}}
+									<label class="button button--small card-figcaption-button" for="compare-{{id}}">
+										{{lang 'products.compare'}} <input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}" data-compare-id="{{id}}">
+									</label>
+									{{/if}}
+									{{!--
+									{{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+									{{#if show_cart_action}}
+									{{#if has_options}}
+									<a href="{{url}}" data-event-type="product-click" class="button button--small card-figcaption-button" data-product-id="{{id}}">{{lang 'products.choose_options'}}</a>
+									{{/if}}
+									{{#if pre_order}}
+									<a href="{{pre_order_add_to_cart_url}}" data-event-type="product-click" class="button button--small card-figcaption-button">{{lang 'products.pre_order'}}</a>
+									{{/if}}
+									{{#if add_to_cart_url }}
+									<a href="{{add_to_cart_url}}" data-event-type="product-click" class="button button--small card-figcaption-button">{{lang 'products.add_to_cart'}}</a>
+									{{/if}}
+									{{#if out_of_stock_message }}
+									<a href="{{url}}" data-event-type="product-click" class="button button--small card-figcaption-button" data-product-id="{{id}}">{{out_of_stock_message}}</a>
+									{{/if}}
+									{{/if}}
+									{{/or}}
+									--}}
+								</div>
+							</figcaption>
+						</figure>
+						<p class="card-text ProductRating" data-test-info-type="productRating">
+								<span class="rating--small">
+									{{> components/products/ratings rating=rating}}
+								</span>
+								<span class="productView-reviewLink">
+                					{{#if product.num_reviews '>' 0}}
+                					<a href="{{product.url}}#product-reviews">
+                						{{lang 'products.reviews.link_to_review' total=product.num_reviews}}
+                					</a>
+                					{{else}}
+                					No Reviews Yet
+                					{{/if}}
+                				</span>
+							</p>
+				</div>
+				<div class="card-body-right-inner">
+					{{#if brand.name}}
+						<p class="card-text" data-test-info-type="brandName">{{brand.name}}</p>
+						{{/if}}
+						<h4 class="card-title">
+							{{#if demo}}
+							{{name}}
+							{{else}}
+							<a href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>{{#each custom_fields}}{{#if name '===' 'BC Condition'}}{{#if (lowercase value) '===' 'used'}}Used{{/if}}{{/if}}{{/each}} {{brand.name}} {{#each custom_fields}}{{#if name '===' 'Model'}}{{{value}}}{{/if}}{{/each}}</a>
+							{{/if}}
+						</h4>
+						<span class="product-sku">
+							{{#each custom_fields}}{{#if name '===' 'Fitment Type'}}{{#or (if value '===' '') (if value '===' 'N/A') (if value '===' 'null')}}{{else}}{{{value}}} {{/or}}{{/if}}{{/each}}{{#each custom_fields}}{{#if name '===' 'Size'}}{{{value}}},{{/if}}{{/each}}{{#each custom_fields}}{{#if name '===' 'Load Index and Speed Rating'}} {{{value}}}{{/if}}{{/each}}{{#each custom_fields}}{{#if name '===' 'Load Range'}}, {{{value}}}{{/if}}{{/each}}
+						</span>
+						
+					
+						<div class="Icon-Air-Pressure-Passed">
+							<ul class="ppIcons">
+								{{#each custom_fields}}
+									{{#if name '===' 'Season'}}
+											{{#if value '===' 'All Season'}}
+											<li>
+												<span class="CustomLabel"><img src="{{cdn 'webdav:all-seasons-new.svg'}}" alt="{{value}}"></span>
+												<span>{{{value}}}</span>
+											</li>
+											{{/if}}
+											{{#if value '===' 'Summer'}}
+												<li>
+													<span class="CustomLabel"><img src="{{cdn 'webdav:tire-list-summer.svg'}}" alt="{{value}}"></span><span>{{{value}}}</span>
+												</li>
+											{{/if}} 
+											{{#if value '===' 'Winter'}}
+												<li>
+													<span class="CustomLabel"><img src="{{cdn 'webdav:winter_new.svg'}}" alt="{{value}}"></span>
+													<span>{{{value}}}</span>
+												</li>
+											{{/if}}
+									{{/if}}
+							{{/each}}
+								{{#each custom_fields}}
+									{{#if name '===' 'Performance'}}
+										<li class="Performance-Result">
+											{{#if value '===' 'All Terrain'}}
+												<img src="{{cdn 'webdav:all_terrain_new.svg'}}" alt="All Terrain">
+											{{/if}}
+											{{#if value '===' 'Highway'}}
+												<img src="{{cdn 'webdav:highway-new.svg'}}" alt="Highway">
+											{{/if}}
+											{{#if value '===' 'Mud Terrain'}}
+												<img src="{{cdn 'webdav:tier-mud-terrain-new.svg'}}" alt="{{value}}">
+											{{/if}}
+											{{#if value '===' 'Touring'}}
+												<img src="{{cdn 'webdav:touring-new.svg'}}" alt="Touring">
+											{{/if}}
+											{{#if value '===' 'High Performance'}}
+												<img src="{{cdn 'webdav:high_performance_new.svg'}}" alt="High Performance">
+											{{/if}}
+											{{#if value '===' 'Performance'}}
+												<img src="{{cdn 'webdav:performance-new.svg'}}" alt="Performance">
+											{{/if}}
+											{{#if value '===' 'Rugged Terrain'}}
+												<img src="{{cdn 'webdav:rugged-terrain-outlined.svg'}}" alt="Performance">
+											{{/if}}
+											<span>{{{value}}}</span>
+										</li>
+									{{/if}}
+							    {{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Treadlife'}}
+								<li class="Warranty-Result">
+								    {{#if value '===' 'N/A'}}
+								    {{else}}
+									<span class="CustomLabel"><img src="{{cdn 'webdav:tire-list-treadlife-new.svg'}}" alt="{{value}}"></span>
+									{{/if}}
+									<span>{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								
+								{{!--
+									{{#each custom_fields}}
+									{{#if name '===' 'Type'}}
+									{{#if value '===' 'Passenger'}}
+									<li><img src="{{cdn 'webdav:passenger.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'Truck/SUV'}}
+									<li><img src="{{cdn 'webdav:truck-suv-pp.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'Light Truck'}}
+									<li><img src="{{cdn 'webdav:light-truck.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'Commercial'}}
+									<li><img src="{{cdn 'webdav:commercial.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'Trailer'}}
+									<li><img src="{{cdn 'webdav:trailer.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'Lawn Mower'}}
+									<li><img src="{{cdn 'webdav:lawn-mower-garden-tractor.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'Racing'}}
+									<li><img src="{{cdn 'webdav:racing.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'Gold Cart'}}
+									<li><img src="{{cdn 'webdav:gold-cart-tires.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'Farm Tractor'}}
+									<li><img src="{{cdn 'webdav:farm-tractor.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'Industrial'}}
+									<li><img src="{{cdn 'webdav:Industrial.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'Motorcyle'}}
+									<li><img src="{{cdn 'webdav:Motorcyle.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li>
+									{{/if}}
+									{{#if value '===' 'ATV & UTV'}}
+									<li><img src="{{cdn 'webdav:atv-utv.svg'}}" alt="{{value}}"><span>{{{value}}}</span></li> 
+									{{/if}}
+									{{/if}}
+									{{/each}}
+									--}}
+								</ul>
+								{{#each custom_fields}}
+								{{#if name '===' 'Free Road Hazard'}}
+    								{{#if (lowercase value) '===' 'yes'}}
+        								<div class="Free-Road-Hazard-Result">
+        									<a href="/manufacturer-free-road-hazard/" target="_blank"><span class="CustomLabel"><img src="{{cdn 'webdav:Free-Road-Hazard.svg'}}" alt="{{value}}">Free Road Hazard</span></a>
+        								</div>
+    								{{/if}}
+								{{/if}} 
+								{{/each}}
+								{{!-- {{#each custom_fields}}
+								{{#if name '===' 'BC Condition'}}
+								{{#if (lowercase value) '===' 'used'}}
+								<div class="Air-Pressure">
+									<span>Air & Pressure Tested - Passed!</span> 
+								</div>
+								{{/if}}
+								{{/if}}
+								{{/each}} --}}
+							</div>
+							
+						</div>
+
+					</div>
+					<div class="card-body-right">
+						<div class="Bottom-Card-Inner">
+							<div class="LoginClubMSG">
+								{{#if customer}}
+									<h4 class="MSGHead">Special Member<br> Only Price</h4>
+								{{else}}
+									<h4 class="MSGHead"><a href="##" data-reveal-id="popupLoginWindow">Log in</a> or <a href="/login.php?action=create_account ">Join</a>  the Club to Get Member Pricing</h4>
+								{{/if}}
+							</div>
+							<div class="LoginClubMSGOuter">
+							<div class="CardPriceWrap{{#if stock_level '===' 0}} OutOfStock{{/if}}">
+								<div class="card-text productView-price {{#if customer}}AfterLogin{{/if}}" data-test-info-type="price">
+									{{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+									{{> components/products/price-product price=price}}
+									{{else}}
+									{{> components/common/login-for-pricing}} 
+									{{/or}}
+								</div>
+							</div>
+							{{#if stock_level '>' 0}} 
+							<div class="form-field form-field--increments {{#or (if stock_level '===' 2)}}BlurredQty{{/or}} {{#or (if (toLowerCase (first sku 2)) '===' 'nl') (if (toLowerCase (first sku 3)) '===' 'lft') (if (toLowerCase (first sku 3)) '===' 'nla')}}minimumQTY{{/or}}">
+								<div class="card_qty" name={{id}}>
+					                <select>
+                                        <option value="1" {{#if stock_level '===' 1}}selected{{/if}}>1</option>
+                                        <option value="2" {{#if stock_level '===' 2}}selected{{/if}}>2</option>
+                                        <option value="3" {{#if stock_level '===' 3}}selected{{/if}}>3</option>
+                                        <option value="4" {{#or (if stock_level '>' 3) (if (toLowerCase (first sku 2)) '===' 'nl') (if (toLowerCase (first sku 3)) '===' 'lft') (if (toLowerCase (first sku 3)) '===' 'nla')}}selected{{/or}}>4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                    </select>
+					            </div>
+							</div>
+							{{/if}} 
+							<div class="Last-Right {{#if stock_level '===' 0}}out-of-stock-btn{{/if}}">
+								<div class="Add-To-Cart-Btn">
+									<a href="javascript:void(0)"><span>ADD TO CART</span></a>
+									<form style="display: none" id="customAddcart"> 
+										<input type="hidden" name="action" value="add">
+										<input type="hidden" name="product_id" value="{{id}}">
+										<input type="hidden" name="qty[]" value="{{#if stock_level '>' 3}}4{{else if stock_level '===' 1}}1{{else if stock_level '===' 2}}2{{else if stock_level '===' 3}}3{{/if}}">
+									</form>
+								</div>
+							</div>
+							{{#if stock_level '>' 0}} 
+							{{#if stock_level '<' 10}} 
+								{{#if stock_level '===' 2}}
+									<div class="stock_level Must-Purchased-Btn QtyTxtCp">Must be purchased as set of {{stock_level}}</div>
+								{{else if stock_level '===' 4}}
+									<div class="stock_level Must-Purchased-Btn QtyTxtCp">Must buy in increments of 2</div>
+								{{else if stock_level '===' 1}}
+									<div class="stock_level Must-Purchased-Btn QtyTxtCp">Must by as a single</div>
+								{{else}} 
+									<div class="stock_level Low-Stock-Btn">Low Stock ({{stock_level}})</div>
+								{{/if}}
+							{{else}}
+								<div class="stock_level In-Stock-Btn">In Stock (10+)</div>
+							{{/if}}
+							{{/if}}
+							</div> 
+						</div>
+						<div class="Risk-Paypal-Img-Credit">
+							<img src="/content/Risk_buying.png" alt=""/>
+						</div>
+					</div>
+					{{#each custom_fields}}
+						{{#if name '===' 'Warning Message'}}
+						<div class="Warning-Message">
+							<span>{{{value}}}</span>
+						</div>
+						{{/if}}
+						{{/each}}
+				</div>
+			</div>
+			<div class="Bottom-Card">
+				{{!--<div class="Outer">
+					<div class="Bottom-Card-Left">
+						<ul>
+							<li style="{{#each custom_fields}}{{#if name '===' 'BC Condition'}}{{#if (lowercase value) '===' 'used'}}{{else}}display: none;{{/if}}{{/if}}{{/each}}">
+								{{#each custom_fields}}
+								{{#if name '===' 'Tread Depth'}}
+								<ul>
+									<li class="Tread-Depth">
+										<img src="{{cdn 'webdav:tread-depth.svg'}}" alt="{{value}} Tread Depth">
+										<span>{{{value}}} Tread Depth</span>
+									</li>
+								</ul>
+								{{/if}}
+								{{/each}}
+							</li>
+							<li style="{{#each custom_fields}}{{#if name '===' 'BC Condition'}}{{#if (lowercase value) '===' 'used'}}{{else}}display: none;{{/if}}{{/if}}{{/each}}">{{#each custom_fields}}{{#if name '===' 'Tread Remaining'}}{{#if value '===' 'N/A'}}{{else}}<ul><li class="Tread-Life">About {{{value}}} of Tread Life Left</li></ul> {{/if}}{{/if}}{{/each}}</li>
+							<li style="{{#each custom_fields}}{{#if name '===' 'BC Condition'}}{{#if (lowercase value) '===' 'new'}}{{else}}display: none;{{/if}}{{/if}}{{/each}}">{{#each custom_fields}}{{#if name '===' 'Treadlife'}}{{#if value '===' 'N/A'}}{{else}}<ul><li class="Tread-Life no_bg"><img src="{{cdn 'webdav:warranty-miles.svg'}}" alt="{{value}} Tread Depth"><span>{{{value}}}</span></li></ul> {{/if}}{{/if}}{{/each}}</li>
+
+							{{#each custom_fields}}
+							{{#if name '===' 'Speed Rating Description'}}
+							<li class="Tire-List-Speed">
+								<img src="{{cdn 'webdav:tire-list-speed.svg'}}" alt="{{value}}">
+								<span>{{{value}}}</span>
+							</li>
+							{{/if}}
+							{{/each}}
+							{{#each custom_fields}}
+							{{#if name '===' 'Load Range'}}
+							<li class="Tire-List-Load-Range">
+								<img src="{{cdn 'webdav:tire-list-load-range.svg'}}" alt="Load Range: {{value}}">
+								<span>Load Range: {{{value}}}</span>
+							</li>
+							{{/if}}
+							{{/each}}
+						</ul>
+					</div>
+					<div class="Bottom-Card-Right">
+					</div>
+				</div> --}}
+				<div class="Outer">
+					<div class="Tire-Specifications">
+						<a href="javascript:void(0)" class="Specifications-Link">Show Tire Specifications</a>
+						<div class="Specifications-Pop" style="display: none;">
+							<ul>
+								<li>
+									{{#if sku}}
+									<span class="ctm_lable">SKU</span>
+									<span class="ctm_value">{{sku}}</span>
+									{{/if}}
+								</li>
+								{{#each custom_fields}}
+								{{#if name '===' 'Load Index'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Type'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'UTQG'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Year'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'MPN'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#if brand.name}}
+								<li>
+									<span class="ctm_lable">Brand</span>
+									<span class="ctm_value">{{brand.name}}</span>
+								</li>
+								{{/if}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Speed Rating'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Performance'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Sidewall'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Section Width'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'UPC/EAN'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Model'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Load Range'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Season'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Tread Depth'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Aspect Ratio'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Treadlife'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Size'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Run Flat'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'ASIN'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Rebate Available'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Rim Diameter'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Overall Diameter'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Production Year (DOT)'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Insurance'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'OE Markings'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Load Capacity'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Tire Construction Type'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+								{{#if name '===' 'Volume'}}
+								<li>
+									<span class="ctm_lable">{{name}}</span>
+									<span class="ctm_value">{{{value}}}</span>
+								</li>
+								{{/if}}
+								{{/each}}
+								{{#each custom_fields}}
+    								{{#if name '===' 'Country of Origin'}}
+    								    {{#if value '===' 'N/A'}}
+    								    {{else}}
+        									<li>
+            									<span class="ctm_lable">{{name}}</span>
+            									<span class="ctm_value">{{{value}}}</span>
+            								</li>
+    									{{/if}}
+        								
+    								{{/if}}
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+					{{#if stock_level '>' 0}}
+						<div class="CardSippingWrap">
+							<div class="FedxImg">
+								<img src="{{cdn 'webdav:free-shipping.svg'}}" alt="Free Shipping">
+							</div>
+							<div class="Same-Day-Ship-Btn"><a href="javascript:void(0)">Same day Shipping for orders before 1PM EST</a></div>
+						</div>
+					{{/if}}	
+				</div>
+			</div> 
+			{{!-- <div class="Bottom-Card-Last">
+				<div class="Outer">
+					<div class="Last-Left">
+						<div class="Risk-Paypal-Img">
+							<img src="{{cdn 'webdav:badges-new.png'}}" class="hideMob" alt="Badges"> 
+							<img src="{{cdn 'webdav:badges_mob.png'}}" class="hideDesktop" alt="Badges"> 
+						</div>
+					</div>
+				</div>    
+			</div> --}}
+		</article> 

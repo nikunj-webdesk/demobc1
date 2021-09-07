@@ -1,0 +1,24 @@
+{{#partial "page"}}
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <h2 class="page-heading Account-Heading">{{lang 'account.addresses.heading' }}</h2>
+    {{> components/account/navigation account_page='addresses'}}
+
+    <div class="account account--fixedLarge">
+        <div class="account-body">
+            {{> components/account/address-list }}
+        </div>
+    </div>
+{{/partial}}
+{{> layout/base}}
+
+<style>
+.footer{margin:0px;}
+@media screen and (max-width: 991px){
+    .footer .footerBottom .FooterLeft ul{
+        margin: 0px;
+    }
+    .footer .footerBottom{
+        padding-bottom: 0px;
+    }
+}
+</style>

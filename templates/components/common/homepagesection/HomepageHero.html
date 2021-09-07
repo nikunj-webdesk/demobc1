@@ -1,0 +1,31 @@
+<div class="Homepage-Hero"> <img class="lazyload" title="" src="https://cdn11.bigcommerce.com/s-n0i50vy/stencil/3202b7b0-39f4-0137-efb3-0242ac110027/e/df5744e0-df95-0136-bf4e-0bb47c4548a2/img/loading.svg" alt="Home Page Top Banner background image" data-sizes="auto" data-src="{{cdn 'webdav:hp-bg.jpg'}}" />
+    <div class="container">
+        <div class="MainWidget">
+            <div class="Top-best-heading">
+                <h1>Get The Best Deals On New Tires</h1>
+                <p>Select Your Vehicle to Get Started</p>
+            </div>
+            <div class="Homepage-Hero-right"> 
+                <div class="Search-Widget-Inner">
+                    <ul class="tabs" data-tab>
+                        <li class="tab is-active"><a class="tab-title" href="#tab-Search-Widget-Vehicle">Shop Tires By <span>Vehicle</span></a></li>
+                        <li class="tab"><a class="tab-title productView-reviewTabLink" href="#tab-Search-Widget-Size">Shop Tires By <span>Size</span></a></li>
+                    </ul>
+                    <div class="tabs-contents">
+                        <div class="tab-content is-active" id="tab-Search-Widget-Vehicle"> 
+                            <div id="searchspring-home-vehicle-finder">
+                                {{> components/common/searchwidget/byvehiclemmhomelink}}
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab-Search-Widget-Size"> 
+                            <div id="searchspring-home-size-finder">
+                                {{> components/common/searchwidget/bysizemmhomelink}} 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

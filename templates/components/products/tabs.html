@@ -1,0 +1,17 @@
+<div class="SimilarTires ProDes" id="SimilarTires">
+    <div class="container">
+        <h3>Similar Tires</h3>
+        <p class="SimilarTxt">We also have these tires that are the same size: 235/65/R17</p>
+        {{#if product.related_products}}
+            {{> components/products/carousel-similar products=product.related_products columns=4}}
+        {{/if}}
+    </div>
+</div>
+<div class="RecentlyViewed ProDes">
+    <div class="container">
+        <h3>Recently Viewed</h3>
+        {{#if product.related_products}}
+            {{> components/products/carousel products=product.related_products columns=4}}
+        {{/if}}
+    </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="Sub-Cat-Top" style="display:none;">
+    <p>Tire results are filtered based on your vehicle/size. To see all sizes, <a href="javascript:void(0);">click here</a> or delete the size below in blue.</p>
+</div>
+
+{{> components/products/filter sort=pagination.category.sort}}
+
+<div class="YourSelections">
+    <label>Your Selections:</label> 
+    <ul class="SelectedList">
+        <li>
+            <a href="javascript:void(0)" class="facetLabel">
+                Single Tires
+                <span id="icon-close"></span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" class="facetLabel">
+                Used
+                <span id="icon-close"></span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" class="facetLabel">
+                Goodyear
+                <span id="icon-close"></span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" class="facetLabel">
+                Price up to $160
+                <span id="icon-close"></span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" class="facetLabel">
+                Summer
+                <span id="icon-close"></span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" class="facetLabel">
+                6-7/32 Tread Depth
+                <span id="icon-close"></span>
+            </a>
+        </li>
+    </ul>
+    <ul class="SelectedList Search-Vehicle-List" style="display:none;">
+        <li>
+            <a href="javascript:void(0)" class="facetLabel">
+                295/30ZR20
+                <span id="icon-close"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="CompareCat Top"><a class="navUser-action navUser-item--compare" href="{{urls.compare}}" data-compare-nav>{{lang 'common.compare'}} <span class="countPill countPill--positive countPill--alt"></span></a></div>
+<div class="AllProductListing">
+	{{#if theme_settings.product_list_display_mode '===' 'grid'}}
+		{{#if settings.data_tag_enabled}}
+			{{> components/products/grid products=category.products show_compare=category.show_compare theme_settings=theme_settings event="list" }}
+		{{else}}
+			{{> components/products/grid products=category.products show_compare=category.show_compare theme_settings=theme_settings}}
+		{{/if}}
+	{{else}}
+		{{#if settings.data_tag_enabled}}
+			{{> components/products/list products=category.products show_compare=category.show_compare theme_settings=theme_settings event="list" }}
+		{{else}}
+			{{> components/products/list products=category.products show_compare=category.show_compare theme_settings=theme_settings}}
+		{{/if}}
+	{{/if}}
+</div>
+<div class="Cat-Bottom-Pagination">
+    {{> components/common/paginator pagination.category}}
+    <div class="Left">
+        <label>Results Per Page:</label>
+        <select id="PerPage">
+            <option value="10">10</option>
+            <option value="10">20</option>
+            <option value="10">30</option>
+            <option value="10">40</option>
+            <option value="10">50</option>
+            <option value="10">60</option>
+            <option value="10">70</option>
+            <option value="10">80</option>
+            <option value="10">90</option>
+            <option value="10">100</option>
+        </select>
+    </div>
+</div>
+<div class="CompareCat Bottom"><a class="navUser-action navUser-item--compare" href="{{urls.compare}}" data-compare-nav>{{lang 'common.compare'}} <span class="countPill countPill--positive countPill--alt"></span></a></div>

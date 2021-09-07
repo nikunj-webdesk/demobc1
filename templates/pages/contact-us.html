@@ -1,0 +1,114 @@
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<main class="page Cms-Content contact-content">
+    {{#unless theme_settings.hide_contact_us_page_heading }}
+        <h1 class="page-heading">{{page.title}}</h1>
+    {{/unless}}
+
+    {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                    <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+    {{/if}}
+
+    <div id="contact-us-page" class="page-content page-content--centered"> 
+        {{#if forms.contact.success}}
+            <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}</div>
+        {{else}}
+        <div class="Top-Content">
+            
+        </div>
+        <div>{{{page.content}}}</div>
+        <div class="Contact_inner">
+            <h3 class="form_title">SEND US A MESSAGE</h3>
+            <div class="left">
+                {{> components/page/contact-us-form}}   
+            </div>
+            <div class="right">
+                <div class="LeftBotBanner">
+                	<div class="LeftBotInner">
+                		<div class="OverImg">
+                			<img src="/content/support-photo.jpg" alt=""/>
+                		</div>
+                		<h5>Need immediate help?</h5>
+                		<a href="tel:866-440-0177" class="call-btn">CALL US: 866-440-0177</a>
+                		<a href="javascript:void(0)" class="chat-btn" onclick="MyLiveChat_OpenDialog()">LIVE CHAT</a>
+                		<p class="bottomTxt">8am - 6pm EST MOnday - Friday <br>Closed Sunday</p>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Bottom-Content">
+        <h3 class="form_title">OUR WAREHOUSE LOCATIONS</h3>
+        <div class="Top-Content">
+            <p>Find information about our warehouse locations below. Feel free to contact us with questions.</p>
+        </div>
+        <div class="Contact-Address-block">
+            <div class="container">
+                <div class="contact_Left">
+                    <h4>Allentown, PA Warehouse</h4>
+                    <ul>
+                        <li class="Ad-Row"><strong>Address:</strong>7072 Snowdrift Rd Allentown, PA 18106</li>
+                        <li class="Pn-Row"><strong>Phone Number:</strong><a href="tel:866-440-0177">866-440-0177</a></li>
+                        <li class="Ph-Row"><strong>Pickup Hours:</strong>DURING THE CORONAVIRUS OUTBREAK,<br>THERE ARE NO LOCAL PICKUPS AT OUR WAREHOUSE</li>
+                        <li class="Cc-Row"><strong>Call Customer Care Hours:</strong>8-6pm Mon-Sat</li>
+                    </ul>
+                </div>
+                <div class="contact_Right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d580241.84745523!2d-76.02247860962595!3d40.62611725808691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x29475fba95c47d60!2sPriorityTireOutlet.com!5e0!3m2!1sen!2sus!4v1535488020230" width="570" height="295" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="Contact-Address-block">
+            <div class="container">
+                <div class="contact_Left">
+                    <h4>Dallas, TX Warehouse</h4>
+                    <ul>
+                        <li class="Ad-Row"><strong>Address:</strong>2920 114th Street Suite 300 Grand Prairie, TX 75050</li>
+                        <li class="Pn-Row"><strong>Phone Number:</strong><a href="tel:866-440-0177">866-440-0177</a></li>
+                        <li class="Ph-Row"><strong>Pickup Hours:</strong>DURING THE CORONAVIRUS OUTBREAK,<br>THERE ARE NO LOCAL PICKUPS AT OUR WAREHOUSE</li>
+                        <li class="Cc-Row"><strong>Call Customer Care Hours:</strong>8-6pm Mon-Sat</li>
+                    </ul>
+                </div>
+                <div class="contact_Right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d168080.64943527462!2d-97.15258627218138!3d32.751549082951584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa3cc7b457c64c1e9!2sPriorityTireOutlet.com!5e0!3m2!1sen!2sus!4v1535381414103" width="570" height="295" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="Contact-Address-block">
+            <div class="container">
+                <div class="contact_Left">
+                    <h4>Jacksonville, FL Warehouse</h4>
+                    <ul>
+                        <li class="Ad-Row"><strong>Address:</strong>1594 Transport Ct STE 102, Jacksonville, FL 32218</li>
+                        <li class="Pn-Row"><strong>Phone Number:</strong><a href="tel:866-440-0177">866-440-0177</a></li>
+                        <li class="Ph-Row"><strong>Pickup Hours:</strong>DURING THE CORONAVIRUS OUTBREAK,<br>THERE ARE NO LOCAL PICKUPS AT OUR WAREHOUSE</li>
+                        <li class="Cc-Row"><strong>Call Customer Care Hours:</strong>8-6pm Mon-Sat</li>
+                    </ul>
+                </div>
+                <div class="contact_Right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438.7803276209397!2d-81.66548964885108!3d30.470659581639584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5afb8d105018f%3A0xefdfa8218b767f9f!2s1594%20Transport%20Ct%20%23102%2C%20Jacksonville%2C%20FL%2032218!5e0!3m2!1sen!2sus!4v1618431040159!5m2!1sen!2sus" width="570" height="295" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        {{/if}}
+
+    </div>
+
+</main>
+
+{{/partial}}
+
+{{> layout/base}}

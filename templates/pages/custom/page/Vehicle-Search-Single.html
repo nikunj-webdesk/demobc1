@@ -1,0 +1,97 @@
+{{#partial "page"}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<main class="page Vehicle-Search-Single">
+    <div class="container">
+        <div class="contentWrap">
+            <div class="Left">
+                <div class="ImageWrap">
+                    <div class="ImageMn">
+                        <div class="Has-image"><img src="/content/vehicle-example-cp.png" alt="vehicle example cp" /></div>
+                        <div class="No-image" style="display: none;"><img src="/content/No-vehicle-image.png" alt="vehicle example cp" /></div>
+                    </div>
+                    <div class="LeftContent">
+                        <span>2016</span>
+                        <h3>BMW M5 Base</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="Right">
+                <p class="toptxt">SEARCH FOR TIRES BY VEHICLE</p>
+                <h3>Confirm Your Tire Size</h3>
+                <p class="titlebottom">Your vehicle can come equipped with more than one possible size during production.</p>
+                <div class="size_result_mn">
+                     <ul class="tabs size_result_mn_inner single_size_mn_inner" data-tab>
+                        <li class="tab is-active"> 
+                            <a class="tab-title" href="#tab-original-equipment-sizes-single">ORIGINAL EQUIPMENT SIZES:</a>
+                        </li>
+                    </ul>
+                    <div class="tabs-contents">
+                        <div class="tab-content is-active" id="tab-original-equipment-sizes-single">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="weels">Wheels<span>19”</span></span><span>275/40ZR19</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="weels">Wheels<span>20”</span></span><span>285/35ZR20</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="Important-Note">
+                    <h5>Important Note About O.E. Tire Sizes</h5>
+                    <p>When selecting an Original Equipment (O.E.) tire size, note that the proper O.E. tire size for the vehicle is determined by options or changes by the manufacturer.</p>
+                </div>
+                <div class="Need-Help">
+                    <a href="javascript:void(0)">Need Help Choosing the correct size?</a>
+                    <div class="Need-Help-Content" style="display: none;">
+                        <p>If you are unsure what size is installed on the vehicle please check the size as listed on the tire sidewall.</p>
+                        <img src="/content/image-correct-size-retina.png" alt="image correct size" />
+                    </div>
+                </div>
+            </div>
+            <div class="bottomDiv">
+                <a href="javascript:void(0)" data-reveal-id="SearchNew" class="hideMob">Don’t see your tire size?</a> <a href="javascript:void(0)" class="hideDesktop" data-collapsible="navPages-mob-BySize">Don’t see your tire size?</a>
+            </div>
+        </div>
+    </div>
+    {{> components/common/homepagesection/Support}}
+    <div id="SearchNew" class="modal" data-reveal>
+        <div class="modal-header">
+            <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button"><span aria-hidden="true"></span></a>
+        </div>
+        <div class="modal-body">
+            <div class="Search-Widget-Inner">
+                <ul class="tabs" data-tab>
+                    <li class="tab is-active">
+                        <a class="tab-title" href="#tab-Search-Widget-Vehicle">Shop Tires By <span>Vehicle</span></a>
+                    </li>
+                    <li class="tab">
+                        <a class="tab-title productView-reviewTabLink" href="#tab-Search-Widget-Size">Shop Tires By <span>Size</span></a>
+                    </li>
+                </ul>
+                <div class="tabs-contents">
+                    <div class="tab-content is-active" id="tab-Search-Widget-Vehicle">{{> components/common/searchwidget/byvehiclemmlink}}</div>
+                    <div class="tab-content" id="tab-Search-Widget-Size">{{> components/common/searchwidget/bysizemmlink}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{/partial}}
+{{> layout/base}}
+<style type="text/css">
+    .body > .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    @media screen and (max-width: 991px) {
+        .footer {
+            margin: 0px;
+        }
+    }
+</style>

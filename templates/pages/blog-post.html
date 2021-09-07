@@ -1,0 +1,165 @@
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<div class="container">
+	<div class="mn_blog_detail">
+		{{> components/blog/post post=blog.post show_tags=true}}
+	</div>
+</div>
+<div class="subscribe">
+	<div class="container">
+		<div class="subscribe_left">
+	    	<img src="/content/newsletter-icon_mn.png">
+	    </div>
+	    <div class="subscribe_right">
+		    <h3>Receive exclusive discounts</h3>
+		    <p>Get the latest information about new products, special deals, news, top-rated items, promotions and more!</p>
+		    <form class="form" action="/subscribe.php" method="post">
+		    <input type="hidden" name="action" value="subscribe">
+		    <input type="hidden" name="nl_first_name" value="Newsletter">
+		    <input type="hidden" name="check" value="1">
+		    <div class="form-field">
+		        <div class="form-wrap">
+		            <input class="form-input" id="nl_email" name="nl_email" type="email" value="" placeholder="Enter email address">
+		            <input class="button button--primary" type="submit" value="SUBSCRIBE">
+		        </div>
+		    </div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="Related_Posts inner_blog">
+	<div class="container">
+		<h2>Related Posts</h2>
+		<div class="blog_related"data-slick='{
+		"dots": false,
+		"arrows": false,
+		"infinite": true,
+		"mobileFirst": true,
+		"slidesToShow": 3,
+		"slidesToScroll": 3,
+		"responsive": [
+		{
+		"breakpoint": 900,
+		"settings": {
+		"slidesToScroll": 3,
+		"slidesToShow": 3
+		}
+		},
+		{
+		"breakpoint": 767,
+		"settings": {
+		"slidesToScroll": 1,
+		"slidesToShow": 3
+		}
+		},
+		{
+		"breakpoint": 479, 
+		"settings": {
+		"slidesToScroll": 1,
+		"variableWidth": true,
+		"infinite": true, 
+    	"mobileFirst": true,
+		"slidesToShow": 2
+		}
+		},
+		{
+		"breakpoint": 319,
+		"settings": {
+		"slidesToScroll": 1,
+		"variableWidth": true,
+		"infinite": true, 
+    	"mobileFirst": true,
+		"slidesToShow": 1
+		}
+		}
+		]
+		}'
+	>
+		<article class="blog">
+		    <div class="blog-post-figure">
+		            <figure class="blog-thumbnail">
+		                <a href="/blog/firestone-champion-fuel-fighter-review/">
+		                    <img class="lazyautosizes lazyloaded" data-sizes="auto" src="/content/related_blog_1.png" data-src="/content/related_blog_1.png" alt="" title="" >
+		                </a>
+		                <div class="Overlay_value">
+                            <p class="blog-date"><i class="fas fa-clock"></i>Apr 22nd 2020</p> 
+                            <span class="tags">
+                                <span>Reviews</span>
+                            </span>
+                        </div>
+		            </figure>
+		    </div>
+
+		    <div class="blog-post-body">
+		        <header class="blog-header">
+		            <div class="blog-title">
+		                <a href="/blog/firestone-champion-fuel-fighter-review/">FIRESTONE CHAMPION FUEL FIGHTER REVIEW</a>
+		                
+		            </div>
+		        </header>
+				<div class="blog-post">
+		                Are you looking for excellent all season tires that provide you with exceptional comfort levels, all while maintaining a fuel efficient performance? Then you’ve come to the right place!
+		        </div>
+			</div>
+		</article>
+		<article class="blog">
+		    <div class="blog-post-figure">
+		            <figure class="blog-thumbnail">
+		                <a href="/blog/yokohama-geolandar-ht-g056-review-16defa/">
+		                    <img class="lazyautosizes lazyloaded" data-sizes="auto" src="/content/related_blog_3.png" data-src="/content/related_blog_3.png" alt="" title="" >
+		                </a>
+		                <div class="Overlay_value">
+                            <p class="blog-date"><i class="fas fa-clock"></i>Apr 22nd 2020</p> 
+                            <span class="tags">
+                                <span>Reviews</span>
+                            </span>
+                        </div>
+		            </figure>
+		    </div>
+
+		    <div class="blog-post-body">
+		        <header class="blog-header">
+		            <div class="blog-title">
+		                <a href="/blog/yokohama-geolandar-ht-g056-review-16defa/">YOKOHAMA GEOLANDAR H/T G056 REVIEW</a>
+		                
+		            </div>
+		        </header>
+				 <div class="blog-post">
+		                For a safe high speed performance, the tires must have excellent durability. Their compound and structure must withstand the driving pressure at such speeds to ensure a secure drive.
+		        </div>
+			</div>
+		</article>
+		<article class="blog">
+		    <div class="blog-post-figure">
+		            <figure class="blog-thumbnail">
+		                <a href="/blog/hankook-kinergy-st-review/">
+		                    <img class="lazyautosizes lazyloaded" data-sizes="auto" src="https://cdn11.bigcommerce.com/s-jmg6p55oqf/images/stencil/1280x1280/uploaded_images/thumbnail-2x.png?t=1583417470" data-src="/content/related_blog_2.png" alt="" title="" >
+		                </a>
+		                <div class="Overlay_value">
+                            <p class="blog-date"><i class="fas fa-clock"></i>Apr 22nd 2020</p> 
+                            <span class="tags">
+                                <span>Reviews</span>
+                            </span>
+                        </div> 
+		            </figure>
+		    </div>
+
+		    <div class="blog-post-body">
+		        <header class="blog-header">
+		            <div class="blog-title">
+		                <a href="/blog/hankook-kinergy-st-review/">HANKOOK KINERGY ST REVIEW</a>
+		            </div>
+		        </header>
+				<div class="blog-post">
+		                Hankook is one of the leading tire manufacturers in the world, and with a good reason. The company utilizes different manufacturing techniques and technologies to constantly improve the quality
+		        </div>
+			</div>
+		</article>
+	</div>
+	</div>
+
+</div>
+{{> components/common/homepagesection/Support}}
+{{/partial}}
+{{> layout/base}}

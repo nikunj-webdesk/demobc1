@@ -1,0 +1,157 @@
+{{#and price.price_range (if theme_settings.price_ranges '==' true)}}
+    {{> components/products/price-range price=price schema_org=schema_org}}
+{{else}}
+    {{#if price.with_tax}}
+        <div class="price-section price-section--withTax rrp-price--withTax" {{#unless price.rrp_with_tax}}style="display: none;"{{/unless}}>
+            <span class="price_label">MSRP</span>
+            <span class="price price--rrp">
+                {{price.rrp_with_tax.formatted}}
+            </span>
+        </div>
+        <div class="price-section price-section--withTax non-sale-price--withTax" {{#unless price.non_sale_price_with_tax}}style="display: none;"{{/unless}}>
+            <span class="price_label">Regular Price</span>
+			<span class="price_label forMobile_only" style="display:none">Our price</span>
+            <span class="price price--non-sale">
+                {{price.non_sale_price_with_tax.formatted}}
+            </span>
+        </div>
+        <div class="price-section price-section--withTax" {{#if schema_org}}itemprop="offers" itemscope itemtype="http://schema.org/Offer"{{/if}}>
+            <span class="price price--withTax">{{price.with_tax.formatted}}</span>
+            {{#if schema_org}}
+                <meta itemprop="availability" content="{{product.availability}}">
+                <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/{{product.condition}}Condition">
+                <div itemprop="priceSpecification" itemscope itemtype="http://schema.org/PriceSpecification">
+                    <meta itemprop="price" content="{{price.with_tax.value}}">
+                    <meta itemprop="priceCurrency" content="{{currency_selector.active_currency_code}}">
+                    <meta itemprop="valueAddedTaxIncluded" content="true">
+                </div>
+            {{/if}}
+            {{#if price.without_tax}}
+                <abbr title="{{lang 'products.including_tax'}}">{{lang 'products.price_with_tax' tax_label=price.tax_label}}</abbr>
+            {{/if}}
+        </div>
+    {{/if}}
+    {{#if price.without_tax}}
+        <div class="price-section price-section--withoutTax rrp-price--withoutTax{{#if price.with_tax}} price-section--minor{{/if}}" {{#unless price.rrp_without_tax}}style="display: none;"{{/unless}}>
+            <span class="price_label">MSRP</span>
+            <span class="price price--rrp" data-price="{{price.rrp_without_tax.formatted}}"> 
+                {{price.rrp_without_tax.formatted}}
+            </span>
+        </div>
+        <div class="price-section price-section--withoutTax non-sale-price--withoutTax{{#if price.with_tax}} price-section--minor{{/if}}" {{#unless price.non_sale_price_without_tax}}style="display: none;"{{/unless}}>
+            <span class="price_label">Regular Price</span>
+			<span class="price_label forMobile_only" style="display:none">Our price</span>
+            <span class="price price--non-sale">
+                {{price.non_sale_price_without_tax.formatted}}
+            </span>
+        </div>
+        <div class="price-section price-section--withoutTax" {{#if schema_org}}itemprop="offers" itemscope itemtype="http://schema.org/Offer"{{/if}}>
+            <span class="price price--withoutTax{{#if price.with_tax}} price-section--minor{{/if}}" data-price="{{price.without_tax.formatted}}">{{price.without_tax.formatted}}</span>
+            {{#if schema_org}}
+                <meta itemprop="availability" itemtype="http://schema.org/ItemAvailability"
+                    content="http://schema.org/{{#if product.pre_order}}PreOrder{{else if product.out_of_stock}}OutOfStock{{else if product.can_purchase '===' false}}OutOfStock{{else}}InStock{{/if}}">
+                <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/{{product.condition}}Condition">
+                <div itemprop="priceSpecification" itemscope itemtype="http://schema.org/PriceSpecification">
+                    <meta itemprop="price" content="{{price.without_tax.value}}">
+                    <meta itemprop="priceCurrency" content="{{currency_selector.active_currency_code}}">
+                    <meta itemprop="valueAddedTaxIncluded" content="false">
+                </div>
+            {{/if}}
+            {{#if price.with_tax}}
+                <abbr title="{{lang 'products.excluding_tax'}}">{{lang 'products.price_without_tax' tax_label=price.tax_label}}</abbr>
+            {{/if}}
+        </div>
+    {{/if}}
+
+    {{#if page_type '===' 'product'}}
+    {{#if product.stock_level '>' 3}}
+    {{#if product.price.with_tax}}
+    <div class="four_p_price">
+        <span>Total for 4:</span>
+        <span>${{toFixed (multiply product.price.with_tax.value 4) 2}}</span>
+    </div>
+    {{/if}}
+    {{#if product.price.without_tax}}
+    <div class="four_p_price">
+        <span>Total for 4:</span>
+        <span>${{toFixed (multiply product.price.without_tax.value 4) 2}}</span>
+    </div>
+    {{/if}}
+    {{else}}
+    {{#if product.stock_level '!==' 0}}
+    {{#if product.price.with_tax}}
+    <div class="four_p_price">
+        <span>Total for {{product.stock_level}}:</span>
+        <span>${{toFixed (multiply product.price.with_tax.value product.stock_level) 2}}</span>
+    </div>
+    {{/if}}
+    {{#if product.price.without_tax}}
+    <div class="four_p_price">
+        <span>Total for {{product.stock_level}}:</span>
+        <span>${{toFixed (multiply product.price.without_tax.value product.stock_level) 2}}</span>
+    </div>
+    {{/if}}
+    {{/if}}
+    {{#if stock_level '===' 0}} 
+    {{#if product.price.with_tax}}
+    <div class="four_p_price">
+        <span>Total for 4:</span>
+        <span>${{toFixed (multiply product.price.with_tax.value 4) 2}}</span>
+    </div>
+    {{/if}}
+    {{#if product.price.without_tax}}
+    <div class="four_p_price">
+        <span>Total for 4:</span>
+        <span>${{toFixed (multiply product.price.without_tax.value 4) 2}}</span>
+    </div>
+    {{/if}}
+    <div class="out_stock_content">
+        <h5 class="Unavailable-Stock">This item is currently unavailable.</h5>
+        <p class="Out_Call">Please call <a href="tel:8664400177">(866-440-0177)</a> for assistance selecting a comparable product</p>
+    </div>
+    {{/if}}
+    {{/if}}
+    {{else}}
+    {{#if stock_level '>' 3}}
+        {{#if price.with_tax}}
+            <div class="four_p_price"><span>Total for 4: </span>${{toFixed (multiply price.with_tax.value 4) 2}}
+            </div>
+        {{/if}}
+        {{#if price.without_tax}}
+            <div class="four_p_price"><span>Total for 4: </span>${{toFixed (multiply price.without_tax.value 4) 2}}</div>
+        {{/if}}
+    {{else}}
+    {{#if stock_level '!==' 0}}
+        {{#if price.with_tax}}
+            <div class="four_p_price"><span>Total for {{stock_level}}: </span>${{toFixed (multiply price.with_tax.value stock_level) 2}}</div>
+        {{/if}}
+        {{#if price.without_tax}}
+            <div class="four_p_price"><span>Total for {{stock_level}}: </span>${{toFixed (multiply price.without_tax.value stock_level) 2}}</div>
+        {{/if}}
+    {{/if}}
+    {{#if stock_level '===' 0}} 
+        {{#if price.with_tax}}
+            <div class="four_p_price"><span>Total for 4: </span>${{toFixed (multiply price.with_tax.value 4) 2}}
+        </div>
+        {{/if}}
+        {{#if price.without_tax}}
+            <div class="four_p_price"><span>Total for 4: </span>${{toFixed (multiply price.without_tax.value 4) 2}}</div>
+        {{/if}}
+            <div class="out_stock_content">
+                <h5 class="Unavailable-Stock">This item is currently unavailable.</h5>
+                <p class="Out_Call">Please call <a href="tel:8664400177">(866-440-0177)</a> for assistance selecting a comparable product</p>
+            </div>
+        {{/if}}
+    {{/if}}
+{{/if}}
+    <div class="price-section price-section--saving price YouSaveMSG" {{#unless price.saved}}style="display: none;"{{/unless}}>
+        <span class="price">{{lang 'products.you_save_opening_text'}}</span> 
+        <span class="price price--saving">
+            {{#if price.with_tax}}
+                <strong class="sprice" data-price="{{price.saved.formatted}}"> {{price.saved.formatted}}</strong> <strong>({{toFixed (divide (multiply price.saved.value 100) price.rrp_with_tax.value) }}%)</strong>
+            {{else}}
+                <strong class="sprice" data-price="{{price.saved.formatted}}"> {{price.saved.formatted}}</strong> <strong>({{toFixed (divide (multiply price.saved.value 100) price.rrp_without_tax.value) }}%)</strong>
+            {{/if}}
+        </span>
+    </div>
+{{/and}}

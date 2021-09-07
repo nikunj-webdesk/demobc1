@@ -1,0 +1,55 @@
+{{#partial "head"}}
+    {{#if settings.request.absolute_path '===' '/vehicles' }}
+    
+    <link href="https://vehicles.bestusedtires.com/public/css/vehicles_styles.css" rel="stylesheet">
+	<script src="https://vehicles.bestusedtires.com/get-js?url={{settings.facebook_like_button.href}}"></script>
+    
+    {{/if}}
+{{/partial}}
+
+
+{{#partial "page"}}
+
+    
+    {{#if settings.request.absolute_path '===' '/vehicles' }}
+     {{{page.content}}}
+     {{> components/common/homepagesection/Support}}
+    {{/if}}
+    
+    
+    {{#if settings.request.absolute_path '!==' '/vehicles' }}
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <main class="page{{#if page.title '==' 'Search Results'}} CatPage Sub-Cat-Layout{{ else }} Cms-Content{{/if}}">
+        <div class="{{#if page.title '!=' 'Search Results'}}page-content page-content--centered{{/if}}">
+            {{#unless theme_settings.hide_page_heading }}
+                <h1 class="page-heading">{{ page.title }}</h1>
+            {{/unless}}
+            
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+            {{else}}
+                <div>{{{page.content}}}</div>
+            {{/replace}}
+        </div>
+    </main>
+    {{/if}}
+
+{{/partial}}
+
+{{> layout/base}}
+
+<style>
+    .footer {
+        margin: 0px;
+    }
+    @media screen and (max-width: 991px){
+        .footer .footerBottom .FooterLeft ul{
+            margin: 0px;
+        }
+        .footer .footerBottom{
+            padding-bottom: 0px;
+        }
+    }
+</style>
+
+

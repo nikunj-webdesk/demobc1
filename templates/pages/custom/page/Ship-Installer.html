@@ -1,0 +1,250 @@
+{{#partial "head"}}
+    {{#if settings.request.absolute_path '===' '/vehicles' }}
+    
+    <link href="https://vehicles.bestusedtires.com/public/css/vehicles_styles.css" rel="stylesheet">
+    <script src="https://vehicles.bestusedtires.com/get-js?url={{settings.facebook_like_button.href}}"></script>
+    
+    {{/if}}
+{{/partial}}
+
+
+{{#partial "page"}}
+
+    
+    {{#if settings.request.absolute_path '===' '/vehicles' }}
+     {{{page.content}}}
+     {{> components/common/homepagesection/Support}}
+    {{/if}}
+    
+    
+    {{#if settings.request.absolute_path '!==' '/vehicles' }}
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <main class="page Cms-Content Why-Buy-Content">
+        <div class="page-content page-content--centered">
+            {{!-- {{#unless theme_settings.hide_page_heading }}
+                <h1 class="page-heading">{{ page.title }}</h1>
+            {{/unless}} --}}
+            
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+            {{else}}
+                <div><div class="ship_insaller_main_banner">
+    <img class="for_web" src="/content/cms/getting-your-tires-installed.png" alt="" />
+    <img class="for_mob" src="/content/cms/getting-your-tires-installed-light.png" alt="" />
+    <div class="container">
+        <div class="LeftOverlay">
+            <h1>Getting your tires installed at your local installer's shop couldn't be easier.</h1>
+            <p>During the checkout process you can choose to have your tires shipped right to your favorite installer. You can even set the day/time.</p>
+
+            <!--<div class="Search_local_area">
+            	<h3>See which installers are available in your local area.</h3>
+            	<span class="zip">
+					<input id="zip" name="zip" type="text" class="field text" pattern="[0-9]*" placeholder="Type ZIP/Postal Code">
+					<input class="button button--primary" type="submit" value="Search for Installers">
+				</span>
+				<div class="line">
+					<span>or</span>
+				</div>
+				<div class="sea_loc_btn">
+            		<a href="javascript:void(0);">Search near my Location</a>
+            	</div>
+            </div> -->
+            
+        </div>
+    </div>
+</div>
+<div class="How_Works_Sec">
+    <div class="container">
+        <div class="How_Works_Inner">
+            <h3>HOW IT WORKS</h3>
+            <div class="StepLayout">
+                <ul>
+                    <li>
+                        <div class="StepHeading">
+                            <a href="javascript:void(0)" data-reveal-id="ShopOnline"><img src="/content/cms/how-it-works-shop-online.png" alt="shop-online" /></a>                         
+                        </div>
+                        <div class="StepContent">
+                        	<h4>1 - Shop Online</h4>
+                            <p>Shop on the site and add your items to the shopping cart. Then select<br>"Ship FREE to an Installer"</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="StepHeading">
+                            <a href="javascript:void(0)" data-reveal-id="CompleteYourPurchase"><img src="/content/cms/select-your-Installer.png" alt="" /></a>                            
+                        </div>
+                        <div class="StepContent">
+                        	<h4>2. Select Your Installer & Complete Your Purchase</h4>
+                            <p>Select the local installer of your choice, set your appointment date and time and complete your transaction.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="StepHeading">
+                            <a href="javascript:void(0)" data-reveal-id="WhenWorkisDone"><img src="/content/cms/we-ship-tires-to-installer.png" alt="" /></a>                            
+                        </div>
+                        <div class="StepContent">
+                        	<h4>3 - We Ship Tires to Installer & You Pay When Work is Done</h4>
+                            <p>We ship you tire right to the installer and when the job is done, you pay them directly. That's it!</p>
+                        </div>
+                    </li>
+                </ul>
+                <a class="button" href="/">Shop NOW</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="Comm_Que_Section">
+    <div class="container">
+        <div class="Comm_Que_Inner">
+            <h3>Common Questions</h3>		        
+	        <div class="Bottom-Content">
+			    <div class="container">
+			        <div class="Outer">
+			            <div class="Left">
+			                <div id="prodAccordion">
+			                    <div id="ProductDescription" class="Block Panel ProductDescription">
+			                        <h2 id="ARETHE" class="sub-title1">Can I sign up as an Installer with Priority Tire?</h2>
+			                        <div class="ProductDescriptionContainer prodAccordionContent">
+			                            <p>Yes, you may sign up for our Installer Program <a href="/join-our-installer-program/">on this page</a>.</p>
+			                        </div>
+			                    </div>
+			                    <div id="ProductDescription" class="Block Panel ProductDescription">
+			                        <h2 id="ARETHE" class="sub-title1">Can I schedule the installation during the checkout process?</h2>
+			                        <div class="ProductDescriptionContainer prodAccordionContent">
+			                            <p>Yes, you will have the option to schedule an appointment with your selected installer during checkout. You will be able to choose your preferred date and time. Once the order is made, our team will contact the installer to finalize the appointment and send you an email with the confirmation or contact you to reschedule the appointment.</p>
+<p>We do not guarantee that the selected date and time will be free. Please wait for the confirmation e-mail or the rescheduling call.</p>
+			                        </div>
+			                    </div>
+			                    <div id="ProductDescription" class="Block Panel ProductDescription">
+			                        <h2 id="ARETHE" class="sub-title1">Can I pay for installation during checkout?</h2>
+			                        <div class="ProductDescriptionContainer prodAccordionContent">
+			                            <p>No, we do not take payment for the installation. The installation fee needs to be paid directly to the installer once the appointment is finished.</p>
+			                        </div>
+			                    </div>
+			                    <div id="ProductDescription" class="Block Panel ProductDescription">
+			                        <h2 id="ARETHE" class="sub-title1">Can I reschedule the appointment once it was confirmed?</h2>
+			                        <div class="ProductDescriptionContainer prodAccordionContent">
+			                            <p>Yes, you can reschedule. If you wish to do so, please contact us at 866-440-0177 or at <a href="mailto:info@prioritytire.com">info@prioritytire.com</a> and we will contact your chosen installer for a new appointment.</p>
+			                        </div>
+			                    </div>                    
+			                </div>
+			            </div>
+			            <div class="Right">
+			                <div id="prodAccordion">
+			                    <div id="ProductReviews" class="Block Panel">
+			                        <h2 class="sub-title1">How much does installation cost?</h2>
+			                        <div class="prodAccordionContent">
+			                            <p>For each installer, we have included their price ranges during checkout. You will be able to see the price ranges for all installer.</p>
+			                        </div>
+			                    </div> 
+			                    <div id="ProductReviews" class="Block Panel">
+			                        <h2 class="sub-title1">What do I need to bring to the installer to confirm the appointment?</h2>
+			                        <div class="prodAccordionContent">
+			                            <p>Please bring your Priority Tire invoice with you to the appointment, as the installer will need to confirm your purchase. The invoice can be in paper or e-mail form.</p>
+			                        </div>
+			                    </div> 
+			                                             
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div class="ready_to_buy_sec">
+	<div class="container">
+		<div class="ready_head">
+			<h3>Ready to buy Online and Ship to Your Tire Installer?</h3>
+		</div>
+		<a class="button" href="/">Shop NOW</a>
+	</div>	
+</div>
+</div>
+            {{/replace}}
+        </div>
+    </main>
+    {{/if}}
+    {{> components/common/homepagesection/Support}}
+    <div id="ShopOnline" class="modal WorkStep" data-reveal>
+        <div class="modal-header">
+            <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+                <span aria-hidden="true"></span> 
+            </a>
+        </div>
+        <div class="modal-body">
+        <div class="WorkStepTitle"><h3>1 - Shop Online</h3></div>  
+            <div class="WorkStep-Popup">
+                <img src="/content/cms/shipping-installer-shoponline.png" alt="Shop Online"/>
+            </div>
+        </div>
+    </div>
+    <div id="CompleteYourPurchase" class="modal WorkStep" data-reveal>
+        <div class="modal-header">
+            <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+                <span aria-hidden="true"></span> 
+            </a>
+        </div>
+        <div class="modal-body">
+        <div class="WorkStepTitle"><h3>2. Select Your Installer & Complete Your Purchase</h3></div>  
+            <div class="WorkStep-Popup">
+                <img src="/content/cms/shipping-complete-your-purchase.png" alt="Shop Online"/>
+            </div>
+        </div>
+    </div>
+    <div id="WhenWorkisDone" class="modal WorkStep" data-reveal>
+        <div class="modal-header">
+            <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+                <span aria-hidden="true"></span> 
+            </a>
+        </div>
+        <div class="modal-body">
+        <div class="WorkStepTitle"><h3>3 - We Ship Tires to Installer & You Pay When Work is Done</h3></div>  
+            <div class="WorkStep-Popup">
+                <img src="/content/cms/shipping-When-work-is-done.png" alt="Shop Online"/>
+            </div>
+        </div>
+    </div>
+
+{{/partial}}
+
+{{> layout/base}}
+
+<style>
+    .footer {
+        margin: 0px;
+    }
+    @media screen and (max-width: 991px){
+        .footer .footerBottom .FooterLeft ul{
+            margin: 0px;
+        }
+        .footer .footerBottom{
+            padding-bottom: 0px;
+        }
+    }
+</style>
+
+
+<script type="text/javascript">
+    $("#prodAccordion .Block h2").click(function () {
+        $(this).css("outline", "none");
+        if ($(this).parent().hasClass("current")) {
+            $(this)
+                .siblings("div")
+                .slideUp("slow", function () {
+                    $(this).parent().removeClass("current");
+                });
+        } else {
+            $("#prodAccordion .Block .prodAccordionContent").slideUp("slow", function () {
+                $(this).parent().removeClass("current");
+            });
+            $(this)
+                .siblings("div")
+                .slideToggle("slow", function () {
+                    $(this).parent().toggleClass("current");
+                });
+        }
+        return false;
+    });
+</script>

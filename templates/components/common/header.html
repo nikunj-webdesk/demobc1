@@ -1,0 +1,87 @@
+<header class="header" role="banner">
+    {{> components/common/navigation}}
+    <div class="HeaderWrap">
+        <div class="Headerleft">
+            <div class="header-logo">
+                <a href="{{urls.home}}"><img class="header-logo-image-unknown-size" src="{{getImage settings.store_logo.image}}" alt="{{settings.store_logo.title}}" title="{{settings.store_logo.title}}"></a>
+                {{!--<span>Because everyone drives on used tires every day... Why buy new?</span>--}}
+            </div>
+        </div>
+        <div class="HeaderRiht">
+            <div class="MenuWrap" data-menu> 
+                <ul class="Default-Search">
+                    <li class="navUser-item header-quickSearch">
+                        <div class="d-quickSearch" id="quickSearch" data-prevent-quick-search-close>
+                            {{> components/common/quick-search}}
+                        </div>
+                    </li>
+                </ul>               
+                {{> components/common/megamenu/megamenu}}
+            </div>
+            <div class="RightWrap">
+                <ul>
+                    <li class="navUser-item navUser-item--cart">
+                        <a class="navUser-action navUser-action--cart" data-cart-preview data-dropdown="cart-preview-dropdown" data-options="align:right" href="{{urls.cart}}"><span class="countPill cart-quantity"></span><span class="header-Cart-Total">{{cart.sub_total.formatted}}</span></a>
+                        <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+                        <div class="cartpopup_bg_black"></div>
+                    </li>
+                    <li class="navUser-item navUser-item--checkout"><a class="navUser-action" href="/cart.php">Checkout</a></li>
+                </ul>
+                <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu"><span class="mobileMenu-toggleIcon">Toggle menu</span></a>
+            </div>
+        </div>
+    </div>
+    {{{region name="header_bottom"}}}
+    <div class="navPages-container" id="menu" data-menu>
+        {{> components/common/mobilelayouts/mobilemenumain}}
+    </div>
+    <div class="mobVehicleWrap menuWrapMob" style="display: none;">
+        {{> components/common/mobilelayouts/mobVehicle}}
+    </div>
+    <div class="mobSizeWrap menuWrapMob" style="display: none;">
+        {{> components/common/mobilelayouts/mobSize}}
+    </div>
+    <div class="mobTypeWrap menuWrapMob" style="display: none;">
+        {{> components/common/mobilelayouts/mobType}}
+    </div>
+</header>
+<section class="quickSearchResults" data-bind="html: results"></section>
+<div class="bottomSlider">
+    <ul data-slick='{
+        "arrows": true,
+        "dots": false,
+        "infinite": false, 
+        "slidesToScroll": 1,
+        "slidesToShow": 1}'>
+        <li><b>FAST & FREE SHIPPING</b>FedEx Shipping</li> 
+        <li><b>90 DAY GUARANTEE</b>Money Back Guarantee</li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+	if (document.cookie.length > 0) {
+		var cName = "hidePromoBanner";
+		cStart = document.cookie.indexOf(cName + "=");
+		if (cStart != -1) {
+			cStart = cStart + cName.length + 1;
+			cEnd = document.cookie.indexOf(";", cStart);
+			if (cEnd == -1) {
+				cEnd = document.cookie.length;
+			}
+			var cookie = unescape(document.cookie.substring(cStart, cEnd));
+			cookie =cookie.toLowerCase();
+			if(cookie == 'yes'){
+				document.querySelector(".top-banner-winter-tires").style.display = "none";
+			}
+		}else{
+			document.querySelector(".top-banner-winter-tires").style.display = "block";
+		}
+	}
+	document.querySelector('.top-banner-winter-tires .CloseSign').addEventListener('click', event => {
+		var date = new Date(),expires = 'expires=';
+            date.setDate(date.getDate() + 1);
+            expires += date.toGMTString();
+		document.cookie = "hidePromoBanner=Yes;"+ expires +";path=/";
+	});
+</script>
+

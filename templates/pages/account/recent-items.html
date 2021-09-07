@@ -1,0 +1,102 @@
+{{#partial "page"}}
+<div class="account">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <h2 class="page-heading">{{lang 'account.recent_items.heading' }}</h2>
+    {{> components/account/navigation account_page='recent_items'}}
+    <div class="container">
+        {{#unless customer.recently_viewed_products.items}}
+            {{> components/common/alert-info (lang 'account.recent_items.no_items')}}
+        {{/unless}}
+    </div>
+    <form action="{{urls.compare}}" method="post" class="account--fixed SimilarTires ProDes">
+        {{!> components/products/grid products=customer.recently_viewed_products.items show_compare=customer.recently_viewed_products.show_compare}}
+        <ul class="productGrid productCarousel">
+            {{#each customer.recently_viewed_products.items}}
+                <li class="product productCarousel-slide">
+                    {{> components/products/card-regular settings=../settings show_compare=../show_compare show_rating=../settings.show_product_rating theme_settings=../theme_settings customer=../customer event=../event position=(add @index 1)}}
+                </li>
+            {{/each}}
+        </ul>
+
+    </form>
+</div>
+{{/partial}}
+{{> layout/base}}
+
+
+<style>
+.SimilarTires.ProDes .productCarousel{
+    margin: 0 -15px;
+}
+.SimilarTires.ProDes .productCarousel .productCarousel-slide{
+    width: 25%;
+    float: left;
+    padding: 0 15px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-figure{
+    border:1px solid #d3d3d3;
+    height: 239px;
+    width: 100%;
+    display: table;
+    margin: 0 0 10px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-figure a{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-img-container:after{
+    display: none;
+}
+.SimilarTires.ProDes .productCarousel .productCarousel-slide .card-image{
+    position: static;
+    max-height: 237px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body{
+    padding: 0px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-title{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0 0 5px;
+    height: 48px;
+    overflow: hidden;
+}
+
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-title a{
+    color: #242424;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-text{
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    margin: 0px;
+    color:#1a9eca;
+}
+.footer{margin:0px;}
+@media screen and (max-width: 991px){
+    .footer .footerBottom .FooterLeft ul{
+        margin: 0px;
+    }
+    .footer .footerBottom{
+        padding-bottom: 0px;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .SimilarTires.ProDes .productCarousel .productCarousel-slide{
+        width: 33.33%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .SimilarTires.ProDes .productCarousel .productCarousel-slide{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 479px) {
+    .SimilarTires.ProDes .productCarousel .productCarousel-slide{
+        width: 100%;
+    }
+} 
+</style>

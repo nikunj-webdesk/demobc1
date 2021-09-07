@@ -1,0 +1,35 @@
+<a href="javascript:void(0)" data-collapsible="navPages-ShopTires" class="has-subMenu">Shop Tires <i class="fas fa-chevron-down"></i></a>
+<div class="navPage-subMenu" id="navPages-ShopTires" aria-hidden="true" tabindex="-1">
+	<div class="menu_inner">
+		<ul class="tabs" data-tab>
+			<li class="tab is-active"><a class="tab-title" data-id="#tab-By-Vehicle" href="javascript:void(0)">By Vehicle</a></li>
+			<li class="tab"><a class="tab-title productView-reviewTabLink" data-id="#tab-By-Size" href="javascript:void(0)">By Size</a></li>
+			<li class="tab"><a class="tab-title productView-reviewTabLink" data-id="#tab-By-Type" href="javascript:void(0)">By Type</a></li>
+			<li class="tab"><a class="tab-title productView-reviewTabLink" data-id="#tab-By-Brand" href="javascript:void(0)">By Brand</a></li>
+			<li class="tab"><a class="tab-title productView-reviewTabLink" data-id="#tab-By-Season" href="javascript:void(0)">By Season</a></li>
+			<li class="tab"><a class="tab-title productView-reviewTabLink" data-id="#tab-By-Performance">By Performance</a></li>
+		</ul>
+		<div class="tabs-contents">
+			<div class="tab-content is-active" id="tab-By-Vehicle">
+				<div id="searchspring-nav-vehicle-finder">
+					{{> components/common/megamenu/byvehiclemmlink}}	
+				</div>
+			</div>
+			<div class="tab-content" id="tab-By-Size">
+				{{> components/common/megamenu/bysizemmlink}}
+			</div>
+			<div class="tab-content" id="tab-By-Type">
+				{{> components/common/megamenu/bytypemm}}
+			</div>
+			<div class="tab-content" id="tab-By-Brand">
+				{{> components/common/megamenu/bybrandmm}}
+			</div>
+			<div class="tab-content" id="tab-By-Season">
+				{{> components/common/megamenu/byseasonmm}}
+			</div>
+			<div class="tab-content" id="tab-By-Performance">
+				{{> components/common/megamenu/byperformancemm}}
+			</div>
+		</div>
+	</div>
+</div>

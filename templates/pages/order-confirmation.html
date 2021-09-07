@@ -1,0 +1,436 @@
+{{#partial "head"}}
+{{{ checkout.checkout_head }}}
+{{{ stylesheet '/assets/css/optimized-checkout.css' }}}
+ 
+<script type="text/javascript">
+    window.language = {{{langJson 'optimized_checkout'}}};
+</script>
+
+{{/partial}}
+
+{{#partial "page"}}
+{{!--  
+<header class="checkoutHeader optimizedCheckout-header">
+    <div class="checkoutHeader-content">
+        <h1 class="is-srOnly">{{lang 'checkout.title'}}</h1>
+        <h2 class="checkoutHeader-heading">
+            <a class="checkoutHeader-link" href="{{urls.home}}">
+                {{#if checkout.header_image}}
+                    <img alt="{{settings.store_logo.title}}" class="checkoutHeader-logo" id="logoImage" src="{{ checkout.header_image }}"/>
+                {{ else }}
+                    <span class="header-logo-text">{{settings.store_logo.title}}</span>
+                {{/if}}
+            </a>
+        </h2>
+    </div>
+</header>
+--}}
+{{{ checkout.order_confirmation_content }}}
+<p class="myjson"></p>
+
+<div class="order_Installer">
+    <div class="container">
+    <h3 class="type_address">Ship to My Address:</h3>
+    <div class="order_Installer_inner">
+        <div class="top_section">
+            <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="🏞/Icon/Checkout/Ship-Free-to-An-Installer/Active" fill-rule="nonzero">
+                        <g id="Group" transform="translate(21.000000, 21.000000)">
+                            <path d="M43.3100332,34.3100332 L43.1100332,34.1100332 L23.8900332,14.8900332 L23.6900332,14.6900332 C23.9006148,13.8089981 24.0046924,12.905873 24.0000332,12.0000332 C24.001626,8.81694733 22.7378554,5.76377488 20.4870735,3.51299298 C18.2362916,1.26221109 15.1831191,-0.00155951838 12.0000332,3.3219412e-05 C10.9497304,-0.00246023986 9.9038052,0.135427007 8.89003322,0.410033219 L13.6900332,5.21003322 L13.3000332,6.66003322 L11.9000332,11.9000332 L6.66003322,13.3000332 L5.21003322,13.6900332 L0.410033219,8.89003322 C0.135427007,9.9038052 -0.00246023986,10.9497304 3.3219412e-05,12.0000332 C-0.00155951838,15.1831191 1.26221109,18.2362916 3.51299298,20.4870735 C5.76377488,22.7378554 8.81694733,24.001626 12.0000332,24.0000332 C12.905873,24.0046924 13.8089981,23.9006148 14.6900332,23.6900332 L14.8900332,23.8900332 L34.1100332,43.1100332 L34.3100332,43.3100332 C34.0994516,44.1910683 33.995374,45.0941934 34.0000332,46.0000332 C34.0000305,49.7314704 35.7358499,53.2505704 38.6966059,55.5215937 C41.657362,57.7926171 45.5060895,58.5570974 49.1100332,57.5900332 L44.3100332,52.7900332 L44.7000332,51.3400332 L46.1000332,46.1000332 L51.3400332,44.7000332 L52.7900332,44.3100332 L57.5900332,49.1100332 C57.8646394,48.0962612 58.0025267,47.050336 58.0000332,46.0000332 C58.001626,42.8169473 56.7378554,39.7637749 54.4870735,37.512993 C52.2362916,35.2622111 49.1831191,33.9984405 46.0000332,34.0000332 C45.0941934,33.995374 44.1910683,34.0994516 43.3100332,34.3100332 Z M37.0000332,41.0000332 L18.0000332,22.0000332 L22.0000332,18.0000332 L41.0000332,37.0000332 L37.0000332,41.0000332 Z" id="Shape" fill="#4295F3"></path>
+                            <polygon id="Rectangle" fill="#E3EDF0" transform="translate(29.500328, 29.499680) rotate(-45.000000) translate(-29.500328, -29.499680) " points="26.6718275 16.0646797 32.3288275 16.0646797 32.3288275 42.9346797 26.6718275 42.9346797"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <div class="Right_side">
+                <h4 class="installer_user_name">Pep Boys</h4>
+                <p><em class="installer_distance"></em></p>
+            </div>
+        </div>
+        <div class="BottomSection">
+            <ul>
+                <li>
+                    <h4><i class="fas fa-calendar-alt"></i>Appointment</h4>
+                    <!--<p>Wednesday, March<br> 20 at 10 AM.</p>-->
+                    <p><span class="installer_day"></span>, <span class="installer_date"></span><br><span class="installer_time"></span></p>
+                </li>
+                <li>
+                    <h4><i class="fas fa-map-marker-alt"></i>Ship to Address</h4>
+                    <!--<p>654 Utica Aveue<br> brooklyn, NY 11203</p>-->
+                    <p class="installer_address"></p>
+                </li>
+                <li>
+                    <h4><i class="fas fa-phone"></i>Contact</h4>
+                    <!--<p><a href="tel:(347) 673-6962">(347) 673-6962</a></p>-->
+                    <p><a class="installer_tel"></a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+
+{{!-- <div class="shippingBlock">  
+    <div class="container">
+        <h3>Shipping Information</h3>
+    	<div class="left"> 
+    		<p>Our tires are shipped through FedEx standard ground FREE to the 48 contiguous states. </p>
+    		<p><b>All orders placed before 12 Noon EST will ship the same day. Orders received after 12 Noon EST will ship out the next business day.</b></p>
+    		<p>FedEx can deliver to confirmed street addresses only (residential or business), they cannot deliver to PO, APO, or FPO. </p>
+    		<p>Please be sure that your shipping address is correct with all necessary information as any requests for change will delay shipping by 1 business day. </p>
+    		<p>To edit the shipping address please email us at <a href="mailto:info@bestusedtires.com">info@bestusedtires.com</a> with the correct address.</p>
+    	</div>
+    	<div class="Right">
+    		<img src="/content/productimages/us-shipping-map.svg" alt="us-shipping-map">
+    	</div> 
+    </div>
+</div> --}}
+<script>
+    setInterval(function() {
+        var tags = document.getElementsByClassName("orderConfirmation-section");
+        for (var i = 0; i < tags.length; i++) {
+            var elm = tags[i];
+            var txt = elm.innerText || elm.innerHTML;
+            if (txt.includes("Bolt")) {
+                elm.style.display = 'none';
+            }
+        }
+    }, 200);
+</script>
+<script>
+var checker = function(){
+    setTimeout(function(){
+        var badMessage = document.querySelector(".orderConfirmation-section p:nth-child(2)");
+        if(badMessage && badMessage.innerHTML.indexOf("Your order was sent to us but is currently awaiting payment") != -1){
+            badMessage.remove();
+        }
+        else{
+            checker();
+        }
+    }, 500);
+}
+checker();
+</script>
+{{{ footer.scripts }}}
+<!-- Google Tag Manager (noscript) -->
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL2GR9N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+{{/partial}}
+
+{{> layout/base}}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" type="text/javascript" ></script>
+<script>
+    if ( $(window).width() < 991) {
+        $( ".nanobar + .ReactModalPortal" ).remove();
+        $(document).ready(function() {
+            setTimeout(function(){
+                $('.has-activeModal.custom_orderconfirmation .ReactModalPortal').appendTo('#checkout-app'); 
+            },9000);
+        });
+    }
+</script>
+<script type="text/javascript"> 
+
+        var obj = jQuery.parseJSON($.cookie("appointment_details")); 
+        //console.log('installer_data =>',obj);
+        if(obj != null){
+            var appointmenttime = obj[0].day + ' ' + obj[0].date+ ' ' + obj[0].time;
+            //console.log('appointmenttime=>',appointmenttime)
+            var installer_data = {Name:obj[0].installer_name,Phone:obj[0].contact,Address:obj[0].address,AppointmentDateTime:appointmenttime};
+            fetch('/api/storefront/order/{{checkout.order.id}}', {credentials: 'include'})
+            .then(function(response) {
+            return response.json();
+            })
+            .then(function(myJson) {
+                //console.log(myJson.billingAddress);
+                //var final_response = {OrderID:{{checkout.order.id}},FirstName:myJson.billingAddress.firstName,LastName:myJson.billingAddress.lastName,CustomerEmail:myJson.billingAddress.email,CustomerPhone:myJson.billingAddress.phone,Installer:obj[0]};
+                
+                var final_response = {OrderID:{{checkout.order.id}},FirstName:myJson.billingAddress.firstName,LastName:myJson.billingAddress.lastName,CustomerEmail:myJson.billingAddress.email,CustomerPhone:myJson.billingAddress.phone,Installer:installer_data};
+                
+                //console.log('final_response=>',final_response);
+                console.log(final_response);
+                
+                var myJSON = JSON.stringify(final_response);
+                console.log(myJSON);
+              
+            });
+        }
+    function shippingAddress(){
+        const regex = /.*\//gm;
+        const str = location.pathname;
+        const subst = "";
+        var URL = str.replace(regex, subst);
+        var order_id = '{{checkout.order.id}}';
+        
+        if (URL == 'order-confirmation') {
+           
+            var oInfo; 
+            fetch('/api/storefront/order/'+order_id, {credentials: 'include'})
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(myJson) {
+                oInfo = myJson;
+                var ShippingDetails = '<section class="Right_Side ship"><h3 class="type_address"><img class="home-icon" src="/content/Ship-add-active.svg" alt=""/>Ship to My Address:</h3><div class="CN-Details"><p class="label">Customer Name</p><p class="Value">'+ oInfo.billingAddress.firstName +' '+ oInfo.billingAddress.lastName +'</p></div><div class="CA-Details"><p class="label">Address</p><p class="Value">'+ oInfo.billingAddress.address1 +' '+ oInfo.billingAddress.address2 +' '+ oInfo.billingAddress.city +', '+ oInfo.billingAddress.stateOrProvinceCode +' '+ oInfo.billingAddress.postalCode +'</p></div></section>';
+                   
+                    $(".layout-cart .cart.optimizedCheckout-orderSummary").append(ShippingDetails);
+                    $('.ReactModalPortal .modalOverlay').append(ShippingDetails);
+                    //console.log('oInfo: ',ShippingDetails);
+                    $('.customer_name').html(oInfo.billingAddress.firstName +' '+ oInfo.billingAddress.lastName );
+                
+            });
+        }
+        
+        
+        var customer_name_order = $('.customer_name').text();
+        var customer_email = $('.customer_email').text();
+        
+        var order_id = $('.custom_orderconfirmation .orderConfirmation-section p:first-child span strong').text();
+        
+        
+        var sa_values = { "site":12347, "token":"8a13d" , 'orderid':order_id, 'name':customer_name_order, 'email':customer_email}; 
+        	function saLoadScript(src) { var js = window.document.createElement("script"); js.src = src; js.type = "text/javascript"; document.getElementsByTagName("head")[0].appendChild(js); } var d = new Date(); if (d.getTime() - 172800000 > 1477399567000) saLoadScript("//www.shopperapproved.com/thankyou/rate/12347.js"); else saLoadScript("//direct.shopperapproved.com/thankyou/rate/12347.js?d=" + d.getTime());
+    }
+
+function getCookie(c_name) {
+   if (document.cookie.length > 0) {
+       var c_start = document.cookie.indexOf(c_name + "=");
+       if (c_start != -1) {
+           c_start = c_start + c_name.length + 1;
+           var c_end = document.cookie.indexOf(";", c_start);
+           if (c_end == -1) {
+               c_end = document.cookie.length;
+           }
+           return unescape(document.cookie.substring(c_start, c_end));
+       }
+   }
+   return "";
+}
+
+$(window).load(function(){
+    
+    setTimeout(function(){
+        $('.cartDrawer.optimizedCheckout-orderSummary').trigger( "click" );
+    },3000);
+    
+    //Get cookie
+    var seperateAdd = getCookie("seperateAdd");
+    var obj = jQuery.parseJSON($.cookie("appointment_details"));
+    if(obj){
+        var ismobile = obj[0].ismobile;
+    }
+    
+    
+    if(seperateAdd == 'address'){
+        //shippingAddress();
+       if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+           setTimeout(function(){ 
+                shippingAddress();
+            },4000);
+        }else{
+            shippingAddress();
+        }
+        return false;
+    }
+    else if(ismobile == 'yes'){
+       // New installer information
+        //console.log('Order Id=>',{{checkout.order.id}});
+        //console.log('cookie data =>',$.cookie("appointment_details"));
+        var obj = jQuery.parseJSON($.cookie("appointment_details")); 
+        console.log('installer_data =>',obj);
+        var appointmenttime = obj[0].day + ' ' + obj[0].date+ ' ' + obj[0].time;
+        //console.log('appointmenttime=>',appointmenttime);
+        
+        const regex = /.*\//gm;
+        const str = location.pathname;
+        const subst = "";
+        var URL = str.replace(regex, subst);
+        var order_id = '{{checkout.order.id}}';
+        
+        if (URL == 'order-confirmation') {
+           
+            var oInfo; 
+            fetch('/api/storefront/order/'+order_id, {credentials: 'include'})
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(myJson) {
+                oInfo = myJson;
+                console.log(oInfo);
+                var shippingAddress = oInfo.billingAddress.address1 +' '+ oInfo.billingAddress.address2 +' '+ oInfo.billingAddress.city +', '+ oInfo.billingAddress.stateOrProvinceCode +' '+oInfo.billingAddress.postalCode;
+                console.log(shippingAddress);
+                console.log(obj);
+                //append data
+                $('.type_address').html('Ship to My Address :'); 
+                $('.installer_day').html(obj[0].day);
+                $('.installer_date').html(obj[0].date);
+                $('.installer_time').html(obj[0].time);
+                $('.installer_address').html(shippingAddress);
+                $('.installer_tel').html(obj[0].contact);
+                $(".installer_tel").attr("href","tel:"+obj[0].contact);
+                $(".installer_user_name").html(obj[0].installer_name);
+                $('.installer_distance').html(obj[0].distance + ' Away');
+
+            });
+        }
+
+        setTimeout(function(){
+            // Move div
+            $('.optimizedCheckout-orderSummary').append($('.order_Installer'));
+            $('.order_Installer').show();
+        },3000);
+        
+        setTimeout(function(){
+            if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                $('.order_Installer').appendTo('.ReactModalPortal .modalOverlay');
+            }
+            $('.order_Installer').show();
+        },3000);
+
+        fetch('/api/storefront/order/{{checkout.order.id}}', {credentials: 'include'})
+        .then(function(response) {
+        return response.json();
+        })
+        .then(function(myJson) {
+            //console.log(myJson.billingAddress);
+            //var final_response = {OrderID:{{checkout.order.id}},FirstName:myJson.billingAddress.firstName,LastName:myJson.billingAddress.lastName,CustomerEmail:myJson.billingAddress.email,CustomerPhone:myJson.billingAddress.phone,Installer:obj[0]};
+            var shippingAddress = myJson.billingAddress.address1 +' '+ myJson.billingAddress.address2 +' '+ myJson.billingAddress.city +', '+myJson.billingAddress.stateOrProvinceCode +' '+myJson.billingAddress.postalCode;
+            
+            var installer_data = {Name:obj[0].installer_name,Phone:obj[0].contact,Address:shippingAddress,AppointmentDateTime:appointmenttime};
+            
+            var final_response = {OrderID:{{checkout.order.id}},FirstName:myJson.billingAddress.firstName,LastName:myJson.billingAddress.lastName,CustomerEmail:myJson.billingAddress.email,CustomerPhone:myJson.billingAddress.phone,Installer:installer_data};
+            
+            //console.log('final_response=>',final_response);
+            console.log(final_response);
+            
+            // Installer API 
+            $.ajax({
+               url: 'https://installers.prioritytire.com/ProcessData',
+               type: 'POST',
+               dataType: 'json',
+               //contentType: 'application/json',
+               data:final_response,
+               success: function(data) {
+                  console.log('Success==>',data);
+                   
+                   // remove cookie
+                   document.cookie = 'appointment_details=; path=/; domain=.prioritytire.com; expires=' + new Date(0).toUTCString();
+                   document.cookie = 'ship_address=; path=/; domain=.prioritytire.com; expires=' + new Date(0).toUTCString();
+                  
+                    
+               },
+                error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                    console.log("Status: " + textStatus); 
+                    console.log("Error: " + errorThrown); 
+                    
+                    // remove cookie
+                    document.cookie = 'appointment_details=; path=/; domain=.prioritytire.com; expires=' + new Date(0).toUTCString();
+                    document.cookie = 'ship_address=; path=/; domain=.prioritytire.com; expires=' + new Date(0).toUTCString();
+                    
+                }   
+           });
+        });
+    }else{
+        // New installer information
+        //console.log('Order Id=>',{{checkout.order.id}});
+        //console.log('cookie data =>',$.cookie("appointment_details"));
+        var obj = jQuery.parseJSON($.cookie("appointment_details")); 
+        console.log('installer_data =>',obj);
+        var appointmenttime = obj[0].day + ' ' + obj[0].date+ ' ' + obj[0].time;
+        var appointmentAddress = obj[0].address;
+            appointmentAddress = appointmentAddress.split(',');
+        var totalLength = appointmentAddress.length;
+        var subLength = totalLength - 3;
+            var Addressdt = '';
+            for(var i=0;i<totalLength;i++){
+            if(i==subLength){
+                Addressdt = Addressdt+appointmentAddress[i]+",";
+            }else{
+                Addressdt = Addressdt+appointmentAddress[i];
+            }
+        }
+        var appointmentAddressnew = Addressdt.replace(/,\s*$/, "");
+        //console.log('appointmenttime=>',appointmenttime)
+        var installer_data = {Name:obj[0].installer_name,Phone:obj[0].contact,Address:appointmentAddressnew,AppointmentDateTime:appointmenttime};
+        //console.log('installer_data =>',installer_data)
+        //console.log('installer_data_object =>',obj[0])
+        
+        //append data
+        $('.type_address').html('Ship to a Local Installer :'); 
+        $('.installer_day').html(obj[0].day);
+        $('.installer_date').html(obj[0].date);
+        $('.installer_time').html(obj[0].time);
+        $('.installer_address').html(appointmentAddressnew);
+        $('.installer_tel').html(obj[0].contact);
+        $(".installer_tel").attr("href","tel:"+obj[0].contact);
+        $(".installer_user_name").html(obj[0].installer_name);
+        $('.installer_distance').html(obj[0].distance + ' Away');
+        
+        setTimeout(function(){
+            // Move div
+            $('.optimizedCheckout-orderSummary').append($('.order_Installer'));
+            $('.order_Installer').show();
+        },3000);
+        
+        setTimeout(function(){
+            if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                $('.order_Installer').appendTo('.ReactModalPortal .modalOverlay');
+            }
+            $('.order_Installer').show();
+        },3000);
+        
+        
+        
+        
+        fetch('/api/storefront/order/{{checkout.order.id}}', {credentials: 'include'})
+        .then(function(response) {
+        return response.json();
+        })
+        .then(function(myJson) {
+            //console.log(myJson.billingAddress);
+            //var final_response = {OrderID:{{checkout.order.id}},FirstName:myJson.billingAddress.firstName,LastName:myJson.billingAddress.lastName,CustomerEmail:myJson.billingAddress.email,CustomerPhone:myJson.billingAddress.phone,Installer:obj[0]};
+            
+            var final_response = {OrderID:{{checkout.order.id}},FirstName:myJson.billingAddress.firstName,LastName:myJson.billingAddress.lastName,CustomerEmail:myJson.billingAddress.email,CustomerPhone:myJson.billingAddress.phone,Installer:installer_data};
+            
+            //console.log('final_response=>',final_response);
+            console.log(final_response);
+            
+            // Installer API 
+            $.ajax({
+               url: 'https://installers.prioritytire.com/ProcessData',
+               type: 'POST',
+               dataType: 'json',
+               //contentType: 'application/json',
+               data:final_response,
+               success: function(data) {
+                   //console.log('Success==>',data);
+                   
+                   // remove cookie
+                   document.cookie = 'appointment_details=; path=/; domain=.prioritytire.com; expires=' + new Date(0).toUTCString();
+                   document.cookie = 'ship_address=; path=/; domain=.prioritytire.com; expires=' + new Date(0).toUTCString();
+                  
+                    
+               },
+                error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                    console.log("Status: " + textStatus); 
+                    console.log("Error: " + errorThrown); 
+                    
+                    // remove cookie
+                    document.cookie = 'appointment_details=; path=/; domain=.prioritytire.com; expires=' + new Date(0).toUTCString();
+                    document.cookie = 'ship_address=; path=/; domain=.prioritytire.com; expires=' + new Date(0).toUTCString();
+                    
+                }   
+           });
+        });
+        
+    }
+   // New installer information End
+   
+});
+
+</script>

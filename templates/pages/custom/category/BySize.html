@@ -1,0 +1,590 @@
+---
+category:
+    shop_by_price: true
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{pagination.category.previous}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{pagination.category.next}}">
+    {{/if}}
+{{/partial}}
+{{#partial "page"}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}{{!--{{#if category.image}} <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage category.image 'zoom_size'}}">{{/if}}{{#unless theme_settings.hide_category_page_heading }}
+<h1 class="page-heading">{{category.name}}</h1>{{/unless}}{{{category.description}}}--}}
+<div class="page CatPage Category-By-Size">
+    <div class="By-Size-Top">
+        <div class="By-Size-inner">
+            <h1>First Select Your Wheel Size</h1>
+            <div class="By-Size-Options">
+                <ul>
+                    <li><a href="javascript:void(0)">13"</a></li>
+                    <li><a href="javascript:void(0)">14"</a></li>
+                    <li><a href="javascript:void(0)">15"</a></li>
+                    <li><a href="javascript:void(0)">16"</a></li>
+                    <li><a href="javascript:void(0)" class="is-active">17"</a></li>
+                    <li><a href="javascript:void(0)">18"</a></li>
+                    <li><a href="javascript:void(0)">19"</a></li>
+                    <li><a href="javascript:void(0)">20"</a></li>
+                    <li><a href="javascript:void(0)">21"</a></li>
+                    <li><a href="javascript:void(0)">22"</a></li>
+                    <li><a href="javascript:void(0)">23"</a></li>
+                    <li><a href="javascript:void(0)">24"</a></li>
+                    <li><a href="javascript:void(0)">25"</a></li>
+                    <li><a href="javascript:void(0)">26"</a></li>
+                    <li><a href="javascript:void(0)">27"</a></li>
+                    <li><a href="javascript:void(0)">28"</a></li>
+                    <li><a href="javascript:void(0)">29"</a></li>
+                    <li><a href="javascript:void(0)">30"</a></li>
+                    <li><a href="javascript:void(0)">31"</a></li>
+                    <li><a href="javascript:void(0)">32"</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="By-Size-Middle">
+        <div class="container">
+            <div class="By-Size-Search-Box">
+                <div class="form"> <span class="Search-Label">SELECT YOUR TIRE SIZE FOR <span class="Search-Value">17"</span> WHEELS</span>
+                    <fieldset class="form-fieldset">
+                        <div class="form-field">
+                            <input class="form-input" id="search_query" placeholder="Type and Search Size…" val="">
+                            <input class="button search_btn" type="submit" value=""> <a href="javascript:void(0)" class="ClearSearch" style="display: none;"></a> </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="by_size_left">
+        <div class="container"> 
+            {{#if category.subcategories}} 
+                <div class="by_size_all_cat"> 
+                    <ul id="category_price_mm" class="cate_13" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '13'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_14" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '14'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_15" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '15'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_16" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '16'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_17"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '17'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_18" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '18'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_19" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '19'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_20" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '20'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_21" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '21'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_22" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '22'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_23" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '23'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_24" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '24'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_25" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '25'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_26" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '26'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_27" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '27'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_28" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '28'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_29" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '29'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_30" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '30'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_31" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '31'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                    <ul id="category_price_mm" class="cate_32" style="display: none;"> 
+                        {{#each category.subcategories}}
+                            {{#if (last name 2) '==' '32'}}
+                                <li name="{{name}}">    
+                                    <div class="by_size_cat_list"> <a href="{{url}}">{{name}}</a> </div> 
+                                </li>
+                            {{/if}}
+                        {{/each}} 
+                    </ul>
+                </div> 
+            {{/if}}
+            <!-- START SKELETONS CODE -->
+            <div class="by-size-skeleton" id="by-size-skeleton">
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="size-wrap">
+                    <div class="size-box"></div>
+                </div>
+                <div class="clear-float"></div>
+            </div>
+            <!-- END SKELETONS CODE -->
+
+        </div>
+    </div> {{> components/common/homepagesection/Support}}</div> {{/partial}}{{> layout/base}}
+
+<script type="text/javascript"> 
+function hideSkeletons(){
+    if(!$){
+        return;
+    }
+    var skeletons = $("#by-size-skeleton");
+    if(skeletons){
+        skeletons.hide();
+    }
+}
+hideSkeletons();
+
+$('.By-Size-Options ul li a').click(function () {
+    $(this).addClass('is-active');
+    $(this).parent().siblings().children().removeClass('is-active');
+    getSize();
+});
+function getSize() {
+    var GetSize = $('.CatPage.Category-By-Size .By-Size-Top .By-Size-inner .By-Size-Options ul li a.is-active').text();
+    var GetSize1 = GetSize.replace('"', '');
+    $('.Search-Value').text(GetSize1 + '"');
+    $('.cate_' + GetSize1).show();
+    $('.cate_' + GetSize1).siblings('ul').hide();
+}
+
+$('.By-Size-Search-Box #search_query').keyup(function () {
+    var get_text, get_cat_name;
+    get_text = $(this).val().toLowerCase();
+    var GetSize = $('.CatPage.Category-By-Size .By-Size-Top .By-Size-inner .By-Size-Options ul li a.is-active').text();
+    var GetSize1 = GetSize.replace('"', '');
+    $('.cate_' + GetSize1 + ' li').each(function () {
+        get_cat_name = $(this).attr('name').toLowerCase();
+        if (get_cat_name.indexOf(get_text) > -1) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    });
+    if (get_text == '') {
+        getSize();
+    }
+});
+$('.By-Size-Search-Box .search_btn').live('click', function () {
+    if ($('.By-Size-Search-Box #search_query').val() == '') {
+        alert('Please enter some keyword');
+    }
+});
+</script>
+<style>
+    .CatBottomStickyBar.hideDesktop {
+        display: none !important;
+    }
+    .footer {
+        margin: 0px;
+    }
+    @media screen and (max-width: 991px){
+        .footer .footerBottom .FooterLeft ul{
+            margin: 0px;
+        }
+        .footer .footerBottom{
+            padding-bottom: 0px;
+        }
+    }
+</style>

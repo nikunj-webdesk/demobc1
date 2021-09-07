@@ -1,0 +1,838 @@
+<div class="container">
+	<div class="productView" {{#if settings.data_tag_enabled}} data-event-type="product" data-entity-id="{{product.id}}" data-name="{{product.title}}" data-product-category="{{#each product.category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{product.brand.name}}" data-product-price="{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}" data-product-variant="single-product-option"{{/if}}>
+		{{#each product.reviews.messages}}
+		{{#if error}}
+		{{> components/common/alert-error error}}
+		{{/if}}
+		{{#if success}}
+		{{> components/common/alert-success success}}  
+		{{/if}}
+		{{/each}}
+		<section class="productView-images" data-image-gallery>
+			{{#each product.custom_fields}}
+			{{#if name '===' 'Badge'}}
+			<span class="Sale-Badge">{{{value}}}</span>
+			{{/if}}
+			{{/each}}
+
+			<div style="display:none;" class="mobile_pro_slider"> 
+				<div class="mobile_slider_inner">
+					<ul class="main_img_slider" data-slick='{
+						"infinite": false,
+						"mobileFirst": true,
+						"speed": 800,
+						"dots": false,
+						"arrows": true,
+						"slidesToShow": 1,
+						"slidesToScroll": 1
+					}'>
+					{{#if product.main_image}}
+						{{#each product.images}}
+						<li>
+							<img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage this 'product_size' (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
+						</li>
+						{{/each}}
+					{{else}}
+						<li>
+							<img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage this 'product_size' (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
+						</li>
+					{{/if}}
+				</ul>
+			</div>
+		</div>
+		<figure class="productView-image"
+		data-image-gallery-main
+		{{#if product.main_image}}
+		data-zoom-image="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}"
+		{{/if}}
+		>
+			<div class="productView-img-container">
+				{{!-- Remove the surrounding a-element if there is no main image. --}}
+				{{#if product.main_image}}
+				<a href="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}">
+					{{/if}}
+
+					<img class="productView-image--default lazyload"
+					data-sizes="auto"
+					src="{{cdn 'img/loading.svg'}}"
+					data-src="{{getImage product.main_image 'product_size' (cdn theme_settings.default_image_product)}}"
+					alt="{{product.title}}" title="{{product.title}}" data-main-image>
+
+					{{#if product.main_image}}
+				</a>
+				{{/if}}
+			</div>
+		</figure>
+		<ul class="productView-thumbnails"{{#gt product.images.length 5}} data-slick='{
+		"infinite": false,
+		"arrows": false,
+		"mobileFirst": true,
+		"slidesToShow": 5,
+		"slidesToScroll": 1
+		}'{{/gt}}>
+		{{#each product.images}}
+		<li class="productView-thumbnail">
+			<a
+			class="productView-thumbnail-link {{#if @first}}is-active{{/if}}"
+			href="{{getImage this 'product_size' (cdn ../theme_settings.default_image_product)}}"
+			data-image-gallery-item
+			data-image-gallery-new-image-url="{{getImage this 'product_size' (cdn ../theme_settings.default_image_product)}}"
+			data-image-gallery-zoom-image-url="{{getImage this 'zoom_size' (cdn ../theme_settings.default_image_product)}}">
+			<img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage this 'productview_thumb_size' (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}"> 
+		</a>
+		</li>
+		{{/each}}
+		</ul>
+		<div class="ProImageTxt">
+			<p>*Rim {{#if (limit product.sku 2) '===' 'NA'}}<b>INCLUDED</b>{{else}}<b>NOT INCLUDED</b>{{/if}}</p>
+			<p>*Tread pattern may vary from pictures</p>
+		</div>
+		</section>
+		<div class="ProRight">
+			<div class="productView-details">
+				<div class="productView-product">
+				<div class="ProRightLeft">
+					<div class="Compatible_Mn" style="display: none;"><p><span>COMPATIBLE</span> with your 2017 BMW M5 BASE</p></div>
+					<section>
+							{{!-- {{#each product.custom_fields}}
+							{{#if name '===' 'BC Condition'}}
+							<div class="Tire-Badge-outer Prod_{{snakecase (lowercase value)}}">
+								<span class="Tire-Badge">{{{value}}} Tire</span>
+							</div>
+							{{/if}}
+							{{/each}} --}}
+							{{#if product.brand}}
+							<h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
+								<a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span {{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
+							</h2>
+							{{/if}}
+							<h1 class="productView-title" {{#if schema}}itemprop="name"{{/if}}>{{#each product.custom_fields}}{{#if name '===' 'BC Condition'}}{{#if (lowercase value) '===' 'used'}}Used{{/if}}{{/if}}{{/each}} {{product.brand.name}} {{#each product.custom_fields}}{{#if name '===' 'Model'}}{{{value}}}{{/if}}{{/each}}</h1>
+							{{!--<span class="product-sku">
+								{{#each product.custom_fields}}{{#if name '===' 'Fitment Type'}}{{#or (if value '===' '') (if value '===' 'N/A') (if value '===' 'null')}}{{else}}{{{value}}} {{/or}}{{/if}}{{/each}}{{#each product.custom_fields}}{{#if name '===' 'Size'}}{{{value}}},{{/if}}{{/each}}{{#each product.custom_fields}}{{#if name '===' 'Load Index and Speed Rating'}} {{{value}}}{{/if}}{{/each}}{{#each product.custom_fields}}{{#if name '===' 'Load Range'}}, {{{value}}}{{/if}}{{/each}}
+							</span> --}}
+							<div class="size-dropdown">
+								<form action="/action_page.php">
+								  <select name="size" id="size">
+									<option value="267/70R17">267/70R17</option>
+									<option value="267/70R18">267/70R18</option>
+									<option value="267/70R19">267/70R19</option>
+									<option value="267/70R20">267/70R20</option>
+								  </select>
+								</form>
+								<span class="size-bottom">{{#each product.custom_fields}}{{#if name '===' 'Fitment Type'}}{{#or (if value '===' '') (if value '===' 'N/A') (if value '===' 'null')}}{{else}}{{{value}}} {{/or}}{{/if}}{{/each}}{{#each product.custom_fields}}{{#if name '===' 'Load Index and Speed Rating'}} {{{value}}}{{/if}}{{/each}}{{#each product.custom_fields}}{{#if name '===' 'Load Range'}}, {{{value}}}{{/if}}{{/each}}</span>
+								<p class="AllSizeLink"><a href="javascript:void(0);">View all 267/70R17 Tires</a></p>
+							</div>
+							<div class="productView-rating"{{#if product.num_reviews '>' 0}}{{#if schema}} itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"{{/if}}{{/if}}>
+								{{#if settings.show_product_rating}}
+								{{#if product.num_reviews '>' 0}}
+								{{#if schema}}
+								<meta itemprop="ratingValue" content="{{product.rating}}">
+								<meta itemprop="ratingCount" content="{{product.num_reviews}}">
+								<meta itemprop="reviewCount" content="{{product.num_reviews}}">
+								{{/if}}
+								{{/if}}
+								{{> components/products/ratings rating=product.rating}}
+								<span class="productView-reviewLink">
+									{{#if product.num_reviews '>' 0}}
+									<a href="{{product.url}}#product-reviews">
+										{{lang 'products.reviews.link_to_review' total=product.num_reviews}}
+									</a>
+									{{else}}
+									No Reviews Yet
+									{{/if}}
+								</span>
+								{{/if}}
+								<div class="yotpo bottomLine" data-product-id="{{ product.id }}"></div> 
+							</div>
+							<div class="BelowProductName">
+								<div class="Left">
+									<div class="Icon-Air-Pressure-Passed">
+										<ul class="ppIcons">
+											{{#each product.custom_fields}}
+											{{#if name '===' 'Season'}}
+												{{#if value '===' 'All Season'}}
+												<li>
+													<span class="CustomLabel"><img src="{{cdn 'webdav:all-seasons-new.svg'}}" alt="{{value}}"></span>
+													<span>{{{value}}}</span>
+												</li>
+												{{/if}}
+												{{#if value '===' 'Summer'}}
+													<li>
+														<span class="CustomLabel"><img src="{{cdn 'webdav:tire-list-summer.svg'}}" alt="{{value}}"></span><span>{{{value}}}</span> 
+													</li>
+												{{/if}} 
+												{{#if value '===' 'Winter'}}
+													<li>
+														<span class="CustomLabel"><img src="{{cdn 'webdav:winter_new.svg'}}" alt="{{value}}"></span>
+														<span>{{{value}}}</span>
+													</li>
+												{{/if}}
+											{{/if}}
+											{{/each}}
+											{{#each product.custom_fields}}
+            									{{#if name '===' 'Performance'}}
+            										<li class="Performance-Result">
+            											{{#if value '===' 'All Terrain'}}
+            												<img src="{{cdn 'webdav:all_terrain_new.svg'}}" alt="All Terrain">
+            											{{/if}}
+            											{{#if value '===' 'Highway'}}
+            												<img src="{{cdn 'webdav:highway-new.svg'}}" alt="Highway">
+            											{{/if}}
+            											{{#if value '===' 'Mud Terrain'}}
+            												<img src="{{cdn 'webdav:tier-mud-terrain-new.svg'}}" alt="{{value}}">
+            											{{/if}}
+            											{{#if value '===' 'Touring'}}
+            												<img src="{{cdn 'webdav:touring-new.svg'}}" alt="Touring">
+            											{{/if}}
+            											{{#if value '===' 'High Performance'}}
+            												<img src="{{cdn 'webdav:high_performance_new.svg'}}" alt="High Performance">
+            											{{/if}}
+            											{{#if value '===' 'Performance'}}
+            												<img src="{{cdn 'webdav:performance-new.svg'}}" alt="Performance">
+            											{{/if}}
+            											{{#if value '===' 'Rugged Terrain'}}
+            												<img src="{{cdn 'webdav:rugged-terrain-outlined.svg'}}" alt="Performance">
+            											{{/if}}
+            											<span>{{{value}}}</span>
+            										</li>
+            									{{/if}}
+            							    {{/each}}
+											{{#each product.custom_fields}}
+											{{#if name '===' 'Treadlife'}}
+											<li class="Warranty-Result">
+											    {{#if value '===' 'N/A'}}
+								                {{else}}
+												<span class="CustomLabel"><img src="{{cdn 'webdav:tire-list-treadlife-new.svg'}}" alt="{{value}}"></span>
+												<span>{{{value}}}</span>
+												{{/if}}
+											</li>
+											{{/if}}
+											{{/each}}
+											{{#each product.custom_fields}}
+											{{#if name '===' 'Free Road Hazard'}}
+											{{#if (lowercase value) '===' 'yes'}}
+    											<div class="Free-Road-Hazard-Result">
+    												<a href="/manufacturer-free-road-hazard/" target="_blank"><span class="CustomLabel"><img src="{{cdn 'webdav:Free-Road-Hazard.svg'}}" alt="{{value}}">Free Road Hazard</span></a>
+    											</div>
+    										{{/if}}	
+											{{/if}} 
+											{{/each}}
+											{{!-- {{#each product.custom_fields}}
+											{{#if name '===' 'Performance'}}
+											<li class="Performance-Result">
+												<span class="Performance_mob_Lable CustomLabel">Performance:</span>
+												<span><strong>{{{value}}}</strong></span>
+											</li>
+											{{/if}}
+											{{/each}} 
+											{{#each product.custom_fields}}
+											{{#if name '===' 'Speed Rating Description'}}
+											<li class="Tire-List-Speed">
+												<span class="CustomLabel">Speed Rated up to:</span>
+												<span><strong>{{{value}}}</strong></span>
+											</li>
+											{{/if}}
+											{{/each}}
+											{{#each product.custom_fields}}
+											{{#if name '===' 'Load Range'}}
+											<li class="Tire-List-Load-Range">
+												<span class="CustomLabel">Load Range:</span>
+												<span><strong>{{{value}}}</strong></span>
+											</li>
+											{{/if}}
+											{{/each}} --}}
+											
+											{{!--
+											{{#each product.custom_fields}}
+											{{#if name '===' 'Type'}}
+											{{#if value '===' 'Passenger'}}
+											<li><img src="{{cdn 'webdav:passenger.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'Truck/SUV'}}
+											<li><img src="{{cdn 'webdav:truck-suv-pp.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'Light Truck'}}
+											<li><img src="{{cdn 'webdav:light-truck.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'Commercial'}}
+											<li><img src="{{cdn 'webdav:commercial.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'Trailer'}}
+											<li><img src="{{cdn 'webdav:trailer.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'Lawn Mower'}}
+											<li><img src="{{cdn 'webdav:lawn-mower-garden-tractor.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'Racing'}}
+											<li><img src="{{cdn 'webdav:racing.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'Gold Cart'}}
+											<li><img src="{{cdn 'webdav:gold-cart-tires.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'Farm Tractor'}}
+											<li><img src="{{cdn 'webdav:farm-tractor.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'Industrial'}}
+											<li><img src="{{cdn 'webdav:Industrial.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'Motorcyle'}}
+											<li><img src="{{cdn 'webdav:Motorcyle.svg'}}"><span>{{{value}}}</span></li>
+											{{/if}}
+											{{#if value '===' 'ATV & UTV'}}
+											<li><img src="{{cdn 'webdav:atv-utv.svg'}}"><span>{{{value}}}</span></li> 
+											{{/if}}
+											{{/if}}
+											{{/each}} --}}
+										</ul>
+										{{#each product.custom_fields}}
+										{{#if name '===' 'BC Condition'}}
+										{{#or (if (lowercase value) '===' 'used') (if (lowercase value) '===' 'take off')}}
+										<div class="Air-Pressure">
+											<span>Air & Pressure Tested - Passed!</span> 
+										</div>
+										{{/or}}
+										{{/if}}
+										{{/each}}
+									</div>
+									{{!-- <div class="Bottom-Card-Left">
+										<ul>
+											<li style="{{#each product.custom_fields}}{{#if name '===' 'BC Condition'}}{{#or (if (lowercase value) '===' 'used') (if (lowercase value) '===' 'take off')}}{{else}}display: none;{{/or}}{{/if}}{{/each}}">
+												{{#each product.custom_fields}}
+												{{#if name '===' 'Tread Depth'}}
+												<ul>
+													<li class="Tread-Depth">
+														<img src="{{cdn 'webdav:tread-depth.svg'}}">
+														<span>{{{value}}} Tread Depth</span>
+													</li>
+												</ul>
+												{{/if}}
+												{{/each}}
+											</li>
+											<li style="{{#each product.custom_fields}}{{#if name '===' 'BC Condition'}}{{#or (if (lowercase value) '===' 'used') (if (lowercase value) '===' 'take off')}}{{else}}display: none;{{/or}}{{/if}}{{/each}}">{{#each product.custom_fields}}{{#if name '===' 'Tread Remaining'}}{{#if value '===' 'N/A'}}{{else}}<ul><li class="Tread-Life">About {{{value}}} of Tread Life Left</li></ul> {{/if}}{{/if}}{{/each}}</li>
+											<li style="{{#each product.custom_fields}}{{#if name '===' 'BC Condition'}}{{#or (if (lowercase value) '===' 'new')}}{{else}}display: none;{{/or}}{{/if}}{{/each}}">{{#each product.custom_fields}}{{#if name '===' 'Treadlife'}}{{#if value '===' 'N/A'}}{{else}}<ul><li class="Tread-Life no_bg"><img src="{{cdn 'webdav:warranty-miles.svg'}}" alt="{{value}} Tread Depth"><span>{{{value}}}</span></li></ul> {{/if}}{{/if}}{{/each}}</li>
+
+										</ul>
+									</div> --}}
+								</div>
+								
+							</div>
+					</section>
+				</div>
+				<div class="ProRightRight BelowProductName">
+					<div class="BelowProductName">
+						<div class="Right">
+							<div class="ProLogMemberinner">
+								<div class="LoginClubMSG">
+									{{#if customer}}
+										<h4 class="MSGHead">Special Member<br> Only Price</h4>
+									{{else}}
+										<h4 class="MSGHead"><a href="##" data-reveal-id="popupLoginWindow">Log in</a> or <a href="/login.php?action=create_account">Join the Club</a> to Get Member Pricing</h4>
+									{{/if}}
+								</div>
+								<div class="LoginClubMSGOuter">
+									<div class="productView-price{{#if customer}} AfterLogin{{/if}}">
+										{{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+										{{> components/products/price-product price=product.price schema_org=schema}}
+										{{else}}
+										{{> components/common/login-for-pricing}}
+										{{/or}}
+									</div>	
+									<div class="productView-options">
+										{{#if product.release_date }}
+										<p>{{product.release_date}}</p>
+										{{/if}}
+										<form class="form" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
+										data-cart-item-add>
+											<input type="hidden" name="action" value="add">
+											<input type="hidden" name="product_id" value="{{product.id}}"/>
+											<div data-product-option-change style="display:none;">
+												{{#each product.options}}
+												{{{dynamicComponent 'components/products/options'}}}
+												{{/each}}
+											</div>
+											{{#if product.stock_level '>' 0}}
+											<div class="form-field form-field--increments {{#if product.stock_level '==' 2}}BlurredQty{{/if}} {{#or (if (toLowerCase (first product.sku 2)) '===' 'nl') (if (toLowerCase (first product.sku 3)) '===' 'lft') (if (toLowerCase (first product.sku 3)) '===' 'nla')}}minimumQTY{{/or}}">
+												<div class="card_qty" name="{{id}}" data-stock="{{product.stock_level}}">
+                                                <select id="qty[]" name="qty[]">
+                                                    <option value="1" {{#if product.stock_level '===' 1}}selected{{/if}}>1</option>
+                                                    <option value="2" {{#if product.stock_level '===' 2}}selected{{/if}}>2</option>
+                                                    <option value="3" {{#if product.stock_level '===' 3}}selected{{/if}}>3</option>
+                                                    <option value="4" {{#or (if product.stock_level '>' 3) (if (toLowerCase (first product.sku 2)) '===' 'nl') (if (toLowerCase (first product.sku 3)) '===' 'lft') (if (toLowerCase (first product.sku 3)) '===' 'nla')}}selected{{/or}}>4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                </select>
+									            </div>
+											</div>
+											{{/if}}
+											{{#if product.can_purchase}}
+											{{> components/products/add-to-cart}}
+											{{/if}}
+											{{#if product.out_of_stock}}
+											{{#if product.out_of_stock_message}}
+											{{> components/common/alert-error product.out_of_stock_message}}
+											{{else}}
+											{{> components/common/alert-error (lang 'products.sold_out')}}
+											{{/if}}
+											{{/if}}
+										</form>
+									</div>
+									{{#if product.stock_level '>' 0}}
+									{{#if product.stock_level '<' 10}} 
+										{{#if product.stock_level '==' 2}}
+										<div class="stock_level Must-Purchased-Btn QtyTxtCp">Must be purchased as set of {{product.stock_level}}</div> 
+										{{else if product.stock_level '==' 4}}
+										<div class="stock_level Must-Purchased-Btn QtyTxtCp">Must buy in increments of 2</div>
+										{{else if product.stock_level '==' 1}}
+										<div class="stock_level Must-Purchased-Btn QtyTxtCp">Must by as a single</div>
+										{{else}} 
+										<div class="stock_level Low-Stock-Btn">Low Stock ({{product.stock_level}})</div>
+										{{/if}}
+									{{else}}      
+										<div class="stock_level In-Stock-Btn">In Stock (10+)</div>
+									{{/if}}
+									{{/if}}
+								</div>
+							</div>
+							<div class="Risk-Paypal-Img-Credit">
+								<img src="/content/Risk_buying.png" alt=""/>
+							</div>
+							<div class="FedxImg">
+								<img src="/content/free-shipping.svg" alt="Free Shipping">
+							</div>
+						</div>
+						{{{region name="product_below_price"}}}
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pro_static_banner">
+	<div class="container">
+		<h3 class="hideDesktop">Why Buy From Us</h3>
+		<ul>
+			<li><a href="javascript:void(0)" data-reveal-id="Fast-Free-Shipping"><img src="/content/fast-free-shipping.svg" alt="Free Shipping on all Orders"/><span>Fast & Free Shipping</span></a>
+			<div id="Fast-Free-Shipping" class="modal Fast-Free-Shipping" data-reveal>
+                <div class="modal-header">
+                    <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+                        <span aria-hidden="true"></span> 
+                    </a>
+                </div>
+                <div class="modal-body">
+                <div class="TopBarMenu hideDesktop">
+                	<h3>Why Buy From Us</h3><a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button"><span>Close</span></a>
+                </div>    
+                <div class="Header_title"><h3>Fast & Free Shipping</h3></div>  
+                    <div class="Fast-Free-Popup">
+                        <p>We understand that our customers live busy lives and can’t wait for packages that take weeks to arrive. That’s why we provide fast and FREE shipping and delivery for all of our customers.</p><p>Orders placed before 1 PM EST, will be shipped out the same day. The delivery time depends on your location. We ensure that all orders are shipped out in a timely manner and are working diligently at getting your orders to you as soon as possible with FedEx Home Delivery and FedEx Ground.</p>
+                        <ul>
+                            <li>FREE and FAST shipping in the 48 contiguous states</li>
+                            <li>FedEx Home Delivery and FedEx Ground</li>
+                            <li>Delivery between 2-6 business days</li>
+                            <li>SAME DAY shipping of order placed before the cut-off time</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+			</li>
+			<li><a href="javascript:void(0)" data-reveal-id="Money-Back-Guarantee"><img src="/content/90-days-money-back.svg" alt="90 Day Money Back Guarantee on all orders"/><span>90 Days Money Back Guarantee</span></a>
+			<div id="Money-Back-Guarantee" class="modal Fast-Free-Shipping" data-reveal>
+                <div class="modal-header">
+                    <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+                        <span aria-hidden="true"></span> 
+                    </a>
+                </div>
+                <div class="modal-body">
+                <div class="TopBarMenu hideDesktop">
+                	<h3>Why Buy From Us</h3><a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button"><span>Close</span></a>
+                </div>    
+                <div class="Header_title"><h3>90 Day Money Back Guarantee</h3></div>  
+                    <div class="Fast-Free-Popup">
+                        <p>We at Priority Tire stand behind our products. We are confident in the quality of our tires. We provide a 90 day money back guarantee with all purchases. No hassle and free returns.</p><p>If you have any issue with your purchase, just contact us and we will resolve it for you! We can be reached at 866-440-0177 or at info@prioritytire.com. You can also chat with one of our representatives on the website.</p>
+                        <ul>
+                            <li>No Hassle - FREE Returns</li>
+                            <li>Fast response from customer support</li>
+                            <li>Safety-inspected products</li>
+                            <li>Quick and satisfactory solutions to problems </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+			</li>
+			<li><a href="javascript:void(0)" data-reveal-id="Risk-Free-Buying"><img src="/content/risk-free.svg" alt="Risk Free Buying"/><span>Risk Free Buying No Hassle Returns</span></a>
+			<div id="Risk-Free-Buying" class="modal Fast-Free-Shipping" data-reveal>
+                <div class="modal-header">
+                    <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+                        <span aria-hidden="true"></span> 
+                    </a>
+                </div>
+                <div class="modal-body">
+                <div class="TopBarMenu hideDesktop">
+                	<h3>Why Buy From Us</h3><a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button"><span>Close</span></a>
+                </div>    
+                <div class="Header_title"><h3>Risk Free Buying No Hassle Returns</h3></div>  
+                    <div class="Fast-Free-Popup">
+                        <p>Ordered the wrong size? The incorrect model? You no longer have use for them? These issues won’t be a problem anymore! We offer a hassle-free return process with all orders. Unused and unmounted tires can be returned for a replacement or refund!</p><p>Contact our Customer Service Office for more details at 866-440-0177 or send us an email to info@prioritytire.com! Please state your intention for a return and our representatives will be able to help you out in a timely and efficient manner.</p>
+                        <ul>
+                            <li>Consumer-friendly return policy</li>
+                            <li>No Hassle and Free Returns</li>
+                            <li>Risk free online purchases</li>
+                            <li>Easily accessible customer support</li>
+                            <li>Efficient resolutions to problems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+			</li>
+			<li><a href="javascript:void(0)" data-reveal-id="Lowest-Price-Large"><img src="/content/lowest-price.svg" alt="Lowest Price Guarantee"/><span>Lowest Price & Large Selection</span></a>
+			<div id="Lowest-Price-Large" class="modal Fast-Free-Shipping" data-reveal>
+                <div class="modal-header">
+                    <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+                        <span aria-hidden="true"></span> 
+                    </a>
+                </div>
+                <div class="modal-body">
+                <div class="TopBarMenu hideDesktop">
+                	<h3>Why Buy From Us</h3><a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button"><span>Close</span></a>
+                </div>    
+                <div class="Header_title"><h3>Lowest Price & Large Selection</h3></div>  
+                    <div class="Fast-Free-Popup">
+                        <p>Our company offers a wide range of tires at the best prices available. From the smallest lawn mower to the largest commercial truck, we supply all types of tires in various sizes. This allows you to find the perfect match for your vehicle in our selection of tire models.</p><p>Our large selection of tire models and sizes are offered at the lowest possible prices available on the market. We keep our prices at a competitive rate, which ensures our customers are getting excellent value for their money with each purchase.</p>
+                        <ul>
+                            <li>Versatile range of products</li>
+                            <li>Lowest prices on the market</li>
+                            <li>Extensive selection of tires</li>
+                            <li>Competitive price rates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="ProStickyBar">
+	<div class="container">
+		<h3 class="hideDesktop">More about this Tire</h3>
+		<ul>
+			<li class="is-active"><a href="javascript:void(0)" name="ProSpecifications" class="tabNav">Tire Specifications & Details</a></li>
+
+			<li class="hideDesktop"><a href="javascript:void(0)" name="ProDescription1" class="tabNav">Description</a></li>
+			<li><a href="javascript:void(0)" name="ProReviews" class="tabNav">Reviews</a></li>
+			<li><a href="javascript:void(0)" name="ProShipping" class="tabNav">Shipping Information</a></li>
+			<li><a href="javascript:void(0)" name="ProCompatible" class="tabNav">Compatible Vehicles</a></li>
+			<li class="hideDesktop"><a href="javascript:void(0)" name="SimilarTires" class="tabNav">SIMILAR TIRES</a></li>
+			{{#if product.out_of_stock}}
+			{{else}}
+			<li class="Sticky-Add" style="display:none;"><a href="javascript:void(0)" class="CustomProAdd"><span>Add to cart</span></a></li>
+			{{/if}}
+		</ul>
+	</div>
+</div>
+<div class="SpecificationsDetails ProDes" id="ProSpecifications">
+	<div class="container">
+		<div class="ProSpecifications">
+			<h3>Tire Specifications</h3>
+			<div class="SpecificationsList {{#each product.custom_fields}}{{#if name '===' 'Type'}}{{#or (if (lowercase value) '===' 'commercial')}}{{else}}comyes{{/or}}{{/if}}{{/each}}">
+				<ul>
+					<li>
+						{{#if product.sku}}
+						<span class="ctm_lable">SKU</span>
+						<span class="ctm_value">{{product.sku}}</span>
+						{{/if}}
+					</li>
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Season'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each custom_fields}}
+					{{#if name '===' 'Sidewall'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Type'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Aspect Ratio'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'UPC/EAN'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Year'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Size'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Load Range'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#if product.brand}}
+					<li>
+						<span class="ctm_lable">Brand</span>
+						<span class="ctm_value">{{product.brand.name}}</span>
+					</li>
+					{{/if}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Load Index'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Tread Depth'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Performance'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'UTQG'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Treadlife'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Section Width'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'MPN'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Run Flat'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Model'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Speed Rating'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'ASIN'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Rebate Available'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Rim Diameter'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Overall Diameter'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Production Year (DOT)'}}
+					<li>
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+					{{#if name '===' 'Commercial Type'}}
+					<li class="Commercial-field">
+						<span class="ctm_lable">{{name}}</span>
+						<span class="ctm_value">{{{value}}}</span>
+					</li>
+					{{/if}}
+					{{/each}}
+					{{#each product.custom_fields}}
+						{{#if name '===' 'Country of Origin'}}
+						    {{#if value '===' 'N/A'}}
+						    {{else}}
+									<li>
+                						<span class="ctm_lable">{{name}}</span>
+                						<span class="ctm_value">{{{value}}}</span>
+                					</li>
+							{{/if}}
+							
+						{{/if}}
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+		<div class="ProDescription" {{#if schema}} itemprop="description"{{/if}} id="ProDescription1">
+			<h3>DESCRIPTION</h3> 
+			{{!-- <div class="UsedTakeOff">
+				{{> components/products/usedtakeoffdetails}}
+			</div> --}}
+			<div class="NewWrapMn">
+				<div class="newdetails">
+					<div class="ProDesMn">
+						{{{product.description}}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ProReviews ProDes" id="ProReviews">
+	<div class="container">
+		<h3>Reviews</h3>
+	</div>    
+</div>
+<div class="ProShipping ProDes" id="ProShipping">
+	<div class="container">
+		<h3>Shipping Information</h3>
+		{{!> components/products/usedtakeoffshipping}}
+		{{> components/products/newshipping}} 
+	</div>
+</div>
+{{#each product.custom_fields}}
+{{#if name '===' 'BC Condition'}}
+{{#or (if (lowercase value) '===' 'used') (if (lowercase value) '===' 'take off')}}
+{{> components/products/newvsused}} 
+{{/or}}
+{{/if}}
+{{/each}}
+<div class="ProCompatible ProDes" id="ProCompatible">
+	<div class="container">
+		<h3>Compatible Vehicles</h3>
+		<div class="ProCompatibleWrap"></div>
+		<p><b>IMPORTANT INFORMATION:</b> Please note this is Original Equipment (O.E.) tire size only. The O.E. size is determined by the year, make, model and options of the vehicle. Original Equipment size data is the best information we currently have available to us. Priority Tire LLC is not responsible for fitment errors. The most important aspect of purchasing a tire is its size, which cannot vary. It is buyer's responsibility to verify the tire size information. It is buyer's responsibility to verify whether a specific tire is suitable for a specific vehicle. However, this tire size may be fitted on other vehicles as well. To ensure that you are purchasing the correct tire size for your vehicle, please check the size of your currently mounted tires (locate on the tire's sidewall). The tire's sidewall also features the speed and load rating, indicating the speed and load capacity of the specific tire. The speed and load index can differ from the tires you currently have mounted on your vehicle up to a degree. Please check your vehicle's Owner's Manual or consult with your mechanic regarding the changes of your tire's speed rating and load index. If you have any questions regarding your tire size , speed rating and load index please contact us prior to purchasing and confirm with certified auto technician of any variance in speed and load index and sizes.</p>
+	</div>
+</div>
+{{#each product.custom_fields}}
+{{#if name '===' 'BC Condition'}}
+{{#or (if (lowercase value) '===' 'used') (if (lowercase value) '===' 'take off')}}
+{{> components/products/productdisclosure}} 
+{{/or}}
+{{/if}}
+{{/each}}
+<div id="previewModal" class="modal modal--large" data-reveal>
+	<a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+		<span aria-hidden="true">&#215;</span>
+	</a>
+	<div class="modal-content"></div>
+	<div class="loadingOverlay"></div>
+</div>
+
+<div style="display: none;" id="HazardTxt">Protect your tires with Road Hazard Insurance <span>for only ${{toFixed (divide product.price.without_tax.value 10) 2}} each ({{product.price.without_tax.formatted}})</div>

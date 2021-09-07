@@ -1,0 +1,82 @@
+<div class="account--fixed SimilarTires ProDes">
+    <ul class="productGrid productCarousel">
+        {{#each wishlist.items}}
+        <li class="product productCarousel-slide">
+            {{> components/products/card-regular settings=../settings show_compare=../show_compare show_rating=../settings.show_product_rating theme_settings=../theme_settings customer=../customer event=../event position=(add @index 1)}}
+            
+            {{#if ../show_remove}}
+                <form action="{{remove_url}}" class="form" method="post">
+                    <input type="submit" class="button button--primary button--small" value="{{lang 'account.wishlists.remove_item'}}" />
+                </form>
+            {{/if}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<style>
+.SimilarTires.ProDes .productCarousel{
+    margin: 0 -15px;
+}
+.SimilarTires.ProDes .productCarousel .productCarousel-slide{
+    width: 25%;
+    float: left;
+    padding: 0 15px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-figure{
+    border:1px solid #d3d3d3;
+    height: 239px;
+    width: 100%;
+    display: table;
+    margin: 0 0 10px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-figure a{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-img-container:after{
+    display: none;
+}
+.SimilarTires.ProDes .productCarousel .productCarousel-slide .card-image{
+    position: static;
+    max-height: 237px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body{
+    padding: 0px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-title{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0 0 5px;
+    height: 48px;
+    overflow: hidden;
+}
+
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-title a{
+    color: #242424;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-text{
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    margin: 0px;
+    color:#1a9eca;
+}
+@media only screen and (max-width: 990px) {
+    .SimilarTires.ProDes .productCarousel .productCarousel-slide{
+        width: 33.33%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .SimilarTires.ProDes .productCarousel .productCarousel-slide{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 479px) {
+    .SimilarTires.ProDes .productCarousel .productCarousel-slide{
+        width: 100%;
+    }
+} 
+</style>

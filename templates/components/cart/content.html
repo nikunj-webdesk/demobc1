@@ -1,0 +1,163 @@
+<table class="cart" data-cart-quantity="{{cart.quantity}}">
+    <thead class="cart-header" style="display:none;">
+        <tr>
+            <th class="cart-header-item" colspan="2">{{lang 'cart.checkout.item'}}</th>
+            <th class="cart-header-item">{{lang 'cart.checkout.price'}}</th>
+            <th class="cart-header-item cart-header-quantity">{{lang 'cart.checkout.quantity'}}</th>
+            <th class="cart-header-item">{{lang 'cart.checkout.total'}}</th>
+        </tr>
+    </thead>
+    <tbody class="cart-list">
+        {{#each cart.items}}
+            <tr class="cart-item" data-item-row data-product-url="{{url}}?sku={{sku}}">
+                <td class="cart-item-block cart-item-figure">
+                    {{#if type '==' 'GiftCertificate'}}
+                        <img class="cart-item-fixed-image lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{cdn ../../theme_settings.default_image_gift_certificate}}" alt="GiftCertificate" title="GiftCertificate">
+                    {{else}}
+                        <img class="cart-item-image lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productthumb_size' (cdn ../../theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
+                    {{/if}}
+                </td>
+                <td class="cart-item-block cart-item-title">
+                    {{#if brand.name}}
+                        <p class="cart-item-brand">{{brand.name}}</p> 
+                    {{/if}}
+                    <h4 class="cart-item-name"><a href="{{url}}">{{#each custom_fields}}{{#if name '===' 'BC Condition'}}{{#if (lowercase value) '===' 'used'}}Used{{/if}}{{/if}}{{/each}} {{brand.name}} {{#each custom_fields}}{{#if name '===' 'Model'}}{{{value}}}{{/if}}{{/each}}</a></h4>
+                    <span class="product-sku">
+                    {{#each custom_fields}}{{#if name '===' 'Size'}}{{{value}}}, {{/if}}{{/each}}{{#each custom_fields}}{{#if name '===' 'Load Index and Speed Rating'}}{{{value}}}{{/if}}{{/each}}{{#each custom_fields}}{{#if name '===' 'Load Range'}}, {{{value}}}{{/if}}{{/each}}
+                    </span>
+                    {{#if release_date}}
+                        <p>({{release_date}})</p>
+                    {{/if}}
+
+                    {{#if options}}
+                        <dl class="definitionList">
+                            {{#each options}}
+                                <dt class="definitionList-key">{{name}}:</dt>
+                                <dd class="definitionList-value">
+                                    {{#if is_file}}
+                                        <a href="/viewfile.php?attributeId={{../id}}&cartitem={{../../id}}">{{value}}</a>
+                                    {{else}}
+                                        {{value}}
+                                    {{/if}}
+                                </dd>
+                            {{/each}}
+                        </dl>
+
+                        <a href="#" data-item-edit="{{id}}">{{lang 'cart.checkout.change'}}</a>
+                    {{/if}}
+
+                    {{#if type '==' 'GiftCertificate'}}
+                        <a href="{{edit_url}}">{{lang 'cart.checkout.change'}}</a>
+                    {{/if}}
+                    {{> components/cart/item-giftwrap this}}
+                    {{#if event_date}}
+                        <dl class="cart-item-options">
+                            <dt class="cart-item-option-title">
+                                {{event_date.name}}
+                            </dt>
+
+                            <dd class="cart-item-option-description">
+                                {{event_date.date}}
+                            </dd>
+                        </dl>
+                    {{/if}}
+                    {{# if can_modify}}
+                        <a class="cart-remove icon" data-cart-itemid="{{id}}" href="#" data-confirm-delete="{{lang 'cart.confirm_delete'}}">
+                            <svg><use xlink:href="#icon-close"></use></svg>
+                        </a>
+                    {{else}}
+                        {{#if type '==' 'GiftCertificate'}}
+                            <a class="cart-remove icon" data-cart-itemid="{{id}}" href="#" data-confirm-delete="{{lang 'cart.confirm_delete'}}">
+                                <svg><use xlink:href="#icon-close"></use></svg>
+                            </a>
+                        {{/if}}
+                    {{/if}}
+                </td>
+                <td class="cart-item-block cart-item-info">
+                    <span class="PerTire">Per Tire</span>
+                    {{#or ../customer (if ../theme_settings.restrict_to_login '!==' true)}}
+                        <span class="cart-item-value {{#if price_discounted}}price--discounted{{/if}}">{{price.formatted}}</span>
+                        {{#if price_discounted}}
+                            <span class="cart-item-value">{{price_discounted.formatted}}</span>
+                        {{/if}}
+                    {{else}}
+                        {{> components/common/login-for-pricing}}
+                    {{/or}}
+
+                    <span class="TotalFor">Total for {{quantity}} = </span>
+                    {{#or ../customer (if ../theme_settings.restrict_to_login '!==' true)}}
+                        <strong class="cart-item-value {{#if total_discounted}}price--discounted{{/if}}">{{total.formatted}}</strong>
+                        {{#if total_discounted}}
+                            <strong class="cart-item-value">{{total_discounted.formatted}}</strong>
+                        {{/if}}
+                    {{else}}
+                        {{> components/common/login-for-pricing}}
+                    {{/or}}
+                </td>
+                <td class="cart-item-block cart-item-info cart-item-quantity">
+                    <div class="form-increment">
+                        {{# if can_modify}}
+                            <button class="button button--icon" data-cart-update data-cart-itemid="{{id}}" data-action="dec">
+                                <span class="is-srOnly">{{lang 'products.quantity_decrease'}}</span>
+                                <i class="icon" aria-hidden="true"></svg></i>
+                            </button>
+                        {{/if}}
+                        <input class="form-input form-input--incrementTotal cart-item-qty-input"
+                            id="qty-{{id}}"
+                            name="qty-{{id}}"
+                            type="tel"
+                            value="{{quantity}}"
+                            data-quantity-min="{{#or (if (toLowerCase (first sku 2)) '===' 'nl') (if (toLowerCase (first sku 3)) '===' 'lft') (if (toLowerCase (first sku 3)) '===' 'nla')}}4{{else}}{{min_purchase_quantity}}{{/or}}"
+                            data-quantity-max="{{max_purchase_quantity}}"
+                            data-quantity-min-error="{{#or (if (toLowerCase (first sku 2)) '===' 'nl') (if (toLowerCase (first sku 3)) '===' 'lft') (if (toLowerCase (first sku 3)) '===' 'nla')}}{{lang 'products.quantity_min' quantity=4}}{{else}}{{lang 'products.quantity_min' quantity=min_purchase_quantity}}{{/or}}"
+                            data-quantity-max-error="{{lang 'products.quantity_max' quantity=max_purchase_quantity}}"
+                            min="1"
+                            pattern="[0-9]*"
+                            data-cart-itemid="{{id}}"
+                            data-action="manualQtyChange"
+                            aria-live="polite"{{#unless can_modify}} disabled{{/unless}}>
+                        {{# if can_modify}}
+                            <button class="button button--icon" data-cart-update data-cart-itemid="{{id}}" data-action="inc">
+                                <span class="is-srOnly">{{lang 'products.quantity_increase'}}</span>
+                                <i class="icon" aria-hidden="true"></i>
+                            </button>
+                        {{/if}}
+                    </div>
+                    <span class="stock_level Must-Purchased-Btn" style="display: none">1</span>
+                    <span class="stock_level Low-Stock-Btn" style="display: none">1</span>
+                    <span class="stock_level In-Stock-Btn" style="display: none">1</span>
+                </td>
+                {{#if options}}
+                <td class="cart-item-block cart-item-info Hazard-Insurance">
+                    <form action="cart.php" enctype="multipart/form-data" method="post">
+                        <input type="hidden" name="action" value="EditProductFieldsInCart">
+                        <input type="hidden" name="item_id" value="{{id}}">
+                        <input type="hidden" name="attribute[113]" value="99">
+                        <input class="form-checkbox HazardInput" type="checkbox" name="attribute[113]" id="HazardInsurance-{{id}}" value="98" {{#each options}}{{#if name '==' 'Road Hazard Insurance'}}{{#if value '==' 'Yes'}} checked {{/if}}{{/if}}{{/each}}>
+                        {{#each options}}
+                            {{#if name '==' 'Road Hazard Insurance'}}
+                                {{#if value '==' 'Yes'}} 
+                                    <label class="form-label optionSelected" for="HazardInsurance-{{../../../id}}">Protect your tires with Road Hazard Insurance <span>for only ${{toFixed (divide ../../../price.value 10) 2}} each ({{../../../price.formatted}})</span></label>
+                                    <script>
+                                    var HazardTxt = $('[for="HazardInsurance-{{../../../id}}"]');
+                                        $.ajax({
+                                            type: "GET",
+                                            url: "{{../../../../url}}",
+                                            success:function(ProData){
+                                                $(HazardTxt).html($(ProData).find('#HazardTxt').html()); 
+                                            }
+                                        });
+                                    </script> 
+                                {{else}}
+                                    <label class="form-label " for="HazardInsurance-{{../../../id}}">Protect your tires with Road Hazard Insurance <span>for only ${{toFixed (divide ../../../price.value 10) 2}} each ({{../../../price.formatted}})</span></label>
+                                {{/if}}
+                            {{/if}}
+                        {{/each}}
+                    </form>
+                </td>
+                {{/if}}
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{{ remote_api_scripts }}} 

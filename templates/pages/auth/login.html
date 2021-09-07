@@ -1,0 +1,72 @@
+{{#partial "page"}}
+<div class="login">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <div class="container">
+        <h1 class="page-heading">{{lang 'login.heading' }}</h1>
+    </div>
+    <div class="login-row">
+        {{#if forms.login.error}}
+            {{> components/common/alert-error forms.login.error}}
+        {{/if}}
+        {{#if forms.login.success}}
+            {{> components/common/alert-success forms.login.success}}
+        {{/if}} 
+        <div class="inner"> 
+        <div class="Login-Left">
+            <form class="login-form form" action="{{urls.auth.check_login}}" method="post">
+                <h2 class="Title">Login</h2>
+                {{inject 'useValidEmail' (lang 'forms.validate.common.email_address')}}
+                {{inject 'enterPass' (lang 'forms.validate.common.password')}}
+                <div class="form-field">
+                    <label class="form-label" for="login_email">{{lang 'login.field_email'}}</label>
+                    <input class="form-input" name="login_email" id="login_email" type="email">
+                </div>
+                <div class="form-field log-password">
+                    <label class="form-label" for="login_pass">{{lang 'login.field_password'}}</label>
+                    <input class="form-input" id="login_pass" type="password" name="login_pass" autocomplete="off">
+                    <span class="passwordIcon" onClick="ShowPass()"></span>
+                </div>
+                <div class="form-actions">
+                    <input type="submit" class="button button--primary" value="{{lang 'login.submit_value' }}">
+                    <a class="forgot-password" href="{{urls.auth.forgot_password}}">{{lang 'login.forgot_password' }}</a>
+                </div>
+            </form>
+        </div>    
+        {{#if settings.account_creation_enabled}}
+            <div class="new-customer">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">{{lang 'login.new_customer.heading' }}</h2>
+                    </div>
+                    <div class="panel-body">
+                        <p class="new-customer-intro">{{lang 'login.new_customer.intro' }}</p>
+                        <ul class="new-customer-fact-list">
+                            <li class="new-customer-fact">{{lang 'login.new_customer.fact1' }}</li>
+                            <li class="new-customer-fact">{{lang 'login.new_customer.fact2' }}</li>
+                            <li class="new-customer-fact">{{lang 'login.new_customer.fact3' }}</li>
+                            <li class="new-customer-fact">{{lang 'login.new_customer.fact4' }}</li>
+                            <li class="new-customer-fact">{{lang 'login.new_customer.fact5' }}</li>
+                        </ul>
+                        <a href="{{urls.auth.create_account}}"><button class="button button--primary">CREATE AN ACCOUNT</button></a>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+        </div>
+    </div>
+</div>
+{{/partial}}
+{{> layout/base}}
+<script>
+    function ShowPass() {
+      if ($('#login_pass').attr('type') === "password") {
+        $('#login_pass').prop('type','text');
+        $('.passwordIcon').addClass('ShowPass');
+        $('.passwordIcon').text('');
+      } else {
+        $('#login_pass').prop('type','password');
+        $('.passwordIcon').removeClass('ShowPass');
+        $('.passwordIcon').text(''); 
+      } 
+    }
+</script>

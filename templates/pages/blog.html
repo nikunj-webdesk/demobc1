@@ -1,0 +1,44 @@
+---
+blog:
+    posts:
+        limit: 9
+        pages: 3
+        summary: 200
+---
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<main class="page Blog_Page">
+    {{#unless theme_settings.hide_blog_page_heading }}
+        <h1 class="page-heading">{{ blog.name }}</h1>
+    {{/unless}}
+    <div class="blog_tab">
+         <div class="container">
+        <ul>
+            <li>
+                <a href="/blog/">All Categories</a>  
+            </li>
+            <li>
+                <a href="/blog/tag/Reviews">Reviews</a>
+            </li>
+            <li>
+                <a href="/blog/tag/Informative">Informative</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <div class="inner_blog">
+        <div class="container">
+            {{#each blog.posts}}
+                {{> components/blog/post post=this}}
+            {{/each}}
+
+            {{> components/common/paginator pagination.blog}}
+        </div>
+    </div>
+    {{> components/common/homepagesection/Support}}
+</main>
+
+{{/partial}}
+{{> layout/base}}

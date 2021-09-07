@@ -1,0 +1,62 @@
+<div class="searchSuggestion hideDesktop">
+    <ul>
+        <li>Maxis</li>
+        <li>Maxxis</li>
+    </ul>
+</div>
+<div class="searchInner"> 
+	{{#if product_results.products}}
+	    <a class="modal-close" aria-label="{{lang 'common.close'}}" data-drop-down-close role="button">
+	        <span aria-hidden="true">&#215;</span>
+	    </a>
+	    <h3>Your Search Results for <span class="quickKeyword">{{forms.search.query}}</span></h3>
+	    <ul class="productGrid" {{#if settings.data_tag_enabled}} data-list-name="Quick Search Results" {{/if}}>
+	        {{#each product_results.products}}
+	        <li class="product">
+                {{> components/products/card settings=../settings alternate=true show_compare=../show_compare theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
+	        </li>
+	        {{/each}}
+	    </ul>
+	{{else}}
+	    <p class="quickSearchMessage">
+	        {{{lang 'search.results.quick_count' count=pagination.product_results.total search_query=forms.search.query}}} 
+	    </p>
+	{{/if}}
+
+	<div class="quickSearchBottom">
+	    <div class="quickSearchList">
+	        <div>
+	            <h4>Size</h4>
+	            <ul>
+	                <li><a href="javascript:void(0)">155/80R13</a></li>
+	                <li><a href="javascript:void(0)">235/65R17</a></li>
+	                <li><a href="javascript:void(0)">175/80R13</a></li>
+	                <li><a href="javascript:void(0)">245/50R20</a></li>
+	            </ul>
+	        </div>
+	        <div>
+	            <h4>Brand</h4>
+	            <ul>
+	                <li><a href="javascript:void(0)">Accelera</a></li>
+	                <li><a href="javascript:void(0)">Americus</a></li>
+	                <li><a href="javascript:void(0)">Achilles</a></li>
+	                <li><a href="javascript:void(0)">Antares</a></li>
+	            </ul>
+	        </div>
+	        <div>
+	            <h4>Model</h4>
+	            <ul>
+	                <li><a href="javascript:void(0)">4X4 HP</a></li>
+	                <li><a href="javascript:void(0)">595RS-R</a></li>
+	                <li><a href="javascript:void(0)">122</a></li>
+	                <li><a href="javascript:void(0)">59RS-RR</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	    <div class="quickbottomButton">
+	        <a href="javascript:void(0)">Show All Results</a>
+	        <p>There are 31 results based on your parameters.</p>
+	    </div>
+	</div>
+</div>
+  

@@ -1,0 +1,651 @@
+---
+cart: true
+---
+{{#partial "page"}} 
+<div class="page">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>  
+    <main class="page-content" data-cart>
+        {{!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} --}}
+       <!----- Start Installer complate order ----->
+        <div class="ship_installer" style="display: none;">
+            <div class="container">
+                 <h1 class="page_heading">Ship to An Installer</h1>
+                 <div class="installer_process">
+                    <ul class="desktop">
+                        <li class="Completed">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="33px" height="33px" viewBox="-3 -3 33 33" enable-background="new -3 -3 33 33" xml:space="preserve">
+                                <g>
+                                    <defs>
+                                        <rect id="SVGID_1_" x="-3" y="-3" width="33" height="33"/>
+                                    </defs>
+                                    <clipPath id="SVGID_2_">
+                                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                                    </clipPath>
+                                    <g clip-path="url(#SVGID_2_)">
+                                        <path id="Rectangle_2_" fill="#3A3839" d="M13.277-1.5h0.445c8.16,0,14.777,6.616,14.777,14.777v0.445
+                                            c0,8.161-6.617,14.777-14.777,14.777h-0.445C5.117,28.5-1.5,21.884-1.5,13.723v-0.445C-1.5,5.116,5.117-1.5,13.277-1.5z"/>
+                                        <g>
+                                            <path fill="#F6F6F6" d="M13.712-3h-0.424C4.307-3-3,4.307-3,13.288v0.424C-3,22.692,4.307,30,13.288,30h0.424
+                                                C22.693,30,30,22.692,30,13.712v-0.424C30,4.307,22.693-3,13.712-3z M25.559,13.712c0,6.532-5.314,11.846-11.847,11.846h-0.424
+                                                c-6.532,0-11.847-5.313-11.847-11.846v-0.424c0-6.532,5.314-11.846,11.847-11.846h0.424c6.532,0,11.847,5.313,11.847,11.846
+                                                V13.712z"/>
+                                            <polygon fill="#F6F6F6" points="10.916,16.853 7.408,13.493 5.685,15.173 10.916,20.272 12.639,18.593 21.315,10.073 
+                                                19.592,8.393            "/>
+                                        </g>
+                                    </g>
+                                </g>
+                                </svg>
+                            Select Installer
+                        </li>
+                        <li class="Completed">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="33px" height="33px" viewBox="-3 -3 33 33" enable-background="new -3 -3 33 33" xml:space="preserve">
+                                <g>
+                                    <defs>
+                                        <rect id="SVGID_1_" x="-3" y="-3" width="33" height="33"/>
+                                    </defs>
+                                    <clipPath id="SVGID_2_">
+                                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                                    </clipPath>
+                                    <g clip-path="url(#SVGID_2_)">
+                                        <path id="Rectangle_2_" fill="#3A3839" d="M13.277-1.5h0.445c8.16,0,14.777,6.616,14.777,14.777v0.445
+                                            c0,8.161-6.617,14.777-14.777,14.777h-0.445C5.117,28.5-1.5,21.884-1.5,13.723v-0.445C-1.5,5.116,5.117-1.5,13.277-1.5z"/>
+                                        <g>
+                                            <path fill="#F6F6F6" d="M13.712-3h-0.424C4.307-3-3,4.307-3,13.288v0.424C-3,22.692,4.307,30,13.288,30h0.424
+                                                C22.693,30,30,22.692,30,13.712v-0.424C30,4.307,22.693-3,13.712-3z M25.559,13.712c0,6.532-5.314,11.846-11.847,11.846h-0.424
+                                                c-6.532,0-11.847-5.313-11.847-11.846v-0.424c0-6.532,5.314-11.846,11.847-11.846h0.424c6.532,0,11.847,5.313,11.847,11.846
+                                                V13.712z"/>
+                                            <polygon fill="#F6F6F6" points="10.916,16.853 7.408,13.493 5.685,15.173 10.916,20.272 12.639,18.593 21.315,10.073 
+                                                19.592,8.393            "/>
+                                        </g>
+                                    </g>
+                                </g>
+                                </svg>
+                            Choose Appointment
+                        </li>
+                        <li class="Current">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
+                                    <g fill="none" fill-rule="evenodd" transform="translate(3 3)">
+                                        <rect width="27" height="27" fill="#EFA41F" stroke="#F6F6F6" stroke-width="4.2" rx="13.3"/>
+                                        <g fill="#FFF" transform="translate(4.974 11.368)">
+                                            <rect width="4.263" height="4.263" rx="2.132"/>
+                                            <rect width="4.263" height="4.263" x="6.395" rx="2.132"/>
+                                            <rect width="4.263" height="4.263" x="12.789" rx="2.132"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            Complete Order
+                        </li>
+                    </ul>
+                    <ul class="mob">
+                        <li class="Completed">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path fill="#545051" d="M0 0h27v27H0z"/>
+                                    <rect width="25" height="25" x="1" fill="#FFF" rx="12.5"/>
+                                    <path fill="#545051" fill-rule="nonzero" d="M13.225 2.893c-5.76 0-10.429 4.669-10.429 10.429v.356c0 5.76 4.67 10.43 10.43 10.43h.356c5.76 0 10.429-4.67 10.429-10.43v-.356c0-5.76-4.67-10.43-10.43-10.43h-.356zm0-2.893h.357c7.357 0 13.322 5.964 13.322 13.321v.358C26.904 21.036 20.939 27 13.582 27h-.357C5.868 27-.096 21.036-.096 13.679v-.358C-.096 5.964 5.868 0 13.224 0z"/>
+                                    <path fill="#231F20" d="M19.092 8.06l-8.677 8.46-3.507-3.36-1.723 1.68 5.23 5.1 1.723-1.68 8.677-8.52z"/>
+                                </g>
+                            </svg>
+                            Select Installer
+                        </li>
+                        <li class="Completed">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path fill="#545051" d="M0 0h27v27H0z"/>
+                                    <rect width="25" height="25" x="1" fill="#FFF" rx="12.5"/>
+                                    <path fill="#545051" fill-rule="nonzero" d="M13.225 2.893c-5.76 0-10.429 4.669-10.429 10.429v.356c0 5.76 4.67 10.43 10.43 10.43h.356c5.76 0 10.429-4.67 10.429-10.43v-.356c0-5.76-4.67-10.43-10.43-10.43h-.356zm0-2.893h.357c7.357 0 13.322 5.964 13.322 13.321v.358C26.904 21.036 20.939 27 13.582 27h-.357C5.868 27-.096 21.036-.096 13.679v-.358C-.096 5.964 5.868 0 13.224 0z"/>
+                                    <path fill="#231F20" d="M19.092 8.06l-8.677 8.46-3.507-3.36-1.723 1.68 5.23 5.1 1.723-1.68 8.677-8.52z"/>
+                                </g>
+                            </svg>
+                                Appointment
+                        </li>
+                        <li class="Current">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path fill="#545051" d="M0 0h27v27H0z"/>
+                                    <g transform="translate(1 1)">
+                                        <rect width="25" height="25" fill="#EFA41F" rx="12.5"/>
+                                        <g fill="#FFF" transform="translate(3.974 10.368)">
+                                            <rect width="4.263" height="4.263" rx="2.132"/>
+                                            <rect width="4.263" height="4.263" x="6.395" rx="2.132"/>
+                                            <rect width="4.263" height="4.263" x="12.789" rx="2.132"/>
+                                        </g>
+                                    </g>
+                                    <path fill="#545051" fill-rule="nonzero" d="M13.225 2.893c-5.76 0-10.429 4.669-10.429 10.429v.356c0 5.76 4.67 10.43 10.43 10.43h.356c5.76 0 10.429-4.67 10.429-10.43v-.356c0-5.76-4.67-10.43-10.43-10.43h-.356zm0-2.893h.357c7.357 0 13.322 5.964 13.322 13.321v.358C26.904 21.036 20.939 27 13.582 27h-.357C5.868 27-.096 21.036-.096 13.679v-.358C-.096 5.964 5.868 0 13.224 0z"/>
+                                </g>
+                            </svg>
+                            Complete Order
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="install_default_page top_content_installer" style="display: none;">
+            <div class="container">
+                <div class="install_default_left">
+                    <div class="installer_no">
+                        <span>3</span> 
+                    </div>
+                    <div class="select_text">
+                        <h2>COMPLETE ORDER</h2>
+                        <p>Review your Tires and Installer appoitment and complete your order</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----- End Installer complate order ----->
+        <div class="Head_Bg" data-quantity="{{cart.quantity}}">
+            <div class="container">
+                <h1>Shopping Cart</h1> 
+            </div>
+        </div>
+        <div class="Cart_page_inner">
+            <div class="container">
+                {{#if customer}} 
+                {{else}}
+                    <div class="Login_Message">
+                        <p>Already have an account? <a href="##" data-reveal-id="popupLoginWindow">Login here</a> to access your previous info. To create a new account, <a href="/login.php?action=create_account">register here</a>.</p>
+                    </div>
+                {{/if}}
+                <div data-cart-status>
+                    {{> components/cart/status-messages}}
+                </div>
+                {{#if cart.items.length}}
+                <div class="loadingOverlay"></div>
+                <h2 class="Review_cart_Title">Review your Cart</h2>
+                <div class="Cart_Row_Outer">
+                    <div data-cart-content class="Left">
+                        {{> components/cart/content}}
+                    </div>
+                    <div class="Right">
+                        <div class="Right_Inner">
+                            <h3 class="Review_cart_Title">Order Summary</h3>
+                            <div class="ShipFreeToMyAddress">
+                                <h3>Select a Shipping Type:</h3>
+                                <div class="ShipFreeAddIns">
+                                    <ul>
+                                        <li><a href="javascript:void(0);" class="Address is-active"><span>SHIP FREE TO MY ADDRESS</span></a></li>
+                                        <li><a href="javascript:void(0);" class="Installer"><span>SHIP FREE TO AN INSTALLER</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="Complete_installer_details" style="display: none;">
+                                <div class="TopSection">
+                                    <ul>
+                                        <li>
+                                            <h5><svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g id="🏞/Icon/Checkout/Ship-Free-to-An-Installer/Active" fill-rule="nonzero">
+                                                        <g id="Group" transform="translate(21.000000, 21.000000)">
+                                                            <path d="M43.3100332,34.3100332 L43.1100332,34.1100332 L23.8900332,14.8900332 L23.6900332,14.6900332 C23.9006148,13.8089981 24.0046924,12.905873 24.0000332,12.0000332 C24.001626,8.81694733 22.7378554,5.76377488 20.4870735,3.51299298 C18.2362916,1.26221109 15.1831191,-0.00155951838 12.0000332,3.3219412e-05 C10.9497304,-0.00246023986 9.9038052,0.135427007 8.89003322,0.410033219 L13.6900332,5.21003322 L13.3000332,6.66003322 L11.9000332,11.9000332 L6.66003322,13.3000332 L5.21003322,13.6900332 L0.410033219,8.89003322 C0.135427007,9.9038052 -0.00246023986,10.9497304 3.3219412e-05,12.0000332 C-0.00155951838,15.1831191 1.26221109,18.2362916 3.51299298,20.4870735 C5.76377488,22.7378554 8.81694733,24.001626 12.0000332,24.0000332 C12.905873,24.0046924 13.8089981,23.9006148 14.6900332,23.6900332 L14.8900332,23.8900332 L34.1100332,43.1100332 L34.3100332,43.3100332 C34.0994516,44.1910683 33.995374,45.0941934 34.0000332,46.0000332 C34.0000305,49.7314704 35.7358499,53.2505704 38.6966059,55.5215937 C41.657362,57.7926171 45.5060895,58.5570974 49.1100332,57.5900332 L44.3100332,52.7900332 L44.7000332,51.3400332 L46.1000332,46.1000332 L51.3400332,44.7000332 L52.7900332,44.3100332 L57.5900332,49.1100332 C57.8646394,48.0962612 58.0025267,47.050336 58.0000332,46.0000332 C58.001626,42.8169473 56.7378554,39.7637749 54.4870735,37.512993 C52.2362916,35.2622111 49.1831191,33.9984405 46.0000332,34.0000332 C45.0941934,33.995374 44.1910683,34.0994516 43.3100332,34.3100332 Z M37.0000332,41.0000332 L18.0000332,22.0000332 L22.0000332,18.0000332 L41.0000332,37.0000332 L37.0000332,41.0000332 Z" id="Shape" fill="#4295F3"></path>
+                                                            <polygon id="Rectangle" fill="#E3EDF0" transform="translate(29.500328, 29.499680) rotate(-45.000000) translate(-29.500328, -29.499680) " points="26.6718275 16.0646797 32.3288275 16.0646797 32.3288275 42.9346797 26.6718275 42.9346797"></polygon>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg><span class="installer_user_name">-</span></h5>
+                                            <p><em class="installer_distance"></em></p>
+                                        </li>
+                                        <li><a href="https://installers.prioritytire.com/">CHANGE INSTALLER</a></li>
+                                    </ul>
+                                </div>
+                                <div class="BottomSection">
+                                    <ul>
+                                        <li>
+                                            <h4><i class="fas fa-calendar-alt"></i>Appointment</h4>
+                                            <!--<p>Wednesday, March<br> 20 at 10 AM.</p>-->
+                                            <p><span class="installer_day"></span>, <span class="installer_date"></span><br><span class="installer_time"></span></p>
+                                        </li>
+                                        <li>
+                                            <h4><i class="fas fa-map-marker-alt"></i>Address</h4>
+                                            <!--<p>654 Utica Aveue<br> brooklyn, NY 11203</p>-->
+                                            <p class="installer_address"></p>
+                                        </li>
+                                        <li>
+                                            <h4><i class="fas fa-phone"></i>Contact</h4>
+                                            <!--<p><a href="tel:(347) 673-6962">(347) 673-6962</a></p>-->
+                                            <p><a class="installer_tel"></a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> 
+                            <div data-cart-totals> 
+                                {{> components/cart/totals}}
+                            </div>
+                            {{#if cart.show_primary_checkout_button}}
+                                <div class="cart-actions Checkout">
+                                    <a class="CheckoutBtn button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}"><span>{{lang 'cart.checkout.button'}}</span></a>
+                                    
+                                    <a class="SelectInstaller button--primary" href="https://installers.prioritytire.com/" title="Select Installer" style="display: none;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
+                                        <path fill="#FFF" d="M21.655 17.155l-.1-.1-9.61-9.61-.1-.1c.105-.44.157-.892.155-1.345 0-1.592-.631-3.118-1.756-4.244C9.118.631 7.592 0 6 0c-.525-.001-1.048.068-1.555.205l2.4 2.4-.195.725-.7 2.62-2.62.7-.725.195-2.4-2.4C.068 4.952-.001 5.475 0 6c0 1.592.631 3.118 1.756 4.244C2.882 11.369 4.408 12 6 12c.453.002.904-.05 1.345-.155l.1.1 9.61 9.61.1.1c-.105.44-.157.892-.155 1.345 0 1.866.868 3.625 2.348 4.76 1.48 1.136 3.405 1.519 5.207 1.035l-2.4-2.4.195-.725.7-2.62 2.62-.7.725-.195 2.4 2.4c.137-.507.206-1.03.205-1.555 0-1.592-.631-3.118-1.756-4.244C26.118 17.631 24.592 17 23 17c-.453-.002-.904.05-1.345.155zM18.5 20.5L9 11l2-2 9.5 9.5-2 2z"/>
+                                        </svg>
+                                        <span>Select Installer</span></a>
+                                </div>
+                                
+                            {{else}}
+                                <div class="cart-actions Checkout skp">
+                                    <a class="button" href="{{urls.home}}" title="{{lang 'cart.continue_shopping'}}">{{lang 'cart.continue_shopping'}}</a>
+                                </div>
+                            {{/if}}
+                            {{!--<div class="Payment_Btn">
+                                <img src="/content/credit-card-checkout.png" alt=""/>
+                            </div> 
+                            <p class="OrPayment">
+                                <span>OR</span>
+                            </p>
+                            <div class="Paypal_Btn">
+                                <img src="/content/button-apple-pay.jpg" alt=""/>
+                                <img src="/content/button-checkout-with-paypal.png" alt=""/>
+                                <img src="/content/button-checkout-with-paypal-credit.jpg" alt=""/>
+                            </div> --}}
+                            {{#if cart.additional_checkout_buttons}}
+                                <div class="cart-additionalCheckoutButtons">
+                                    <div class="cart_logo_custom">
+                                        <div class="Payment_Btn">
+                                        	<img src="/content/credit-card-checkout.png" alt="">
+                                        </div> 
+                                         <div class="Paypal_Btn">
+                                        	<img src="/content/button-apple-pay.jpg" alt="">
+                                        	<img src="/content/button-checkout-with-paypal.png" alt="">
+                                        	<img src="/content/button-checkout-with-paypal-credit.jpg" alt="">
+                                        </div> 
+                                    </div>
+                                   {{!-- {{#each cart.additional_checkout_buttons}}
+                                        {{{this}}}
+                                    {{/each}} --}}
+                                </div>
+                            {{/if}}
+                            {{else}}
+                                <h3>{{lang 'cart.checkout.empty_cart'}}</h3>
+                                {{{ remote_api_scripts }}}
+                            {{/if}}
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+{{/partial}}
+{{> layout/CartLayout}}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" type="text/javascript" ></script>
+
+<script type="text/javascript">
+    var seperateAdd = "address";
+    var d = new Date();
+    d.setTime(d.getTime() + (1*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie =  "seperateAdd="+seperateAdd+";" + expires + ";path=/";
+
+     var ship = getCookie("appointment_details");
+     var cookieShipAddress = $.cookie("ship_address");
+   
+if (cookieShipAddress == null) {
+    console.log('localshipping');
+        if (ship) {
+            var obj = JSON.parse(ship);
+            var ismobile = obj[0].ismobile;
+            
+            var obj = JSON.parse(ship);
+            //var ship = Cookies.get('ship_address');
+            var fullAddress = obj[0].address;
+            var installerName = obj[0].installer_name;
+    
+            var address = fullAddress.split(',');
+            var name = installerName.split(' ');
+            if (name.length == 3) {
+                var firstName = name[0] + ' ' + name[1];
+                var lastName = name[2];
+            } else if (name.length == 4) {
+                var firstName = name[0] + ' ' + name[1];
+                var lastName = name[2] + ' ' + name[3];
+            } else {
+                var firstName = name[0];
+                var lastName = name[1];
+            }
+    
+            if(address.length == 5){
+                var state = $.trim(address[3]);
+                var city = address[2];
+                var address2 = address[1];
+                var postalCode = address[4];
+            }
+            else{
+                var state = $.trim(address[2]);
+                var city = address[1];
+                var address2 = '';
+                 var postalCode = address[3];
+            }
+            
+            //Fetch cart details
+             if(ismobile == 'no'){
+            fetch('/api/storefront/cart', {
+                credentials: 'include'
+            }).then(function(response) {
+                return response.json();
+            }).then(function(myJson) {
+                var a = JSON.parse(JSON.stringify(myJson));
+                var x = [];
+    
+                //push cart items to array x
+                for (var i = 0; i < a[0]['lineItems']['physicalItems'].length; i++) {
+                    x.push({
+                        "itemId": a[0]['lineItems']['physicalItems'][i]['id'],
+                        "quantity": a[0]['lineItems']['physicalItems'][i]['quantity']
+                    });
+                }
+    
+   
+                createConsignment(`/api/storefront/checkouts/`, a[0]['id'],
+                        [{
+                            "shippingAddress": {
+                                "first_name": firstName,
+                                "last_name": lastName,
+                                "address1": address[0],
+                                "address2": address2,
+                                "city": city,
+                                "stateOrProvinceCode": state,
+                                "countryCode": 'US',
+                                "postalCode": postalCode,
+                                "company": installerName,
+                            },
+                            "lineItems": x
+                        }]
+                    ).then(function(data) {
+                        setCookie('cartId', data.cart.id);
+                        setCookie('consignmentsId', data.consignments[0].id);
+                        setCookie('shippingId', data.consignments[0].availableShippingOptions[0].id);
+    
+                    })
+                    .catch(error => console.error(error));
+            });
+            }
+        }
+}else{
+    console.log('freeshipping');
+        $('.ShipFreeAddIns .Installer').removeClass('is-active');
+         $('.ShipFreeAddIns .Address').addClass('is-active');
+         $('.Complete_installer_details').hide();
+         $('.ship_installer').hide();
+         $('.install_default_page').hide();
+         $.removeCookie("appointment_details",{ domain: 'prioritytire.com' });
+         
+         fetch('/api/storefront/cart', {
+                    credentials: 'include'
+        }).then(function(response) {
+            return response.json();
+        }).then(function(myJson) {
+                    var a = JSON.parse(JSON.stringify(myJson));
+                    var x = [];
+
+                    //push cart items to array x
+                    for(var i=0; i < a[0]['lineItems']['physicalItems'].length;i++){
+                        x.push({
+                            "itemId": a[0]['lineItems']['physicalItems'][i]['id'],
+                            "quantity": a[0]['lineItems']['physicalItems'][i]['quantity'] 
+                        });
+                    }
+
+                    createConsignment(`/api/storefront/checkouts/`, a[0]['id'],
+                        [{
+                          "shippingAddress": {
+                              "first_name": '',
+                              "last_name": '',
+                              "address1": '',
+                              "city": '',
+                              "stateOrProvinceCode": '',
+                              "countryCode": '',
+                              "postalCode": ''
+                          },
+                          "lineItems": x
+                        }]
+                    ).then(function(data) {
+                        
+                    })
+                    .catch(error => console.error(error));
+                    
+                });
+}
+    
+
+    $('.ShipFreeAddIns a.Installer').click(function(event){
+        $('.ShipFreeAddIns .Address').removeClass('is-active');
+    
+        var seperateAdd = "installer";
+        var d = new Date();
+        d.setTime(d.getTime() + (1*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie =  "seperateAdd="+seperateAdd+";" + expires + ";path=/";
+        
+        
+        $(this).addClass('is-active');
+        $('.CheckoutBtn').hide();
+        $('.SelectInstaller').show();
+        //$('.Complete_installer_details').show();
+        
+        //if (!!$.cookie('appointment_details') || $.cookie('appointment_details')==undefined) {
+        if ($.cookie('appointment_details')!='' && $.cookie('appointment_details')!=undefined && $.cookie('ship_address')==null) { //cookie get
+        console.log($.cookie('ship_address'));
+            //button script
+             $('.SelectInstaller').hide();
+             $('.CheckoutBtn').show();
+             $('.Complete_installer_details').show();
+             
+        }else{
+             $('.SelectInstaller').show();
+            $('.Complete_installer_details').hide();
+            $.removeCookie("ship_address",{ domain: 'prioritytire.com' });
+            return false;
+        }
+        
+    });
+     $('.ShipFreeAddIns a.Address').click(function(event){
+        
+        $('.ShipFreeAddIns .Installer').removeClass('is-active');
+        $(this).addClass('is-active');
+        $('.CheckoutBtn').show();
+        $('.SelectInstaller').hide();
+        $('.Complete_installer_details').hide();
+        
+        $.cookie("ship_address", 1,{ domain: 'prioritytire.com' });
+        $.removeCookie("appointment_details",{ domain: 'prioritytire.com' });
+        fetch('/api/storefront/cart', {
+                    credentials: 'include'
+        }).then(function(response) {
+            return response.json();
+        }).then(function(myJson) {
+                    var a = JSON.parse(JSON.stringify(myJson));
+                    var x = [];
+
+                    //push cart items to array x
+                    for(var i=0; i < a[0]['lineItems']['physicalItems'].length;i++){
+                        x.push({
+                            "itemId": a[0]['lineItems']['physicalItems'][i]['id'],
+                            "quantity": a[0]['lineItems']['physicalItems'][i]['quantity'] 
+                        });
+                    }
+
+                    createConsignment(`/api/storefront/checkouts/`, a[0]['id'],
+                        [{
+                          "shippingAddress": {
+                              "first_name": '',
+                              "last_name": '',
+                              "address1": '',
+                              "city": '',
+                              "stateOrProvinceCode": '',
+                              "countryCode": '',
+                              "postalCode": ''
+                          },
+                          "lineItems": x
+                        }]
+                    ).then(function(data) {
+                        
+                    })
+                    .catch(error => console.error(error));
+                    
+                });
+            
+        var seperateAdd = "address";
+        var d = new Date();
+        d.setTime(d.getTime() + (1*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie =  "seperateAdd="+seperateAdd+";" + expires + ";path=/";
+    
+    });
+    
+    /*$('.cart-actions.Checkout a').click(function(event){
+        event.preventDefault();
+        if(!$('.Terms_check input').is(':checked')){
+            alert('Please select Conditions of Sale');
+        }else{
+            window.location.href = '/checkout.php';
+        }
+    }); */
+    
+    $('.Box-layout').click(function(){
+        if(!$('.Terms_check input').is(':checked')){
+            $('.Terms_check input').prop('checked',true);    
+            $(this).addClass('is-checked');
+        }else{
+            $('.Terms_check input').prop('checked',false);    
+            $(this).removeClass('is-checked'); 
+        }
+    });
+    
+    
+    $(document).ready(function(){
+         var cookieShipAddress = $.cookie("ship_address");
+         console.log(cookieShipAddress);
+         if (cookieShipAddress == null) {
+             console.log('localshipping1');
+            if (!!$.cookie('appointment_details')) {
+             // have cookie
+             var obj = jQuery.parseJSON($.cookie("appointment_details")); 
+             
+             //append data
+            $('.installer_day').html(obj[0].day);
+            $('.installer_date').html(obj[0].date);
+            $('.installer_time').html(obj[0].time);
+            $('.installer_address').html(obj[0].address);
+            $('.installer_tel').html(obj[0].contact);
+            $(".installer_tel").attr("href","tel:"+obj[0].contact);
+            $(".installer_user_name").html(obj[0].installer_name);
+            $('.installer_distance').html(obj[0].distance + ' Away');
+             
+             $('.Complete_installer_details').show();
+             $('.ship_installer').show();
+             $('.install_default_page').show();
+             
+             //button script
+             $('.SelectInstaller').hide();
+             $('.CheckoutBtn').show();
+             
+             //tab script
+             $('.ShipFreeAddIns .Installer').addClass('is-active');
+             $('.ShipFreeAddIns .Address').removeClass('is-active');
+             $.removeCookie("ship_address",{ domain: 'prioritytire.com' });
+                var seperateAdd = "installer";
+                var d = new Date();
+                d.setTime(d.getTime() + (1*24*60*60*1000));
+                var expires = "expires="+ d.toUTCString();
+                document.cookie =  "seperateAdd="+seperateAdd+";" + expires + ";path=/";
+             
+            } 
+        }else {
+            console.log('freeshipping1');
+             $('.ShipFreeAddIns .Installer').removeClass('is-active');
+             $('.ShipFreeAddIns .Address').addClass('is-active');
+             $('.Complete_installer_details').hide();
+             $('.ship_installer').hide();
+             $('.install_default_page').hide();
+             $.removeCookie("appointment_details",{ domain: 'prioritytire.com' });
+             
+             fetch('/api/storefront/cart', {
+                    credentials: 'include'
+            }).then(function(response) {
+                return response.json();
+            }).then(function(myJson) {
+                        var a = JSON.parse(JSON.stringify(myJson));
+                        var x = [];
+    
+                        //push cart items to array x
+                        for(var i=0; i < a[0]['lineItems']['physicalItems'].length;i++){
+                            x.push({
+                                "itemId": a[0]['lineItems']['physicalItems'][i]['id'],
+                                "quantity": a[0]['lineItems']['physicalItems'][i]['quantity'] 
+                            });
+                        }
+    
+                        createConsignment(`/api/storefront/checkouts/`, a[0]['id'],
+                            [{
+                              "shippingAddress": {
+                                  "first_name": '',
+                                  "last_name": '',
+                                  "address1": '',
+                                  "city": '',
+                                  "stateOrProvinceCode": '',
+                                  "countryCode": '',
+                                  "postalCode": ''
+                              },
+                              "lineItems": x
+                            }]
+                        ).then(function(data) {
+                            
+                        })
+                        .catch(error => console.error(error));
+                        
+                    });
+                
+            var seperateAdd = "address";
+            var d = new Date();
+            d.setTime(d.getTime() + (1*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+            document.cookie =  "seperateAdd="+seperateAdd+";" + expires + ";path=/";
+        }
+    });
+    
+    function createConsignment(url, cartId, data) {
+            return fetch(url + cartId + `/consignments?include=consignments.availableShippingOptions`,   {
+               method: "POST",
+               credentials: "same-origin",
+               headers: {
+                   "Content-Type": "application/json" ,
+               },
+               body: JSON.stringify(data),
+            })
+            .then(response => response.json());
+        };
+        
+    /* Get Cookie Function */
+    function getCookie(c_name) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(c_name + "=");
+            if (c_start != -1) {
+                c_start = c_start + c_name.length + 1;
+                c_end = document.cookie.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = document.cookie.length;
+                }
+                return unescape(document.cookie.substring(c_start, c_end));
+            }
+        }
+        return "";
+    }
+
+    /* Set Cookie */
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+    
+    
+</script>  

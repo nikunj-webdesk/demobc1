@@ -1,0 +1,941 @@
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-property($property...) {
+    -moz-transition-property: $property;
+    -o-transition-property: $property;
+    -webkit-transition-property: $property;
+    transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+    -moz-transition-property: $duration;
+    -o-transition-property: $duration;
+    -webkit-transition-property: $duration;
+    transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function: $timing;
+    -o-transition-timing-function: $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+.custom_category{
+   .page.CatPage .Front_Rear_Login{
+        margin:0 auto;
+        .CategoryOuter{
+            margin:0px -15px;
+            .AllProductListing{
+                float: left;
+                width: 100%; 
+                >ul{
+                    margin:0;
+                    >li{
+                        width: 100%;
+                        float: left;
+                        padding:0px;
+                        border:3px solid #cfcfcf;
+                        padding: 23px 0px 23px;
+                        position: relative;
+                        overflow: visible;
+                        margin: 0 0 30px;
+                        .card{
+                            float: left;
+                            width: 100%;
+                            margin:0px;
+                            .Tire-Badge-outer{
+                                position: absolute;
+                                top:-3px;
+                                max-width: 852px;
+                                left: 0px;
+                                right:0px;
+                                margin:0 auto;
+                                width: auto;
+                                text-align: center;
+                                border-top: 3px solid #62d7ff;
+                                border-radius:6px;
+                                span{
+                                    display: inline-block;
+                                    padding:3px 12px;
+                                    font-size: 16px;
+                                    color:#fff;
+                                    text-transform: uppercase;
+                                    font-weight: 800;
+                                    background: #62d7ff;
+                                    border-radius:0px 0px 10px 10px;
+                                }
+                                &.Tire-Badge-outer.Prod_new{
+                                    border-color: #1aba8d;
+                                    span{
+                                        background: #1aba8d;
+                                    }
+                                }
+                                &.Prod_take_off, &.Prod_factory_take_off{
+                                    border-color: #18a4b2;
+                                    span{
+                                        background: #18a4b2;
+                                    }
+                                }
+                            }
+                            .Sale-Badge {
+                                position: absolute;
+                                left: -3px;
+                                top: -3px;
+                                background: #f34242;
+                                color: #fff;
+                                font-weight: 800;
+                                border-radius: 11px 0 0 0;
+                                line-height: 18px;
+                                font-size: 12px;
+                                padding: 6px 10px 6px;
+                            }
+                            .Top-Card{
+                                width: 100%;
+                                float: left;
+                                padding:0 22px;
+                                .card-figure{
+                                    float: left;
+                                    width: 21.97%;
+                                    padding-right: 5px;
+                                    .card-img-container{
+                                        .card-image{
+                                            position: static;
+                                            max-height: 187px;
+                                        }
+                                        &:after{
+                                            display: none; 
+                                        }
+                                    }
+                                }
+                                .card-body{
+                                    float: left;
+                                    width: 78.03%;
+                                    padding: 0 0 0 20px;
+                                    border-bottom: 0px;
+                                    .card-body-left{
+                                        float: left;
+                                        width: 79.75%;
+                                        .card-text{
+                                            font-size: 18px;
+                                            font-weight: normal;
+                                            color:#242424;
+                                            line-height: 28px;
+                                            text-transform: uppercase;
+                                            margin:0px;
+                                            &.ProductRating{
+                                                text-align: left;
+                                                margin: 10px 0px 0px;
+                                            }
+                                        }
+                                        .Warning-Message{
+                                            margin:8px 0 10px;
+                                        }
+                                        .card-title{
+                                            font-size: 22px;
+                                            font-weight: 800;
+                                            line-height: 30px;
+                                            color: #2b2b2b;
+                                            margin: 0 0 5px;
+                                            a{
+                                                color: #2b2b2b;
+                                            }
+                                        }
+                                        .product-sku{
+                                            font-size: 24px;
+                                            font-weight: bold;
+                                            line-height: 28px;
+                                            color: #3a3839;
+                                            text-transform: uppercase;
+                                        }
+                                    }
+                                    .card-body-right{
+                                        float: right;
+                                        width: 20.25%;
+                                        p.card-text{
+                                            float: right;
+                                        }
+                                    }
+                                }
+                            }
+                            .Bottom-Card{
+                                float: left;
+                                width: 100%;
+                                margin: 30px 0px 0px;
+                                padding:0px;
+                                .product-sku{
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    line-height: 28px;
+                                    color: #3a3839;
+                                    text-transform: uppercase;
+                                    margin: 0 0 25px;
+                                    display: inline-block;
+                                }
+                                .Front-Label , .Rear-Label{
+                                    font-size: 24px;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    line-height: 28px;
+                                    color:#4295f3;
+                                    margin: 0 7px 5px 0px;
+                                    display: inline-block;
+                                }
+                                .Outer{
+                                    padding: 0 22px;    
+                                    float: left;
+                                    width: 100%;
+                                    .Bottom-Card-Left{
+                                        width:52.439%;
+                                        float: left;
+                                        ul{
+                                            margin: 0px;
+                                            li{
+                                                margin: 0 0 10px;
+                                                width: auto;
+                                                padding: 0px 10px 0px 0px;
+                                                float: left;
+                                                text-align: center;
+                                                img{
+                                                    max-width: 100%;
+                                                    display: inline-block;
+                                                    vertical-align: middle;
+                                                    max-height: 45px;
+                                                }
+                                                span{
+                                                    font-size: 8.8px;
+                                                    font-weight: normal;
+                                                    color: #242424;
+                                                    line-height: 14.3px;
+                                                    padding-left: 0;
+                                                    display: inline-block;
+                                                    vertical-align: middle;
+                                                    text-transform: uppercase;
+                                                    &.CustomLabel{
+                                                        padding: 0px;
+                                                        display: block;
+                                                        margin: 0 auto;
+                                                        text-align: center;
+                                                    }
+                                                }
+                                                &.Tread-Life{
+                                                    background: #1a9eca;
+                                                    font-size: 12px;
+                                                    font-weight: 800; 
+                                                    color: #fff;
+                                                    text-transform: uppercase;
+                                                    padding:1px 5px;
+                                                    clear: left;
+                                                    border-radius: 2px;
+                                                    margin: 0;
+                                                    width: auto;
+                                                }
+                                                &.Tread-Depth{
+                                                    margin: 0 0 -5px 0;  
+                                                    span{
+                                                        font-weight: 800;
+                                                        text-transform: uppercase;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .Bottom-Card-Right{
+                                        width:47.561%;
+                                        float: right;
+                                        padding-left: 0px;
+
+                                        .Bottom-Card-Inner{
+                                            border: 3px solid #fbe7c2;
+                                            border-radius: 4.7px;
+                                            width: 100%;
+                                            float: left;
+                                            max-width: 100%;
+                                            .LoginClubMSG {
+                                                border-radius: 0px 0px 3.7px 3.7px;
+                                                background-color: #fbe7c2;
+                                                float: left;
+                                                width: 100%;
+                                                h4 {
+                                                    font-size: 14.9px;
+                                                    font-weight: 800;
+                                                    max-width: 199px;   
+                                                    margin: 10px auto 10.8px;
+                                                    line-height: 18.6px;
+                                                    text-align: center;
+                                                }
+                                            }
+                                            .LoginClubMSGOuter {
+                                                float: left;
+                                                width: 100%;
+                                                padding: 14px 14px 6px;
+                                                .CardPriceWrap {
+                                                    width: 100%;
+                                                    float: left;
+                                                    .card-text{
+                                                        .four_p_price{
+                                                            display: inline-block;
+                                                            line-height: normal;
+                                                            vertical-align: middle;
+                                                            font-size: 16.7px;
+                                                            line-height: 26px;
+                                                            color: #3a3839;
+                                                            text-align: right;
+                                                            margin: 0px 0px 9px;
+                                                            max-width: 100%;
+                                                            width: auto;
+                                                            float: right;
+                                                            clear: right;
+                                                            span{
+                                                                font-size: 16.7px;
+                                                                font-weight: normal;
+                                                                color: #242424;
+                                                                float: none;
+                                                                margin-right: 2px;
+                                                            }
+                                                            strong{
+                                                                font-weight: normal;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .stock_level {
+                                                    font-size: 12.1px;
+                                                    font-weight: normal;
+                                                    color: #242424;
+                                                    display: inline-block;
+                                                    vertical-align: middle;
+                                                    margin: 5px 0px 8px 0px; 
+                                                    line-height: 22.3px;
+                                                    float: right;
+                                                    &:before {
+                                                        content: "";
+                                                        font-size: 14.9px;
+                                                        font-family: "Font Awesome 5 Free";
+                                                        margin-right: 5px;
+                                                        color: #ff6b07;
+                                                        vertical-align: middle;
+                                                    }
+
+                                                    &.In-Stock-Btn {
+                                                        &:before {
+                                                            content: "";
+                                                            color: #6cac22;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .Price-Per-Tire{
+                                                display: inline-block;
+                                                vertical-align: middle;
+                                                font-size: 14px;
+                                                font-weight: 800;
+                                            }
+                                            .out_stock_content{
+                                                float: left;
+                                                width: 100%;
+                                                border-bottom: 1px solid #dee7ea;
+                                                padding: 0 0 14px;
+                                                .Unavailable-Stock{
+                                                    font-size: 18px;
+                                                    font-weight: 800;
+                                                    display: inline-block;
+                                                    padding: 0 0 0 41px;
+                                                    position: relative;
+                                                    margin: 19px 0 10px;
+                                                    text-transform:inherit;
+                                                    color:#242424;
+                                                    &:before{
+                                                        content: "";
+                                                        font-size: 20px;
+                                                        font-family: "Font Awesome 5 Free";
+                                                        margin-right: 10px;
+                                                        display: inline-block;
+                                                        vertical-align: middle;
+                                                        position: absolute;
+                                                        left: 8px;
+                                                        top: 50%;
+                                                        transform: translateY(-50%);
+                                                        color: #dd172f;
+                                                    }
+                                                }
+                                                .Out_Call{
+                                                    font-size: 16px;
+                                                    font-weight: normal;
+                                                    line-height: 24px;
+                                                    color: #242424;
+                                                    margin: 0px;
+                                                    a{
+                                                        color: #1a9eca;
+                                                    }
+                                                }
+                                            }
+                                            .FedxImg{
+                                                width: 100%;
+                                                float: left;
+                                                margin:0 0 10px;
+                                            }
+                                            .Same-Day-Ship-Btn{
+                                                width: 100%;
+                                                float: left;
+                                                a{
+                                                    font-size: 12px;
+                                                    font-weight: 800;
+                                                    background:#dee7ea;
+                                                    padding:5px 28px 5px 15px;
+                                                    line-height: 18px;
+                                                    border-radius: 14px;
+                                                    display: inline-block;
+                                                    &:before{
+                                                        margin-right: 10px;
+                                                        font-family: "Font Awesome 5 Free";
+                                                        font-size: 16px;
+                                                        content: "";
+                                                    }
+                                                }
+                                            }   
+                                        }
+                                    }
+                                }
+                                .Tire-Specifications{
+                                    float: left;
+                                    width: 100%;
+                                    margin-top: -32px;
+                                    a.Specifications-Link{
+                                        font-size: 15px;
+                                        font-weight: 700;
+                                        color:#242424;
+                                        line-height: 28px;
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        margin-left: 15px;
+                                        padding: 6px 14px 11px 16px;
+                                        position: relative;
+                                        z-index: 1;
+                                            &:after{
+                                                content: "";
+                                                font-family: "Font Awesome 5 Free";
+                                                font-size: 20px;
+                                                font-weight: normal;
+                                                margin-left: 11px;
+                                                line-height: 28px;
+                                                vertical-align: middle;
+                                            }
+                                            &.is-open{
+                                                background: #fbfbfb;
+                                                border-radius: 18px 18px 0 0;
+                                            }
+                                        }
+                                    }
+                                    .Specifications-Pop{
+                                        float: left;
+                                        width: 100%;
+                                        background: #fbfbfb;
+                                        ul{
+                                            margin:0px;
+                                            padding:30px 0px 20px;
+                                            float: left;
+                                            width:100%;
+                                            li{
+                                                width: 50%;
+                                                float: left;
+                                                padding: 0 30px 10px;
+                                                border-right:1px solid #d5dcde;
+                                                span{
+                                                    font-size: 16px;
+                                                    font-weight: normal;
+                                                    line-height: 24px;
+                                                    color: #242424;
+                                                    float: right;
+                                                &.ctm_lable{
+                                                    float: left;
+                                                    font-weight: 700;
+                                                    text-transform: uppercase;
+                                                }   
+                                                }
+                                                &:nth-child(even){
+                                                    border:0px;
+                                                }
+                                            }
+                                        }
+                                    }   
+                            &.Front-Pro-Data{
+                                position: relative;
+                                margin: 25px 0px 10px;
+                                padding: 0px 0px 9px;
+                            }
+                            &.Rear-Pro-Data{
+                                margin: 14px 0 0;
+                                padding:0px;
+                                .Bottom-Card-Last{
+                                    padding: 14px 27px 0;
+                                }
+                            }
+                            }
+                            .Bottom-Card-Last{
+                                float: left;
+                                width: 100%;
+                                padding: 14px 27px 0;
+                                .Outer-One{
+                                    background: #f6f6f6;
+                                    float: left;
+                                    width: 100%;
+                                    text-align: left;
+                                    padding: 14px 25px 13px 30px;
+                                    border-radius: 35px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    >div{
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        margin: 0 -1px;
+                                        line-height: 38px;
+                                    }
+                                    .FedxImg-Left{
+                                        border-right: 0px;
+                                        line-height: normal;
+                                        img{
+                                            margin: 0px 0px 5px;
+                                        }
+                                    }
+                                    .Total-Right{
+                                        margin: 0 -1px 0 13px;
+                                        float: right;
+                                        span{
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                        }
+                                        .Total-Label{
+                                            font-size: 18px;
+                                            font-weight: normal;
+                                            &:after{
+                                                content: "";
+                                                color: #2b2b2b;
+                                                font-size: 18px;
+                                                font-family: "Font Awesome 5 Free";
+                                                margin-left: 10px;
+                                            }
+                                        }
+                                        .Total-Value{
+                                            font-size: 32px;
+                                            font-weight: 800;
+                                            line-height: 40px;
+                                            color: #4295f3;
+                                            margin: 0 0 0 10px;
+                                        }
+                                    }
+                                }
+                                .Outer-One + .Outer{
+                                    border:0px;
+                                    padding: 25px 0 0;
+                                }
+                                .Outer{
+                                    border-top:1px solid #dadada;
+                                    float: left;
+                                    width:100%;
+                                    padding: 27px 0 0;
+                                    .Last-Left{
+                                        float: right;
+                                        width: auto;
+                                        padding: 12px 0px;
+                                        .Risk-Paypal-Img{
+                                            float: right;
+                                            margin:0px;
+                                            img + img{
+                                                margin-left:16px;
+                                            }
+                                        }
+                                    }
+                                    .Last-Right{
+                                        width: auto;
+                                        float: right;
+                                        padding:0 0 0 20px;
+                                        text-align: right;
+                                        .Add-To-Cart-Btn , .Custom-Add-To-Cart-Btn{
+                                            a{
+                                                font-size: 17px;
+                                                font-weight: 800;
+                                                line-height: 22px;
+                                                text-transform: uppercase;
+                                                color: #ffffff;
+                                                padding: 14px 48px 14px;
+                                                display: inline-block;
+                                                background: #efa41f;
+                                                @include transition(all 0.5s ease);
+                                                &:hover{
+                                                    @include transition(all 0.5s ease);
+                                                    background: #d99214;
+                                                }
+                                            }
+                                        }
+                                        &.out-of-stock-btn{
+                                            .Add-To-Cart-Btn{
+                                                a{
+                                                    background: #d5dcde url("../img/icon-cart.png") 17.66% 50% no-repeat;
+                                                    pointer-events:none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+    }
+   .Front_Rear_Login .Icon-Air-Pressure-Passed{
+        margin:8px 0 13px;
+        float: left;
+        width: 100%;
+        ul{
+            margin: 0px;
+            float: left;
+            li{
+                float: left;
+                width: auto;
+                margin-right: 15px;
+                text-align: center;
+                img{
+                    max-width: 40px;
+                    display: block;
+                    margin:auto;
+                }
+                span{
+                    display: inline-block;
+                    margin: 1px 0 0;
+                    font-size: 10px;
+                    font-weight: normal;
+                    color:#242424;
+                    line-height: 18px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        ul + .Air-Pressure{
+            border-left: 2px solid #d5dcde;
+        }
+        .Air-Pressure{
+            float: left;
+            line-height: 46px;
+            margin: 5px 0px;
+            padding-left:15px; 
+            span{
+                border: solid 1px rgba(27, 188, 0, 0.5);
+                border-radius: 4px;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 12px;
+                font-weight: 800;
+                color:#1bbc00;
+                background: #fff;
+                line-height: 25px;
+                padding:0px 10px;
+                text-transform: uppercase;
+                &:before{
+                    content: "";
+                    font-size: 18px;
+                    font-family: "Font Awesome 5 Free";
+                    margin-right: 5px;
+                    line-height: 25px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+.custom_category .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card.Front-Pro-Data:after{    
+    content: "";    
+    height: 1px;    
+    width: auto;    
+    background: #dadada;
+    position: absolute; 
+    left: 22px;
+    right: 22px;
+    bottom: 0;
+} 
+.custom_category .Front_Rear_Login .Free-Road-Hazard-Result {
+    margin: 10px 0px 0px;
+}
+.custom_category .Front_Rear_Login .productView-price .price-section span.price_label{
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 21px;
+}
+.custom_category .Front_Rear_Login .productView-price .price-section{
+    max-width: 100%;
+    width: auto;
+    padding-right: 30px;
+}
+.custom_category .Front_Rear_Login .productView-price .price-section.non-sale-price--withoutTax {
+    text-align: left;
+    padding-right: 0px;
+}
+.Front_Rear_Login .productView-price .price-section:nth-child(3){
+    padding-right: 0px;
+    margin: 0px;
+}
+.custom_category .Front_Rear_Login .qty-save-inner {
+    width: 100%;
+    float: left;
+    text-align: right;
+    font-size: 0;
+}
+.custom_category .Front_Rear_Login .price-section.price-section--saving.price.YouSaveMSG{
+    vertical-align: middle;
+    max-width: 100%;
+    background: #f6f6f6;
+    border-radius: 20.9px;
+    text-align: center;
+    padding: 5px 15px 6px;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 15px;
+}
+.custom_category .Front_Rear_Login .LoginClubMSGOuter .form-field.form-field--increments{
+    width: 70px;
+    float: none;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.custom_category .Front_Rear_Login .LoginClubMSGOuter .form-field.form-field--increments .card_qty select{
+    height: 40px;
+    padding: 5px 10px 5px 14px;
+    line-height: 30px;
+}
+.custom_category .Front_Rear_Login .productView-price{
+    margin: 0px;
+}
+.Front_Rear_Login .FedxImg-Left span.delivary_date {
+    display: block;
+    margin: 0;
+    width: auto;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3a3839;
+    font-weight: normal;
+}
+.Front_Rear_Login .FedxImg-Left span.delivary_date span {
+    text-decoration: underline;
+}
+.Front_Rear_Login .Cat-Bottom-Pagination .Left select{
+    background: url(../img/short-down.png) no-repeat 73% 50%;
+    padding: 12px 23px 12px 15px;
+}
+.custom_category .Front_Rear_Login .CategoryOuter .AllProductListing>ul>li .card .Bottom-Card-Last .Outer .Last-Left .Risk-Paypal-Img > img:first-child {
+    display: none;
+}
+
+/* Start Front-Rear CSS */
+.custom_category #searchspring-searchpage > .Front_Rear_Login
+{	margin:auto;
+}
+.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer .Last-Left .Risk-Paypal-Img > img:first-child
+{	display:none;
+}
+.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer-One + .Outer
+{	display:block;
+}
+.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Outer .Bottom-Card-Left ul li span
+{	display:block; margin:6px auto 0;
+}
+
+@media screen and (max-width: 767px){
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li
+	{
+        border-left: 0px;
+        border-right: 0px;
+    }
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .product-sku
+	{
+		float: none;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Outer .Bottom-Card-Right,
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Outer .Bottom-Card-Left
+	{
+		width: 100%;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter main.page-content .AllProductListing > ul > li .card .Bottom-Card .Outer .Bottom-Card-Right .Bottom-Card-Inner .card-text:before
+	{
+		display: none;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter main.page-content .AllProductListing > ul > li .card .Bottom-Card .Outer .Bottom-Card-Right .Bottom-Card-Inner .card-text
+	{
+		padding:0px;
+		margin: 0px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Tire-Specifications{
+		margin-top: 0px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .Free-Road-Hazard-Result
+	{
+		margin: 0px 0px 20px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last
+	{
+		padding: 0px 15px 0px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .product-sku
+	{
+		font-size: 17px;
+		margin: 0px 0px 10px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Front-Label, .custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Rear-Label
+	{
+		font-size: 19px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Top-Card .card-figure
+	{
+		width: 36.254%;
+		padding-right: 0px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Top-Card .card-body
+	{
+		width: 63.746%;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Top-Card .card-body .card-body-left
+	{
+		width: 100%;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Top-Card,
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Outer
+	{
+		padding: 0px 15px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li
+	{
+		padding: 15px 0px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Top-Card .card-body .card-body-left .card-text
+	{
+		font-size: 16px;
+		line-height: 18px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Top-Card .card-body .card-body-left .card-title
+	{
+		font-size: 20px;
+		line-height: 27px;
+		margin: 5px 0px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Top-Card .card-body .card-body-left .card-text.ProductRating
+	{
+		margin: 7px 0px 0px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Top-Card .card-body .card-body-left .Warning-Message
+	{
+		margin-bottom: 0px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Tire-Specifications
+	{
+		text-align: center;
+		margin: 0px -15px;
+		float: none;
+		width: auto;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Tire-Specifications a.Specifications-Link
+	{
+		margin: 0px auto;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Specifications-Pop
+	{
+		text-align: left;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer-One .FedxImg-Left
+	{
+		display: none;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer-One
+	{
+		padding: 9px 25px 8px 25px;
+		justify-content: center;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer-One .Total-Right
+	{
+		line-height: normal;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer-One .Total-Right .Total-Value
+	{
+		font-size: 26px;
+		line-height: 33px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer-One .Total-Right .Total-Label
+	{
+		font-size: 16px;
+		line-height: 21px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Outer .Bottom-Card-Right .Bottom-Card-Inner .LoginClubMSGOuter .CardPriceWrap .card-text .four_p_price span,
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Outer .Bottom-Card-Right .Bottom-Card-Inner .LoginClubMSGOuter .CardPriceWrap .card-text .four_p_price strong
+	{
+		font-size: 15px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Outer .Bottom-Card-Right .Bottom-Card-Inner .LoginClubMSGOuter .CardPriceWrap .card-text .four_p_price
+	{
+		max-width: 100%;
+		width: auto;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing>ul>li .card .Bottom-Card.Rear-Pro-Data
+	{
+	    padding: 0px 0px 13px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing>ul>li .card .Bottom-Card.Front-Pro-Data
+	{
+	    padding: 0 0 23px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing>ul>li .card .Bottom-Card.Front-Pro-Data:after
+	{
+	    left: 15px;
+	    right: 15px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li
+	{	overflow:hidden;
+	}
+}
+@media screen and (max-width: 479px){
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Specifications-Pop ul li
+	{
+		width: 100%;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Specifications-Pop ul li{
+		padding: 0 15px 10px;
+		border-left: 0px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer .Last-Right
+	{
+		width: 100%;
+		padding: 0px;
+		margin-bottom: 20px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer .Last-Left .Risk-Paypal-Img img
+	{
+		display: block;
+		margin: 0px auto 10px;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer .Last-Left .Risk-Paypal-Img img + img
+	{
+		margin: 0px auto;
+	}
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer .Last-Left .Risk-Paypal-Img,
+	.custom_category #searchspring-searchpage > .Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card-Last .Outer .Last-Left
+	{
+		width: 100%;
+	}
+	.custom_category #searchspring-searchpage>.Front_Rear_Login .CategoryOuter .AllProductListing > ul > li .card .Bottom-Card .Specifications-Pop ul li
+	{	border:0; padding:0 25px 10px;
+	}
+} 
+/* End Front-Rear CSS */    

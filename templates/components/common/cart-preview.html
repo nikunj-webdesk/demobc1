@@ -1,0 +1,81 @@
+<div class="previewCart">
+    <div class="CartMob_topbar">
+    	<div class="TopBarMenu">
+    		<h3>My Cart</h3>
+    		<a class="closeMenu" href="javascript:void(0)"><span>Close</span></a>
+    	</div>
+    </div>
+    {{#if cart.items.length}}
+        <ul class="previewCartList">
+            {{#each (limit cart.items 4)}}
+                <li class="previewCartItem">
+                    <div class="previewCartItem-image">
+                        {{#if type '==' 'GiftCertificate'}}
+                            <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{cdn ../../theme_settings.default_image_gift_certificate}}" alt="GiftCertificate" title="GiftCertificate">
+                        {{else}}
+                            <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productthumb_size' (cdn ../../theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
+                        {{/if}}
+                    </div>
+
+                    <div class="previewCartItem-content">
+                        <span class="previewCartItem-brand">        
+                            {{brand.name}}
+                        </span>
+
+                        <h6 class="previewCartItem-name">
+                            <a href="{{url}}" alt="{{name}}" title="{{name}}">{{name}}</a> 
+                        </h6>
+
+                        <span class="previewCartItem-price">
+                            {{#if quantity '>' 0}}
+                                {{quantity}} &times;
+                            {{/if}}
+                            {{#or ../customer (if ../theme_settings.restrict_to_login '!==' true)}}
+                                <span{{#if price_discounted}} class="price--discounted"{{/if}}>{{price.formatted}}</span>
+                                {{#if price_discounted}}
+                                    {{price_discounted.formatted}}
+                                {{/if}}
+                            {{else}}
+                                {{> components/common/login-for-pricing}}
+                            {{/or}}
+                        </span>
+                        <span class="previewCartItem-Total-Price">
+                            <span class="lable">Total:</span>
+                            <span class="total-Value">${{toFixed (multiply quantity price.value) 2}}</span>
+                        </span>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+        <div class="previewCartAction">
+            <div class="previewCartAction-checkout">
+                <ul class="total-row">
+                    <li>
+                        <span class="lableTxt">Shipping</span>
+                        <span class="totalTxt">FREE!</span>
+                    </li>
+                    <li>
+                        <span class="lableTxt">Total</span>
+                        <span class="totalTxt">{{cart.sub_total.formatted}}</span>
+                    </li>
+                </ul>
+                <a href="{{urls.cart}}" class="button button--small button--primary">{{lang 'cart.preview.checkout_now'}}</a>
+            </div>
+            <div class="mob_check_img">
+                <img class="Top" src="/content/3-selling-points-cart-model.png"/>
+                <img class="Bottom" src="/content/footer-payment-logos-cart-model.png"/>
+            </div>
+        </div>
+    {{else}}
+        <div class="previewCart-emptyBody">
+            <img src="{{cdn 'webdav:empty-cart.svg'}}" alt="empty-cart" />
+            <p>There is nothing in your cart.</p>
+            <a href="/">SEARCH TIRES NOW</a>
+            <div class="cart-mob-button">
+                <a href="javascript:void(0)" data-collapsible="navPages-mob-BySize">Shop By Size</a>
+                <a href="javascript:void(0)" data-collapsible="navPages-mob-ByVehicle">Shop By Vehicle</a>
+            </div>
+        </div>
+    {{/if}}
+</div>
+  

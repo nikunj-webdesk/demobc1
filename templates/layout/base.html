@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ locale_name }}">
+    <head>
+        <title>{{ head.title }}</title>
+        {{{ resourceHints }}}
+        {{{ head.meta_tags }}}
+        {{{ head.config }}}
+        {{#block "head"}} {{/block}}
+        <link href="{{ head.favicon }}" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">   
+        <!-- SearchSpring Integration -->
+        {{!> components/common/searchspring }}  
+        <script>
+            document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        </script>
+        {{ getFontsCollection }}
+        {{{stylesheet '/assets/css/theme.css'}}}
+        {{#if page_type '==' 'product' }}
+            {{{stylesheet '/assets/css/product.css'}}}
+        {{/if}}
+		{{{stylesheet '/assets/css/cmspage.css'}}}
+        {{{head.scripts}}}
+        {{{head.rsslinks}}}
+        {{inject 'themeSettings' theme_settings}}
+        {{inject 'genericError' (lang 'common.generic_error')}}
+        {{inject 'maintenanceMode' settings.maintenance}}
+        {{inject 'urls' urls}}
+        {{inject 'secureBaseUrl' settings.secure_base_url}}
+        {{inject 'cartId' cart_id}}
+        {{inject 'template' template}}
+        <link rel="stylesheet" href="https://use.typekit.net/woi1sri.css">
+        <link rel="stylesheet" href="/content/cms/cmspage-responsive.css">
+        <!-- Searchspring Script Tag -->
+
+      {{#if category}}
+        	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?6bir78" token="{{settings.storefront_api.token}}" hide-content="#searchspring-content, #searchspring-sidebar" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query" category="{{#each breadcrumbs}}{{#unless @first}}{{name}}{{#unless @last}}>{{/unless}}{{/unless}}{{/each}}" name="{{ category.name }}" {{#if customer.id}}logged-in{{/if}}></script>
+        {{else if brand}}
+        	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?6bir78" token="{{settings.storefront_api.token}}" hide-content="#searchspring-content, #searchspring-sidebar" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query" brand="{{ brand.name }}" {{#if customer.id}}logged-in{{/if}}></script>
+        {{else if product}}
+        	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?6bir78" token="{{settings.storefront_api.token}}" hide-content="#searchspring-content, #searchspring-sidebar" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query" size="{{#each product.custom_fields}}{{#if name '===' 'Size'}}{{ value }}{{/if}}{{/each}}"  model="{{#each product.custom_fields}}{{#if name '===' 'Model'}}{{ value }}{{/if}}{{/each}}" {{#if customer.id}}logged-in{{/if}}></script>
+        {{else}}
+        	<script src="//cdn.searchspring.net/search/v3/js/searchspring.catalog.js?6bir78" token="{{settings.storefront_api.token}}" hide-content="#searchspring-content, #searchspring-sidebar, .page-heading, #searchspring-vehicle-sizes-finder-left, #searchspring-vehicle-sizes-finder-right" webdav="{{cdn 'webdav:'}}" cdn="{{ cdn '/' }}" search="search_query"{{#if page.title "!=" 'Search Results'}} defer{{/if}} {{#if page.title "==" 'Vehicle Search Multi'}} vehicle-search{{/if}} {{#if customer.id}}logged-in{{/if}}></script>
+        {{/if}} 
+            
+    </head>
+    <body class="custom_{{page_type}}{{#if page.title '==' 'Search Results'}} custom_category{{/if}}">
+        {{#if carousel}}
+            {{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows}}
+        {{/if}}
+        <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
+        {{#and settings.privacy_cookie settings.is_eu_ip_address}}
+            {{> components/common/cookie}}
+        {{/and}}
+        {{> components/common/header }}
+        {{> components/common/body }}
+        {{> components/common/footer }}
+        <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
+        <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
+        <script>
+            window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+        </script>
+        <div class="megamenu_bg_black"></div>
+        <span class="customer_name" style="display:none;">{{customer.name}}</span>
+        <span class="customer_email" style="display:none;">{{customer.email}}</span>
+        {{{footer.scripts}}}
+        {{#unless customer}}
+            {{> components/custom/popup-login-window-modal }}
+        {{/unless}}
+        <!-- Google Tag Manager (noscript) -->
+         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL2GR9N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+        <!-- End Google Tag Manager (noscript) -->
+    </body>
+</html>

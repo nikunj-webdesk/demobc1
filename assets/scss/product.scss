@@ -1,0 +1,3729 @@
+.custom_product .body > .container{
+    max-width: 100%;
+    padding: 0px;
+}
+.custom_product .CategoryTopContent{
+    background:#f4f7f8;
+    float: left;
+    width: 100%;
+    padding: 20px 0px;
+}
+.custom_product .CategoryTopContent p{
+    font-size: 20px;
+    font-weight: 800;
+    color: #3a3839;
+    line-height: 28px;
+    margin: 11px 0px;
+    display: inline-block;
+}
+.custom_product .CategoryTopContent .Left{     
+    float: left;
+    width: 100%; 
+    max-width: calc(100% - 282px);
+} 
+.custom_product .CategoryTopContent .Right{  
+    float: right;
+    width: auto;
+}
+.custom_product .CategoryTopContent .Right a{
+    font-size: 16px;
+    font-weight: 800;
+    background: #efa41f;
+    color: #fff;
+    text-transform: uppercase;
+    width: 277px;
+    text-align: center;
+    padding: 15px 0px 13px;
+    line-height: 22px;
+    display: inline-block;
+    border-radius: 0px;
+}
+.custom_product .CategoryTopContent .Right a:hover{
+    background: #d99214;
+    transition: all 0.5s ease; 
+}
+.custom_product .ProWrap{
+    width: 100%;
+    float: left;
+    margin: 30px 0px 0px;
+}
+.VehicleTireFitWrap {
+    float: left;
+    width: 100%;
+    background: #f6f6f6;
+    margin: 15px 0 15px;
+    padding:0px;
+}
+.VehicleTireFitWrapInner {
+    font-size: 0px;
+    width: 100%;
+    float: left;
+    margin:0px;
+    padding: 30px 0px;
+}
+.VehicleTireFitWrap .VehicleTireFitWrapInner h3 {
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 800;
+    color: #2b2b2b;
+    margin: 0 20px 0px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.VehicleTireFitWrap .VehicleTireFitWrapInner a.Btn.Fits {
+    font-size: 13px;
+    line-height: 17px;
+    background: #fff;
+    font-weight: 700;
+    border: 0.8px solid #2b2b2b;
+    padding: 9px 21px 9px 23px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #272727;
+}
+.VehicleTireFitWrap .VehicleTireFitWrapInner a.Btn.Fits:hover{
+    background: #ececec;
+    color: #272727;
+    transition: all 0.5s ease;
+}
+.VehicleTireFitWrapInner.form.is-open{
+    display: block;
+}
+.VehicleTireFitWrapInner.form{
+    padding: 12px 0px;
+    display: none;
+}
+.VehicleTireFitWrapInner.form h4 {
+    margin: 0px 0px 3px;
+    font-weight: 800;
+    color: #2b2b2b;
+    text-transform: uppercase;
+    line-height: 28px;
+    font-size: 20px;
+}
+.TireFIt {
+    float: left;
+    width: 100%;
+}
+.TireFIt p {
+    background: #f6f6f6;
+    margin: 0;
+    padding: 6px 0px;
+    text-align: center;
+}
+.TireFIt p.Not span {
+    color: #f10023;
+}
+.TireFIt p span {
+    font-size: 16px;
+    line-height: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: 700;
+    margin-right: 20px;
+}
+.TireFIt p a {
+    border: solid 1px rgba(102, 102, 102, 0.48);
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    line-height: 18px;
+    color: #666666;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+}
+.TireFIt p span {
+    font-size: 16px;
+    line-height: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: 700;
+    margin-right: 20px;
+    color: #6cac22;
+}
+.TireFIt p.Not span {
+    color: #f10023;
+}
+.TireFIt p span:before{
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.TireFIt p.Not span:before {
+    content: "\f071";
+    font-size: 18px;
+    margin-right: 7px;
+}
+.custom_product .productView{
+    margin: 0 -15px 52px;
+    padding: 0px;
+}
+.custom_product .productView-images{
+    width: 33.334%;
+    float: left;
+    position: relative;
+    padding: 0 15px;
+    margin: 0px;
+}
+.custom_product .productView-images .productView-image{
+    border: solid 1px #d3d3d3;
+    height: 370px;
+    width: 100%;
+    position: static;
+}
+.custom_product .productView-images .productView-img-container{
+    margin: 0px;
+}
+.custom_product .productView-images .productView-img-container:after{
+    display: none;
+}
+.custom_product .productView-images .productView-image .productView-img-container img{
+    max-height: 368px;
+}
+.custom_product .Sale-Badge{
+    position: absolute;
+    top:1px;
+    left: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius:0px 0px 3px 0px;
+    background-color: #f34242;
+    display: inline-block;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding:5px 10px;
+    color: #fff;
+    z-index: 1;
+}
+.custom_product .ProRight{
+    width: 66.66%;
+    float: right;
+    padding: 0 15px;
+    margin: 0px;
+}
+.custom_product .ProRight .productView-details{
+    width: 100%;
+    padding:0px;
+    margin: 0 0 15px;
+}
+.productView-image + .productView-thumbnails{
+    margin: 15px -4px 0px;
+}
+.productView-image + .productView-thumbnails .productView-thumbnail{
+    width: 20%;
+    float: left;
+    padding: 0 4px;
+    height: 75px;
+    display: table;
+}
+.productView-thumbnails .slick-list .slick-track{
+    margin: 0px;
+}
+.productView-image + .productView-thumbnails .productView-thumbnail .productView-thumbnail-link{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0px;
+    height: 100%;
+    border:2px solid #d3d3d3;
+    opacity: 0.5;
+}
+.productView-image + .productView-thumbnails .productView-thumbnail .productView-thumbnail-link.is-active{
+    opacity: 1;
+}
+.productView-thumbnails .slick-list{
+    margin: 0px;
+}
+.productView-thumbnails .slick-dots{
+    bottom: 0px;
+}
+.productView-thumbnails .slick-dots li, 
+.productView-thumbnails .slick-dots li button, 
+.productView-thumbnails .slick-dots li button:before{
+    margin: 0 3px;
+    height: 12px;
+    width: 12px;
+    padding: 0px;
+}
+.productView-thumbnails .slick-dots li button,
+.productView-thumbnails .slick-dots li button:before{
+    margin: 0px;
+}
+.productView-thumbnails .slick-dots li button:before{
+    border:1px solid #efa41f;
+}
+.productView-thumbnails .slick-dots li.slick-active button:before,
+.productView-thumbnails .slick-dots li button:hover:before{
+    border:1px solid #efa41f;
+    background:#efa41f;
+}
+.productView-thumbnails .productView-thumbnail img{
+    position: static;
+    max-height: 73px;
+    max-width: 100%;
+}
+.ProImageTxt{
+    float: left;
+    width: 100%;
+    margin: 15px 0 0;
+}
+.ProImageTxt p{ 
+    font-weight: normal;
+    font-size: 16px;
+    color: #242424;
+    line-height: 20px;
+    margin: 0 0 8px; 
+}
+.ProImageTxt p b{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.productView-image .easyzoom-flyout{
+    left: 100%;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+    background: #fff;
+    box-shadow: 0px 2px 12px #000;
+    height: 600px;
+    width: 650px; 
+}
+.custom_product .ProRight .productView-product{
+    position: relative;
+    padding: 0px;
+    float: left;
+    width: 100%;
+    border:0px;
+}
+.productView-product .Tire-Badge-outer {
+    position: absolute;
+    top: -3px;
+    max-width: 100%;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+    border-top: 3px solid #62d7ff;
+    border-radius: 0px;
+}
+.productView-product .Tire-Badge-outer.Prod_new{
+    border-color: #1aba8d;
+}
+.productView-product .Tire-Badge-outer.Prod_new span{
+    background:#1aba8d;
+}   
+.productView-product .Tire-Badge-outer.Prod_take_off{
+    border-color: #18a4b2;
+}
+.productView-product .Tire-Badge-outer.Prod_take_off span{
+    background:#18a4b2;
+}
+.productView-product .Tire-Badge-outer span {
+    display: inline-block;
+    padding: 3px 12px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    background: #62d7ff;
+    border-radius: 0px 0px 10px 10px;
+}
+.productView-product .productView-brand{
+    font-size: 20px;
+    font-weight: 500;
+    color: #242424;
+    line-height: 24px;
+    margin: 0px 0px 5px;
+    display: inline-block;
+}
+.productView-product .productView-brand a{ 
+    color: #2b2b2b;
+    pointer-events: none;
+}
+.productView-product .productView-rating {
+    position: static;
+    right: 0;
+    text-align: left;
+}
+.yotpo .yotpo-bottomline{ 
+    display: block !important; 
+}
+.yotpo .yotpo-bottomline .yotpo-icon-empty-star{
+    color: #d3d3d3 !important; 
+}
+.productView-product .productView-rating .productView-reviewLink, 
+.yotpo .write-review-btn-hidden{
+    display: inline-block !important;
+    margin: 0px !important;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    color: #242424 !important;
+    font-family: "multi-display" !important;
+}
+.productView-product .productView-title{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 40px;
+    margin: 0 0 10px;
+    text-transform: inherit;
+    letter-spacing: normal;
+    color: #2b2b2b;
+    max-width: 370px;
+}
+.productView-product .product-sku{
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #3a3839;
+    margin: 0px 0px 12px;
+    display: inline-block;
+    width: 100%; 
+}
+.productView-product .BelowProductName .ProTotalWrap{
+    float: right;
+    width: auto;
+    clear: right;
+    margin: 0px 0px 15px;
+}
+.productView-product .BelowProductName{
+    float: left;
+    width: 100%;
+    margin: 0px;
+}
+.productView-product .BelowProductName .Left{
+    float: left;
+    width: 100%;
+}
+.productView-product .BelowProductName .Right{
+    float: right;
+    width: 51%;
+    text-align: right;
+}
+.productView-product .BelowProductName .Right .ProLogMemberinner{
+    border-radius: 4.7px;
+    border: solid 3px #fbe7c2;
+    float: left;
+    width: 100%;
+}
+.productView-product .BelowProductName .Right .ProLogMemberinner .LoginClubMSG{
+    border-radius: 0px 0px 3.7px 3.7px;
+    background: #fbe7c2;
+    float: left;
+    width: 100%;
+}
+.productView-product .BelowProductName .Right .ProLogMemberinner .LoginClubMSGOuter{
+    padding: 14px 14px 6px;
+    float: left;
+    width: 100%;
+}
+.ProLogMemberinner .LoginClubMSG h4{
+    font-size: 14.9px;
+    font-weight: 800;
+    max-width: 193px;
+    margin: 10px auto 10.8px;
+    line-height: 18.6px;
+    text-align: center;
+}
+.ProLogMemberinner .LoginClubMSG h4 a{
+    color: #3a3839;
+    text-decoration: underline;
+}
+.ProLogMemberinner .LoginClubMSG h4 a:hover{
+    color: #3a3839;
+    text-decoration: none;
+}
+
+.productView-product .Price-Per-Tire {
+    font-size: 16px;
+    font-weight: 800;
+    color: #242424;
+    line-height: 24px;
+    display: inline-block;
+}
+.productView-product .form-field--increments{
+    margin: 0px;
+}
+.productView-product .form-field--increments .form-increment {
+    max-width: 150px;
+    border: solid 1px #d3d3d3;
+    border-radius: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.productView-product .form-field--increments .form-increment .button {
+    width: 33.33%;
+    float: left;
+    height: 48px;
+    background: #f4f7f8;
+    border: 0px;
+    border-radius: 100px 0px 0px 100px;
+}
+.productView-product .form-field--increments .form-increment .button i {
+    font-size: 18px;
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    color: #5a5a5a;
+    font-weight: normal;
+}
+.productView-product .form-field--increments .form-increment .form-input {
+    width: 33.33%;
+    float: left;
+    height: 48px;
+    border-left: solid 1px #d3d3d3;
+    border-right: solid 1px #d3d3d3;
+    border-radius: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #313131;
+}
+.productView-product .form-field--increments .form-increment .form-input + .button {
+    border-radius: 0px 100px 100px 0px;
+}
+.productView-product .BelowProductName .Right .stock_level {
+    font-size: 12.1px;
+    font-weight: normal;
+    color: #3a3839;
+    display:block;
+    vertical-align: middle;
+    margin:10px 0px 0px;
+    text-align: left;
+    line-height: 22.3px;
+    float: left;
+    width: 100%;
+}
+.productView-product .BelowProductName .Right .stock_level:before {
+    content: "";
+    font-size: 14.9px;
+    font-family: "Font Awesome 5 Free";
+    margin-right: 10px;
+    color: #ff6b07;
+    vertical-align: middle;
+}
+.productView-product .BelowProductName .Right .stock_level.In-Stock-Btn:before {
+    content: "";
+    color: #6cac22;
+    font-size: 14.9px;
+}
+.productView-product .BelowProductName .Icon-Air-Pressure-Passed{
+    margin: 28px 0px 10px;
+    width: 100%;
+}
+.productView-product .BelowProductName .Icon-Air-Pressure-Passed .Air-Pressure{
+    line-height: 56px;
+    margin: 0px;
+}
+.productView-product .BelowProductName .Bottom-Card-Left{
+    float: left;
+    width: 100%;
+    border-top: 1px solid #d5dcde;
+    padding: 15px 0px 20px;
+}
+.productView-product .BelowProductName .Bottom-Card-Left ul{
+    list-style: none;
+    margin: 0px;
+}
+.productView-product .BelowProductName .Bottom-Card-Left ul li {
+    margin: 0 0 10px;
+    display: inline-block;
+    width: 100%;
+}
+.productView-product .BelowProductName .Bottom-Card-Left ul li:empty {
+    display: none;
+}
+.productView-product .BelowProductName .Bottom-Card-Left ul li ul li{
+     margin: 0 0 -4px;
+}
+.productView-product .BelowProductName .Bottom-Card-Left ul li img {
+    max-width: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.productView-product .BelowProductName .Bottom-Card-Left ul li span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #242424;
+    line-height: 20px;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.productView-product .BelowProductName .Bottom-Card-Left ul li.Tread-Depth span {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 28px;
+}
+.productView-product .BelowProductName .Bottom-Card-Left ul li.Tread-Life {
+    background: #1a9eca;
+    font-size: 12px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    clear: left;
+    border-radius: 2px;
+    margin: 0px 0px 5px;
+    width: auto;
+}
+.productView-product .BelowProductName .ProTotalWrap .Top{
+    padding: 0px;
+    color: #3a3839;
+    font-size: 18px;
+    font-weight: normal;
+    float: left;
+    width: 100%;
+}
+.productView-product .BelowProductName .four_p_price{
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 26px;
+    color: #3a3839;
+    text-align: right;
+    margin: -11px 0px 14px;
+    max-width: 100%;
+    width: 100%;
+    float: right;
+    clear: right;
+}
+.productView-product .BelowProductName .four_p_price span{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 28px;
+    color: #242424;
+    float: none;
+}
+.productView-product .BelowProductName .four_p_price span:last-child{
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    margin-left: 0px;
+}
+.productView-product .BelowProductName .ProTotalWrap .Bottom {
+    border:1px solid #d5dcde;
+    border-radius: 0px 0px 4px 4px;
+    padding: 13px 15px;
+    float: left;
+    width: 100%;
+    background:#f0f5f7;
+}
+.productView-product .BelowProductName .ProTotalWrap .Bottom .FedxImg,
+.productView-product .BelowProductName .ProTotalWrap .Bottom .Same-Day-Ship-Btn{
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+.productView-product .BelowProductName .ProTotalWrap .Bottom .FedxImg{
+    margin: 0 17px 0px 0px;
+}
+.productView-product .BelowProductName .ProTotalWrap .Bottom .Same-Day-Ship-Btn{
+    font-size: 14px;
+    font-weight: bold;
+    color:#242424;
+    line-height: 20px;
+    position: relative;
+    padding: 0 0 0 30px;
+}
+.productView-product .BelowProductName .ProTotalWrap .Bottom .ProSubtotal{
+    float: right;
+    padding: 9px 0px 7px;
+}
+.productView-product .BelowProductName .ProTotalWrap .Bottom .ProSubtotal span{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 28px;
+    color:#242424;
+    margin:0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.productView-product .BelowProductName .ProTotalWrap .Bottom .ProSubtotal span.SubtotalVal{
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    margin: 0px 0px 0px 7px;
+    color: #1a9eca;
+}
+.productView-product .BelowProductName .ProTotalWrap .Bottom .Same-Day-Ship-Btn:before{
+    content: "";
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: 0px;
+    top:10px;
+}
+.custom_product .ProRight .productView-details .productView-options{
+    margin: 0px;
+    width: 100%;
+    float: left;
+}
+.custom_product .productView-product .BelowProductName .four_p_price{
+    margin: -9px 0px 10px;
+}
+.custom_product .productView-price.AfterLogin .price-section:nth-child(3){
+    text-align: right;
+}
+.custom_product .productView-product .BelowProductName .AfterLogin .four_p_price{
+    width: auto;
+    margin: 3px 0px 10px;
+}
+.custom_product .ProRight .productView-details .productView-options label.form-label.form-label--inlineSmall{
+    display: none;
+}
+.custom_product .ProRight .productView-details .productView-options label.form-label{
+    background: #f6f6f6;
+    padding:12px 1px 12px 49px;
+    font-weight: 700;
+    border:1px solid #d3d3d3;
+    font-size: 13px;
+    color: #3a3839;
+}
+.custom_product .ProRight .productView-details .productView-options label.form-label:before{
+    border-color: #3a3839;
+    height: 24px;
+    width: 24px;
+    background: #fff;
+    top: 15px;
+    border-radius: 2px;
+    left: 10px;
+}
+.custom_product .ProRight .productView-details .productView-options .form-checkbox + .form-label::after{
+    background: url(https://dev-prioritytire.mybigcommerce.com/content/checked-retina.png) center no-repeat;
+    top: 20px;
+    margin: auto;
+    left: 15px;
+    background-size: auto 16px;
+}
+.productView-options .form-action{
+    margin: 0px;
+    float: right;
+    width: auto;
+    padding: 0px;
+}
+.productView-product .Free-Road-Hazard-Result{
+    margin: 3px 0 0;
+}
+.productView-options .form-action #form-action-addToCart{
+    background: url(https://www.bestusedtires.com/content/icon-cart-retina.png) 14% 50% no-repeat #efa41f;
+    background-size: auto 24px;
+    border-radius: 0px;
+    font-size: 20.5px;
+    font-weight: 800;
+    color:#fff;
+    text-transform: uppercase;
+    line-height: 26px;
+    padding: 15px 22px 15px 70px;
+    width: 231px;
+    display: inline-block;
+    margin: 0px;
+    border:0px;
+    text-align: left;
+}
+.productView-options .form-action #form-action-addToCart:hover{
+    background: url(https://www.bestusedtires.com/content/icon-cart-retina.png) 14% 50% no-repeat #d99214;
+    background-size: auto 24px;
+    transition: all 0.5s ease; 
+}
+
+.custom_product .ProRight .productView-details .Risk-Paypal-Img{
+    float: right;
+    margin: 0 30px 0px 0px;
+}
+.custom_product .ProRight .productView-details .Risk-Paypal-Img img{
+    max-width: 304px;
+}
+.custom_product .ProStickyBar {
+    float: left;
+    width: 100%;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin: 0px;
+    z-index: 1;
+}
+.custom_product .ProStickyBar:before {
+    content: "";
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    height: 17px;
+    top: -17px;
+}
+.custom_product .ProStickyBar ul{
+    list-style: none;
+    margin: 0px;
+}
+.custom_product .ProStickyBar ul li{
+    float: left;
+    width: auto;
+    margin: 0px 30px 0px 0px;
+    padding: 23px 0px;
+}
+.custom_product .ProStickyBar ul li.is-active {
+    position: relative;
+}
+.custom_product .ProStickyBar ul li.is-active a {
+    color: #4295f3;
+}
+.custom_product .ProStickyBar ul li.is-active:before {
+    content: "";
+    background: #4295f3;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 4px;
+    bottom: 0px;
+}
+.custom_product .ProStickyBar ul li a{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #3a3839;
+}
+.custom_product .SpecificationsDetails,
+.ProSpecifications,
+.ProDescription,
+.ProReviews,
+.ProShipping,
+.ProNewUsed,
+.ProCompatible,
+.ProductDisclosure,
+.SimilarTires,
+.RecentlyViewed{
+    width: 100%;
+    float: left;
+}
+
+.SpecificationsDetails .SpecificationsList{
+    background:#f6f6f6;
+    float: left;
+    width: 100%;
+    border-radius: 0px;
+    padding: 30px 0px;
+}
+.SpecificationsDetails .SpecificationsList ul{
+    margin: 0px;
+    list-style: none;
+    padding: 0 5px;
+    float: left;
+    width: 100%;
+}
+.SpecificationsDetails .SpecificationsList ul li{
+    width: 33.33%;
+    float: left;
+    padding: 0 25px;
+    border-right: 1px solid #d5dcde;
+}
+.SpecificationsDetails .SpecificationsList ul li:nth-child(3n+3){
+    border:0px;
+}
+.SpecificationsDetails .SpecificationsList ul li span{
+    float: left;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #3a3839;
+    margin: 10px 0px 0px;
+}
+.SpecificationsDetails .SpecificationsList ul li span.ctm_value{
+    float: right;
+    font-weight: normal;
+}
+.SpecificationsDetails .SpecificationsList ul li:first-child span, .SpecificationsDetails .SpecificationsList ul li:nth-child(2) span, .SpecificationsDetails .SpecificationsList ul li:nth-child(3) span{
+    margin: 0px;
+}
+.custom_product .ProDes h3{
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 42px;
+    margin: 60px 0 15px;
+    color: #2b2b2b;
+    text-transform: uppercase;
+}
+.custom_product .ProDes p{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 15px;
+    line-height: 28px;
+    color:#3a3839;
+}
+.custom_product .ProDes p.SimilarTxt{
+    font-size: 20px;
+    color: #2b2b2b;
+}
+.ProDescription .UsedTakeOff.showMe,
+.ProDescription .NewWrapMn.showMe{
+    display: block !important;
+}
+.ProDescription .UsedTakeOff{
+    background: #f0f5f7 url(../img/inspection-results-bg.jpg) no-repeat top right;
+    padding: 30px;
+    float: left;
+    width: 100%;
+    border-radius: 4px;
+}
+.usedtakeoffshipping,
+.ProNewUsed .ProNewUsedWrap,
+.ProCompatible .ProCompatibleWrap,
+.NewWrapMn,
+.newshippingTxt{
+    background: #f6f6f6;
+    border-radius: 0px;
+    width: 100%;
+    float:left;
+}
+.ProDescription .UsedTakeOff .TopContent,
+.ProNewUsed .ProNewUsedWrap .TopContent {
+    width: 100%;
+    float: left;
+    max-width: 840px;
+}
+.ProDescription .UsedTakeOff h4,
+.ProNewUsed .ProNewUsedWrap h4,
+.NewWrapMn .ProDesMn .Right h4{
+    font-size: 32px;
+    font-weight: 800;
+    color: #2b2b2b;
+    margin: 0 0 10px;
+    line-height: 40px;
+}
+.ProNewUsed .ProNewUsedWrap h4{
+    font-size: 28px;
+    line-height: 36px;
+}
+.ProDescription .UsedTakeOff h5,
+.ProNewUsed .ProNewUsedWrap h5,
+.NewWrapMn .ProDesMn .Right h5{ 
+    color:#2b2b2b;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    margin: 0 0 15px;
+    text-transform: inherit;
+}
+.NewWrapMn .ProDesMn .Right h5{
+    color:#2b2b2b;
+    margin: 0px 0px 10px;
+    text-transform: uppercase;
+}
+.NewWrapMn .ProDesMn .Right h4{
+    margin: 0px 0px 15px;
+}
+.ProDescription .UsedTakeOff p{
+    margin: 0 0 10px;
+}
+.ProDescription .UsedTakeOff p b{
+    font-size: 18px;
+    font-weight: 800;
+} 
+.ProDescription .UsedTakeOff .TopContent img{
+    margin: 0 0 20px;
+}
+.ProDescription .UsedTakeOff .BottomContent,
+.ProNewUsed .ProNewUsedWrap .BottomContent{
+    width: 100%;
+    float: left;
+    margin: 20px 0px 0px;
+}
+.ProDescription .UsedTakeOff h6{
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0px 0px 10px;
+    color:#0a4e66;
+    text-transform: inherit;
+}
+.ProDescription .UsedTakeOff .BottomContent .col-2{
+    width: 48.65%;
+    float: left;
+}
+.ProDescription .UsedTakeOff .BottomContent .col-2 + .col-2 {
+    width:51.35%;
+    float: right;
+    padding: 0px 0px 0px 30px;
+}
+.ProDescription .UsedTakeOff .BottomContent .col-2 ul{
+    list-style: none;
+    margin: 0px 0px 0px 30px;
+}
+.ProDescription .UsedTakeOff .BottomContent .col-2 ul li{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 10px;
+    line-height: 28px;
+    color:#242424;
+}
+.ProDescription .UsedTakeOff .BottomContent .col-2 ul li:before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #3a3839;
+    display: inline-block;
+    margin: 0px 10px 0px 0px; 
+}
+.ProDescription .UsedTakeOff .BottomContent .col-1{
+    border-top:1px solid #d5dcde;
+    float: left;
+    width: 100%;
+    padding: 30px 0px 0px;
+    margin: 20px 0px 0px;
+}
+.ProDescription .UsedTakeOff .BottomContent .col-1 .Left{
+    float: left;
+    width: 33.33%;
+}
+.ProDescription .UsedTakeOff .BottomContent .col-1 .Right{
+    width: 66.33%;
+    float: right;
+    padding: 0px 56px 0px 0px;
+}
+.ProDescription .UsedTakeOff .BottomContent .col-1 .Right p{
+    font-weight: 800;
+    margin: 0px;
+}
+.ProDescription .UsedTakeOff .BottomContent .col-1 .Right p a{
+    color:#1a9eca;
+}
+.usedtakeoffshipping{
+    padding: 45px 42px 54px;
+}
+.usedtakeoffshipping .Left{
+    width: 22.66%;
+    float: left;
+    padding: 22px 0px 0px;
+}
+.usedtakeoffshipping .Right{
+    width: 77.34%;
+    float: right;
+    text-align: left;
+}
+.usedtakeoffshipping .BottomContent {
+    float: right;
+    padding: 30px 23px 0 0;
+    width:auto;
+}
+.ProNewUsed .ProNewUsedWrap{
+    padding: 30px;
+    background: #f0f5f7 url(../img/new-vs-used-bg.jpg) no-repeat top right;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent{
+    margin: 15px 0px 0px;
+    border-top: 1px solid #d5dcde;
+    padding: 30px 0px 0px;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent > p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 28px;
+    color:#095871;
+    margin: 0px;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul{
+    margin: 0px auto;
+    max-width: 650px;
+    padding: 0px;
+    list-style: none;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li {
+    float: left;
+    text-align: right;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li.online-stores {
+    width: 25%;
+    padding-top: 45px;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li.new-vs-used {
+    width: 43.4%;
+    padding: 0 25px;
+    text-align: center;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li.new-vs-used img{
+    max-width: 228px;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li.best-used-tires {
+    width: 31.39%;
+    text-align: left;
+    padding-top: 44px;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li .Newlable, .ProNewUsed .ProNewUsedWrap .BottomContent ul li .usedlable {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: #bf2520;
+    width: auto;
+    padding: 1px 6px 0px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    margin: 10px 0px;
+    border-radius: 3px;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li .usedlable {
+    background: #ed8009;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li .Newlable.hideDesktop, .ProNewUsed .ProNewUsedWrap .BottomContent ul li .usedlable.hideDesktop {
+    display: none;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #282828;
+    font-weight: normal;
+    margin: 0 0 5px;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li .bottomLine {
+    font-size: 12px;
+    line-height: 18px;
+    color: #282828;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent ul li p span{
+    font-weight: 800;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent .bottomText {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.ProNewUsed .ProNewUsedWrap .BottomContent .bottomText h5 {
+    color: #ed8009;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 32px;
+    margin: 5px 0px 22px;
+    text-transform: inherit;
+}
+.ProCompatible .ProCompatibleWrap ul{
+    list-style: none;
+    margin: 0px -15px;
+}
+.ProCompatible .ProCompatibleWrap .car-fits {
+    float: left;
+    width: 100%;
+    padding: 30px 30px 20px;
+}
+.ProCompatible .ProCompatibleWrap ul li{
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+    position: relative;
+    margin: 0 0 10px;
+    color: #3a3839;
+    font-size: 18px;
+    line-height: 28px;
+}
+.ProCompatible .ProCompatibleWrap ul li:before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #3a3839;
+    display: inline-block;
+    margin: 0px 10px 0px 0px; 
+    vertical-align: middle;
+}
+.ProCompatible .ProCompatibleWrap ul li a{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 28px;
+    color: #242424;
+    display: inline-block;
+    vertical-align: middle;
+}
+.custom_product .ProCompatible .ProCompatibleWrap + p{
+    font-size: 12px;
+    line-height: 18px;
+    color: #3a3839;
+    margin: 15px 0px 0px;
+    text-align: center;
+    display: inline-block;
+}
+.ProCompatible .ProCompatibleWrap + p b{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.custom_product .ProDes.ProductDisclosure h3 {
+    margin: 30px 0px 15px;
+    font-size: 24px;
+    font-weight: 800;
+}
+.custom_product .ProDes.ProductDisclosure .Left,
+.custom_product .ProDes.ProductDisclosure .Right{
+    width: 50%;
+    float: left;
+}
+.custom_product .ProDes.ProductDisclosure .Left{
+    padding:0px 15px 0px 0px;
+}
+.custom_product .ProDes.ProductDisclosure .Right{
+    padding:0px 0px 0px 15px;
+}
+.custom_product .ProDes.ProductDisclosure .Left p:last-child{
+    margin: 0px;
+}
+.custom_product .ProDes.ProductDisclosure .Left p b{
+    font-weight: 800;
+}
+.SimilarTires.ProDes{
+    padding: 0 0 60px;
+    border-bottom: 1px solid rgba(166,166,166,0.6);
+}
+.SimilarTires.ProDes h3{
+    margin: 60px 0px 5px;
+}
+.SimilarTires.ProDes .productCarousel{
+    margin: 0 -15px;
+}
+.SimilarTires.ProDes .productCarousel .productCarousel-slide{
+    width: 25%;
+    float: left;
+    padding: 0 15px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-figure{
+    border:1px solid #d3d3d3;
+    height: 239px;
+    width: 100%;
+    display: table;
+    margin: 0 0 10px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-figure a{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-img-container:after{
+    display: none;
+}
+.SimilarTires.ProDes .productCarousel .productCarousel-slide .card-image{
+    position: static;
+    max-height: 237px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body{
+    padding: 0px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-title,
+.RecentlyViewed .productCarousel-slide .card-body .card-title {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0 0 5px;
+    height: 48px;
+    overflow: hidden;
+}
+.RecentlyViewed .productCarousel-slide .card-body .card-title{
+    margin: 0 0 15px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-title a,
+.RecentlyViewed .productCarousel-slide .card-body .card-title a{
+    color: #3a3839;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-text,
+.RecentlyViewed .productCarousel-slide .card-body .card-text {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    margin: 0px;
+    color:#4295f3;
+}
+.RecentlyViewed .productCarousel{
+    margin:0 -15px;
+}
+.RecentlyViewed .productCarousel-slide{
+    width: 33.33%;
+    float: left;
+    padding: 0 15px;
+    margin: 0 0 20px;
+}
+.RecentlyViewed .productCarousel-slide:last-child{
+    margin: 0px;
+}
+.RecentlyViewed .productCarousel-slide .card-figure{
+    border:1px solid #d3d3d3;
+    width: 36.66%;
+    display: table;
+    float: left;
+    height: 120px;
+}
+.RecentlyViewed .productCarousel-slide .card-figure a{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.RecentlyViewed .productCarousel-slide .card-figure .card-img-container:after{
+    display: none;
+}
+.RecentlyViewed .productCarousel-slide .card-figure .card-image {
+    position: static;
+    max-height: 118px;
+}
+.RecentlyViewed .productCarousel-slide .card-body{
+    width: 63.34%;
+    float: left;
+    padding: 13px 11px 12px 16px;
+}
+.support_product{
+    margin: 60px 0px 0px;
+}
+.NewWrapMn .ProDesMn{
+    width: 100%;
+    padding: 26px 30px 30px;
+    float: left;
+}
+.NewWrapMn .ProDesMn .FeaturesBenefits{
+    font-size: 20px;
+    font-weight: 800;
+    color: #2b2b2b;
+    line-height: 28px;
+    margin: 0 0 12px;
+}
+.NewWrapMn .ProDesMn .FeaturesBenefits strong{
+    font-weight: 800;
+}
+.NewWrapMn .ProDesMn .Left{
+    float: left;
+    width: 30.64%;
+}
+.NewWrapMn .ProDesMn .FeaturesBenefitsList{
+    margin: 0px;
+    list-style: none;
+}
+.NewWrapMn .ProDesMn .FeaturesBenefitsList + img{
+    margin: 20px 0px 0px;
+}
+.NewWrapMn .ProDesMn .FeaturesBenefitsList li{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 28px;
+    color: #3a3839;
+    position: relative;
+    padding: 0 0 0px 30px;
+    margin: 0px 0px 10px;
+}
+.NewWrapMn .ProDesMn .FeaturesBenefitsList li:before{
+    content: "";
+    font-size: 20px;
+    color:#4295f3;
+    position: absolute;
+    left: 0px;
+    top:0px;
+    font-family: "Font Awesome 5 Free";
+}
+
+.NewWrapMn .ProDesMn .Right{
+    float: right;
+    width: 69.36%;
+    padding: 0px 0px 0px 30px;
+}
+.NewWrapMn .ProDesMn .Right p:last-child,
+.newshippingTxt .TopContent .Right p:last-child{
+    margin: 0px;
+}
+.newshippingTxt .TopContent{
+    padding: 30px 30px 30px 50px;
+    float: left;
+    width: 100%;
+}
+.newshippingTxt .TopContent .Left{
+    width: 22.66%;
+    float: left;
+    padding: 36px 0px 0px;
+}
+.newshippingTxt .TopContent .Right{
+    width: 77.34%;
+    float: right;
+    padding: 0px 0px 0px 3px;  
+}
+.newshippingTxt .TopContent .Right p b{
+    font-weight: 800;
+}
+.newshippingTxt .TopContent .Right p a{
+    color: #4295f3;
+    white-space: nowrap;
+}
+.custom_product .ProStickyBar ul li.Sticky-Add {
+    float: right;
+    margin: 0;
+    padding: 10px 0px;
+}
+.custom_product .ProStickyBar ul li.Sticky-Add .CustomProAdd {
+    background: #efa41f url('https://www.bestusedtires.com/content/icon-cart-retina.png') 17.66% 50% no-repeat;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    width: 200px;
+    border-radius: 0px;
+    display: inline-block;
+    padding: 16px 0px 14px 66px;
+    line-height: 20px;
+    background-size: auto 19px;
+}
+.custom_product .ProStickyBar ul li.Sticky-Add .CustomProAdd:hover{
+    background: #d99214 url('https://www.bestusedtires.com/content/icon-cart-retina.png') 17.66% 50% no-repeat;
+    transition: all 0.5s ease; 
+    background-size: auto 19px;
+}
+.Pro_Not_Compatibe_wrap{
+    float: left;
+    width: 100%;
+    margin: 30px 0px 0px;
+}
+.Pro_Not_Compatibe{
+    border-radius: 4px;
+    border: solid 1px #f10023;
+    background-color: rgba(241, 0, 35, 0.1);
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+.Pro_Not_Compatibe p{
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+    margin: 0px;
+    color:#242424;
+    padding: 5px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+.Pro_Not_Compatibe p span{
+    font-weight: 800;
+    color:#f10023;
+    margin: 0px 7px 0px 0px;
+    display: inline-block;
+}
+.Pro_Not_Compatibe p span:before{
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    margin-right: 7px;
+    vertical-align: middle;
+}
+.Pro_Not_Compatibe p a{
+    background: #1bbc00;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    margin-left: 17px;
+    text-transform: uppercase;
+    line-height: 18px;
+    padding: 5px 0px;
+    border-radius: 14px;
+    width: 183px;
+    display: inline-block;
+    text-align: center;
+}
+.Pro_Not_Compatibe p a:after{
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    margin-left: 8px;
+}
+.custom_product .CategoryTopContent.SizeRow{
+    background: #f6f6f6;
+    padding: 15px 0;
+    float: left;
+    width: 100%;
+    margin: 0px;
+    position: relative;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent {
+    margin: 10px 0 5px 5px;
+    max-width: calc(100% - 160px);
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent p {
+    display: block;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    margin: 0px;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent span, .custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent h1{
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 36px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    color: #2b2b2b;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent h1 {
+    padding-left: 3px;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent .ClearSizeSearch {
+    width: 53px;
+    height: 30px;
+    border-radius: 0px;
+    border: solid 1px #d3d3d3;
+    background-color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    color: #232323;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 5px 0;
+    font-weight: 700;
+    margin: 0 0 0 15px;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Right {
+    float: right;
+    width: auto;
+    padding: 19px 0;
+    margin: 0px;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Right > a.SwitchSize{
+    font-size: 16px;
+    font-weight: 700;
+    color: #232323;
+    line-height: 20px;
+    border-radius: 0;
+    border: 1px solid #2b2b2b;
+    width: 282px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 0 14px;
+    background: #fff;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Right > a.SwitchSize:after {
+    content: "";
+    line-height: 21px;
+    font-size: 14px;
+    margin-left: 15px;
+    font-family: "Font Awesome 5 Free";
+}
+.custom_product .CategoryTopContent.SizeRow .container .Right > a.SwitchSize.is-open{
+    border-radius: 0px;
+    border-bottom: 0px;
+    position: relative;
+    background: #f6f6f6;
+    padding: 15px 0 64px;
+    z-index: 11;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Right > a.SwitchSize.is-open:before{
+    content: "";
+    height: 9px;
+    position: absolute;
+    bottom: -1px;
+    background: #f4f7f8;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+}
+.custom_product .CategoryTopContent.SizeRow .Left.Vehicle-Search .CatImg {
+    max-width: 138px;
+    padding: 0 10px;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left.Vehicle-Search > div.CatContent{
+    margin: 11px 0 6px 5px;
+}
+.custom_product .CategoryTopContent.SizeRow .Left.Vehicle-Search .CatImg img {
+    margin: 20px 0 0 0;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left .Tire-Size-Btn {
+    margin: 0 0 9px 145px;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left .Tire-Size-Btn {
+    clear: left;
+    display: inline-block;
+    margin: 0 0 10px 145px;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left .Tire-Size-Btn a {
+    border-radius: 15px;
+    border: solid 1px #ededed;
+    background: #fff;
+    padding: 3px 15px;
+    display: inline-block;
+    line-height: 20px;
+    cursor: default;
+    font-weight: 800;
+    color: #242424;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left .Tire-Size-Btn a span {
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+    color: #242424;
+    font-weight: normal;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left .Tire-Size-Btn a span.Value {
+    font-weight: 800;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left > div ,
+.custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent div{
+    float: left;
+}
+.custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent div{
+    max-width: calc(100% - 68px);
+}
+.Compatible_Mn{
+    border-radius: 0px;
+    background-color: #f6f6f6;
+    float: left;
+    width: 100%;
+    margin: 0px 0 15px;
+    padding: 5px 10px;
+}
+.Compatible_Mn p{ 
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: normal;
+    color: #3a3839;
+    line-height: 18px;
+    margin: 0px;
+    float: left;
+}
+.Compatible_Mn p span{
+    color: #6cac22;
+    font-weight: 700;
+    float: left;
+    margin-right: 5px;
+}
+
+.Compatible_Mn p span:before{ 
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    margin-right: 10px;
+    float: left;
+}
+.productView-product .BelowProductName .Bottom-Card-Left ul li.Performance-Result .Performance_mob_Lable{
+    display:none;
+}
+.NortonSG {
+    clear: both;
+    margin-top:10px;
+    float:right;
+} 
+#buysafeRollover {
+    max-width: 670px;
+} 
+.pro_static_banner {
+    width: 100%;
+    float: left;
+    background: #f6f6f6;
+    position: relative;
+    z-index: 2;
+    margin:0px 0px 3px;
+}
+.pro_static_banner ul {
+    list-style: none;
+    padding: 0px;
+    text-align: center;
+    margin: 11px 0px;
+}
+.pro_static_banner ul li {
+    display: inline-block;
+    vertical-align: middle;
+    border-right: 1px solid #cdcdcd;
+    line-height: 28px;
+    width: auto;
+    padding-left: 22px;
+}
+.pro_static_banner ul li:last-child {
+    border: 0px;
+}
+.pro_static_banner ul li:first-child{
+    padding:0px;
+}
+.pro_static_banner ul li img,
+.pro_static_banner ul li span {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+.pro_static_banner ul li span{
+    margin-left: 15px;
+    color: #3a3839;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 21px;
+    margin-right: 30px;
+}
+.pro_static_banner ul li:first-child span,
+.pro_static_banner ul li:last-child span {
+    margin-right: 0;
+}
+.pro_static_banner ul li:first-child span{
+    margin-right: 65px;
+}
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-text .price-section--withoutTax.rrp-price--withoutTax,
+.RecentlyViewed .productCarousel-slide .card-body .card-text .price-section--withoutTax.rrp-price--withoutTax,
+.RecentlyViewed .productCarousel-slide .card-body .card-text .non-sale-price--withoutTax,
+.SimilarTires.ProDes .productCarousel-slide .card-body .card-text .non-sale-price--withoutTax{  
+    display: none;
+}
+.Icon-Air-Pressure-Passed{
+    padding: 0px;
+}
+.Icon-Air-Pressure-Passed ul li{
+    margin:0px 0px 12px;
+}
+.Icon-Air-Pressure-Passed ul li img{
+    max-width: 49px;
+}
+.Icon-Air-Pressure-Passed ul li span{
+    font-size: 9.7px;
+    line-height: 15.7px;
+}
+.Fast-Free-Shipping{
+    box-shadow: none;
+    max-width: 630px;
+    background: transparent;
+}
+.Fast-Free-Shipping .modal-content {
+    background: transparent;
+}
+.Fast-Free-Shipping .modal-header {
+    text-align: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    float: left;
+    width: 100%;
+}
+.Fast-Free-Shipping .modal-header .modal-close span {
+    color: #3a3839;
+    font-size: 22px;
+    font-family: "Font Awesome 5 Free";
+}
+.Fast-Free-Shipping .modal-body {
+    background: #fff;
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.5);
+    margin: 30px;
+    padding: 30px 0px;
+    width: calc(100% - 60px);
+}
+.Fast-Free-Shipping .modal-header .modal-close {
+    position: static;
+    text-align: center;
+    display: inline-block;
+    height: 39px;
+    line-height: 34px;
+    width: 39px;
+    margin: 13px 0 16px;
+    color: #3a3839;
+    background: #fff;
+    border-radius: 50%;
+}
+.Fast-Free-Shipping .Header_title{
+    width: 100%;
+    display: inline-block;
+    border-bottom: 3px solid #d3d3d3;
+    padding: 0px 0px 16px;
+}
+.Fast-Free-Shipping .Header_title h3{
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 30px;
+    color: #2b2b2b;
+    text-align: center;
+    margin:0px;
+}
+.Fast-Free-Shipping .Fast-Free-Popup{
+    width: 100%;
+    padding:15px 28px 0px 30px;
+}
+.Fast-Free-Shipping .Fast-Free-Popup p{
+    font-size: 18px;
+    font-weight: normal;
+    color: #3a3839;
+    line-height: 28px;
+    margin:0px 0px 15px;
+}
+.Fast-Free-Shipping .Fast-Free-Popup ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.Fast-Free-Shipping .Fast-Free-Popup ul li{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding:0px 0px 0px 30px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 28px;
+    color: #3a3839;
+    margin:0px 0px 10px;
+}
+.Fast-Free-Shipping .Fast-Free-Popup ul li:last-child{
+    margin-bottom: 0px;
+}
+.Fast-Free-Shipping .Fast-Free-Popup ul li:before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 21px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 20px;
+    letter-spacing: normal;
+    color: #4295f3;
+    position: absolute;
+    left: 0px;
+    top:0px;
+}
+$threecolumn:33.33%;
+.SwitchSizePop {
+    position: absolute;
+    top: 115px;
+    left: 0;
+    right: 0;
+    background: #f6f6f6;
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    padding: 30px 0 15px;
+
+    .inner {
+        margin: 0 auto;
+        max-width: 1170px;
+        padding: 0px;
+
+        .Top {
+            width: 100%;
+            float: left;
+
+            .Left {
+                margin: 22px 0 0;
+                float: left;
+                width: auto;
+                h3 {
+                    font-size: 20px;
+                    font-weight: 800;
+                    color: #2b2b2b;
+                    line-height: 28px;
+                    margin: 0;
+                    display: inline-block;
+                }
+
+                a {
+                    display: inline-block;
+                    margin-left: 12px;
+                    background: #ffffff;
+                    font-size: 12px;
+                    line-height: 20px;
+                    border-radius: 0px;
+                    border: solid 1px #d3d3d3;
+                    color: #242424;
+                    padding: 4px 0px;
+                    width: 151px;
+                    text-align: center;
+                    font-weight: 800;
+                }
+            }
+
+            .Right {
+                padding: 0;
+
+                a {
+                    font-size: 16px;
+                    font-weight: 800;
+                    background: #efa41f;
+                    font-size: 16px;
+                    color: #ffffff;
+                    line-height: 22px;
+                    border-radius: 0px;
+                    width: 304px;
+                    display: inline-block;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding: 15px 0 13px;
+                }
+            }
+        }
+
+        .SwitchSizePopContent {
+            width: 100%;
+            float: left;
+            padding: 5px 0 0;
+
+            ul {
+                margin: 0 -15px;
+                list-style: none;
+
+                li {
+                    width: $threecolumn;
+                    float: left;
+                    padding: 10px;
+
+                    .Vehicle_inner {
+                        border: 1px solid #d5dcde;
+                        padding: 10px;
+                        border-radius: 0px;
+                        width: 100%;
+                        float: left;
+                        background: #fff;
+
+                        div {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 25%;
+                            float: left;
+
+                            &.Vehicle-Recent-Content {
+                                width: 75%;
+                                vertical-align: top;
+
+                                p {
+                                    margin: 0px;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    color: #3a3839;
+                                    line-height: 20px;
+                                    display: inline-block;
+                                    text-transform: uppercase;
+                                    margin-left: 15px;
+                                }
+
+                                a {
+                                    float: right;
+                                    margin: 0px;
+                                    width: 67px;
+                                    padding: 10px 0px;
+                                    border-radius: 0px;
+                                    font-size: 14px;
+                                    font-weight: 800;
+                                    color: #fff;
+                                    line-height: 20px;
+                                    background: #efa41f;
+                                    border: 0px;
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                    }
+
+                    .size_inner {
+                        border: 1px solid #d5dcde;
+                        padding: 10px;
+                        border-radius: 0px;
+                        width: 100%;
+                        float: left;
+                        background: #fff;
+
+                        div {
+                            display: inline-block;
+                            vertical-align: middle;
+                            float: left;
+
+                            &.Size-Recent-Img {
+                                width: 25%;
+                            }
+
+                            &.Size-Recent-Content {
+                                width: 75%;
+                                vertical-align: top;
+
+                                .Front-Rear-Text {
+                                    width: 72%;
+                                    display: inline-block;
+                                    padding-left: 15px;
+
+                                    span {
+                                        margin: 0px;
+                                        font-size: 14px;
+                                        font-weight: 800;
+                                        color: #242424;
+                                        line-height: 20px;
+                                        display: inline-block;
+                                        text-transform: uppercase;
+                                        margin: 0px;
+                                        float: left;
+
+                                        &.Front-Label,
+                                        &.Rear-Label {
+                                            font-size: 12px;
+                                            font-weight: normal;
+                                            margin-right: 3px;
+                                        }
+
+                                        &:nth-child(3) {
+                                            clear: left;
+                                        }
+                                    }
+                                }
+
+                                .Tire-Size-Text {
+                                    width: 72%;
+                                    display: inline-block;
+                                    padding-left: 15px;
+
+                                    span {
+                                        margin: 0px;
+                                        font-size: 14px;
+                                        font-weight: 800;
+                                        color: #3a3839;
+                                        line-height: 20px;
+                                        display: inline-block;
+                                        text-transform: uppercase;
+                                        margin: 0px;
+                                        float: left;
+
+                                        &.Tire-Size-Label {
+                                            font-size: 12px;
+                                            font-weight: normal;
+                                            margin-right: 3px;
+                                        }
+
+                                        &:last-child {
+                                            clear: left;
+                                        }
+                                    }
+                                }
+
+                                a {
+                                    float: right;
+                                    margin: 0px;
+                                    width: 67px;
+                                    padding: 10px 0px;
+                                    border-radius: 0px;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    color: #fff;
+                                    line-height: 20px;
+                                    background: #efa41f; 
+                                    border: 0px;
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap{
+    width:100%;
+    float: left;
+    position: relative;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul{
+    list-style: none;
+    margin: 0;
+    text-align: left;
+    font-size: 0px;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li {
+    display: inline-block;
+    margin: 0px 25px 0px 0px;
+    vertical-align: top;
+    text-align: left;
+    min-width: 176px;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap>ul>li>a.ss-start-selected.is-open i {
+    transform: none;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li:first-child {
+    width: 165px;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li:last-child {
+    width: 134px;
+    margin: 0;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li:last-child > a {
+    background: #efa41f;
+    color: #fff;
+    font-weight: 700;
+    padding: 9px 25px;
+    line-height: 26px;
+    border: 0;
+    margin: 0;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li > a {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    color: #3a3839;
+    border-radius: 0px;
+    border: 2px solid #3a3839;
+    width: 100%;
+    float: left;
+    padding: 8px 13px 8px 8px;
+    background: #fff;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li > a.is-open{
+    border: 2px solid #efa41f;
+    z-index: 11;
+    background: #fff;
+    border-radius: 0px;
+    border-bottom: 0;
+    padding: 8px 13px 32px 8px;
+    border-color: #efa41f;
+    position: relative;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li > a.is-open:after{
+    content: "";
+    background: #fff;
+    height: 2px;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li > a.is-open i {
+    transform: rotate(180deg);
+    padding-left: 0px;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li > a > span {
+    float: left;
+    width: 18px;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: 700;
+    background: rgba(211, 211, 211, 0.61);
+    font-size: 12.8px;
+    line-height: 20px;
+    border-radius: 1px;
+    padding: 2px 0px;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li > a > i {
+    float: right;
+    line-height: 24px;
+    padding-left: 15px;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap .navPage-subMenu.is-open{
+    display: block;
+    width: 100%;
+    margin: 0;
+    left: 0px;
+    right: 0px;
+    border: 2px solid #efa41f;
+    box-shadow: none;
+    background-color: #fff;
+    top: 100%;
+    padding: 15px 0 0 0;
+    z-index: 10;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li .navPage-subMenu.is-open > div:first-child {
+    padding: 0 30px 15px;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #d3d3d3;
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li .navPage-subMenu.is-open > div:first-child .form-input{
+    width: 371px;
+    height: 46px;
+    border-radius: 0px;
+    border: solid 2px #3a3839;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 46px;
+    letter-spacing: normal;
+    color: rgba(36, 36, 36, 0.5);
+}
+.VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li .navPage-subMenu.is-open > div{
+    padding: 0 30px 15px;
+    display: inline-block;
+    width: 100%;
+}
+.custom_product .ProRight .productView-product .ProRightLeft{
+    width: 51.956%;
+    float: left;
+    padding-right: 0;
+}
+.custom_product .ProRight .productView-product .BelowProductName.ProRightRight{
+    width: 48.044%;
+    float: left;
+    padding-left: 30px;
+}
+.productView-product .BelowProductName .Right{
+    width: 100%;
+}
+.productView-price .price-section.price-section--saving span{
+    font-size: 16.7px;
+}
+.LoginClubMSGOuter .form-field.form-field--increments .card_qty select{
+    height: 56px;
+}
+.custom_product .productView-price{
+    margin: 3px 0 0;
+}
+.productView-options .form-field{
+    margin-bottom: 16px;
+}
+.custom_product .Risk-Paypal-Img-Credit{
+    margin: 18px 0;
+}
+.productView-price .price-section.price-section--saving{
+    margin: 0px 0px 20px;
+}
+.productView-product .productView-price .price.price--withoutTax{
+    font-size: 39px;
+    line-height: 40px;
+}
+.custom_product .productView-price.AfterLogin .price-section.non-sale-price--withoutTax.visible-price{
+    display: inline-block !important;
+}
+.productView-price .price-section .price--rrp{
+    vertical-align: top;
+}
+.SwitchSizePop .inner .SwitchSizePopContent ul li div div > img{
+    max-height: 50px;
+}
+.comyes li.Commercial-field {
+    display: none;
+}
+.custom_product .CategoryTopContent.Front_Rear .container .Left>div.CatContent div.front_left {
+    margin-right: 75px;
+}
+.custom_product .CategoryTopContent.Front_Rear {
+    padding: 15px 0px;
+}
+.custom_product .CategoryTopContent.Front_Rear .container .Left > div.CatContent{
+    margin: 0px 0px 5px;
+}
+.custom_product .CategoryTopContent.Front_Rear .container .Right{
+    margin: 0px;
+    padding: 19px 0px;
+}
+.custom_product .CategoryTopContent.Front_Rear .container .Left>div.CatContent p.Lab {
+    font-weight: 400;
+}
+.CategoryTopContent .container>.Left>div.CatContent .SizeValue {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 36px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    color: #2b2b2b;
+}
+.SwitchSizePop .inner .SwitchSizePopContent ul li .Vehicle_inner div.Vehicle-Recent-Content p{
+    max-width: calc(100% - 82px);
+}
+.SwitchSizePop .inner .SwitchSizePopContent ul li:nth-child(3n+1){
+    clear: left;
+}
+@media only screen and (max-width: 1199px) {
+    .custom_product .productView-product .BelowProductName .four_p_price{
+        margin: -33px 0px 10px;
+    }
+    .custom_product .productView-price.AfterLogin .price-section{
+        font-size: 0;line-height: normal;display: inline-block;
+    }
+    .productView-price .price-section.price-section--saving span{
+        font-size: 15.5px;
+    }
+    .custom_product .LoginClubMSGOuter .form-field.form-field--increments{
+        width: 22.48%;
+    }
+    .productView-product .productView-title{
+        font-size: 31px;
+        line-height: 40px;
+        max-width: 80%;
+    }
+    .productView-product .product-sku{
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .productView-product .productView-price{
+        font-size: 36px;
+        line-height: 45px;
+    }
+    .productView-image + .productView-thumbnails .productView-thumbnail{
+        height: 60px;
+    }
+    .productView-thumbnails .productView-thumbnail img{
+        max-height: 98px;
+    }
+    .custom_product .ProStickyBar ul li{
+        padding:20px 0px;
+        margin: 0px 20px 0px 0px;
+    }
+    .custom_product .ProStickyBar ul li a{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .custom_product .ProStickyBar ul li.Sticky-Add .CustomProAdd{
+        padding: 13px 0px 10px 58px;
+        line-height: 20px;
+        font-size: 14px;
+        background:#efa41f url(https://www.bestusedtires.com/content/icon-cart-retina.png) 17.66% 50% no-repeat;
+        background-size: auto 19px;
+        width: 180px;
+    }
+    .custom_product .ProStickyBar ul li.Sticky-Add .CustomProAdd:hover{
+        background: #d99214 url(https://www.bestusedtires.com/content/icon-cart-retina.png) 17.66% 50% no-repeat;
+        background-size: auto 19px;
+    }
+    .custom_product .ProDes h3{
+        font-size: 30px;
+        line-height: 35px;
+        margin: 40px 0 15px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-1 .Right p{
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .usedtakeoffshipping .Right{
+        width: 74%;
+    }
+    .ProCompatible .ProCompatibleWrap ul li:before{
+        height: 7px;
+        width: 7px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .ProCompatible .ProCompatibleWrap ul li a{
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .newshippingTxt .TopContent .Right{
+        padding: 0px 0px 0px 20px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-1 .Right{
+        padding: 0px 0px 0px 20px;
+    }
+    .SwitchSizePop{
+        padding: 30px 15px 15px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right .Top .Right{
+        margin: 0px;
+        padding: 0px;
+    }
+    .SwitchSizePop .inner .SwitchSizePopContent ul li .size_inner div.Size-Recent-Content a{
+        width: 28%;
+    }
+    .productView-price .price-section.price-section--saving{
+        line-height: normal;
+    }
+    .productView-options .form-action{
+        width: 77.52%;
+        padding: 0px 0px 0px 10px;
+    }
+    .productView-options .form-action #form-action-addToCart{
+        padding: 16px 0 16px 50px;
+        font-size: 17.5px;
+        width: 100%;
+        background: url(https://www.bestusedtires.com/content/icon-cart-retina.png) 9% 50% no-repeat #efa41f;
+        background-size: auto 24px;
+    }
+    .productView-options .form-action #form-action-addToCart:hover{
+        background: url(https://www.bestusedtires.com/content/icon-cart-retina.png) 9% 50% no-repeat #d99214;
+        background-size: auto 24px;
+    }
+    .productView-price .price-section span.price_label{
+        line-height: normal;
+    }
+    .productView-product .BelowProductName .four_p_price,
+    .productView-product .BelowProductName .four_p_price span{
+        font-size: 15px;
+    }
+    .pro_static_banner ul li{
+        line-height: 42px;
+    }
+    .pro_static_banner ul li:first-child span{
+        margin-right: 28px;
+    }
+    .pro_static_banner ul li span{
+        margin-right: 20px;
+        max-width: 155px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .custom_product .productView-images , .custom_product .ProRight{
+        width: 100%;
+    }
+    .custom_product .ProStickyBar ul li{
+        padding:15px 0px;
+        margin: 0px 10px 0px 0px;
+    }
+    .custom_product .ProStickyBar ul li a {
+        font-size: 11px;
+        line-height: 24px;
+    }
+    .custom_product .ProStickyBar ul li.Sticky-Add {
+        float: right;
+        margin: 0;
+        padding: 10px 0px;
+    }
+    .custom_product .ProStickyBar ul li.Sticky-Add .CustomProAdd {
+        padding: 8px 0px 8px 45px;
+        line-height: 16px;
+        font-size: 13px;
+        background: #efa41f url(https://www.bestusedtires.com/content/icon-cart-retina.png) 13% 50% no-repeat;
+        background-size: auto 16px;
+        width: 150px;
+    }
+    .custom_product .ProStickyBar ul li.Sticky-Add .CustomProAdd:hover{
+        background: #d99214 url(https://www.bestusedtires.com/content/icon-cart-retina.png) 13% 50% no-repeat;
+        background-size: auto 16px;
+    }
+    .custom_product .productView{
+        margin: 0 -15px 10px;
+    }
+    .custom_product .ProDes h3{
+        font-size: 25px;
+        line-height: 30px;
+        margin: 30px 0px 10px;
+    }
+    .SpecificationsDetails .SpecificationsList{
+        padding: 20px 0px 30px;
+    }
+    .SpecificationsDetails .SpecificationsList ul li{   
+        padding: 0px 10px;
+    }
+    .SpecificationsDetails .SpecificationsList ul li span{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .ProDescription .UsedTakeOff{
+        padding: 20px;
+    }
+    .ProDescription .UsedTakeOff h4, .ProNewUsed .ProNewUsedWrap h4, .NewWrapMn .ProDesMn .Right h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .ProDescription .UsedTakeOff h5, .ProNewUsed .ProNewUsedWrap h5, .NewWrapMn .ProDesMn .Right h5 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .custom_product .ProDes p , .ProDescription .UsedTakeOff p b , .ProDescription .UsedTakeOff .BottomContent .col-2 ul li{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .ProDescription .UsedTakeOff h6{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-2 ul{
+        margin: 0px 0px 0px 10px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-2 ul li{
+        margin:0px 0px 5px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-1 .Right p{
+        font-size: 15px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-2 + .col-2{
+        padding: 0px 0px 0px 20px;
+    }
+    .usedtakeoffshipping , .ProNewUsed .ProNewUsedWrap{
+        padding: 30px 20px;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent .bottomText h5{
+        margin: 5px 0px 0;
+    }
+    .ProCompatible .ProCompatibleWrap .car-fits{
+        padding: 20px;
+    }
+    .ProCompatible .ProCompatibleWrap ul li , .RecentlyViewed .productCarousel-slide{
+        width: 50%;
+    }
+    .custom_product .ProDes.ProductDisclosure h3{
+        font-size: 22px;
+        margin: 20px 0px 15px;
+        line-height: 20px;
+    }
+    .custom_product .ProDes h3{
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .SimilarTires.ProDes .productCarousel .productCarousel-slide{
+        width: 33.33%;
+        margin:0 0 15px;
+    }
+    .SimilarTires.ProDes .productCarousel-slide .card-figure{
+        height: 200px;
+    }
+    .SimilarTires.ProDes .productCarousel .productCarousel-slide .card-image{
+        max-height: 198px;
+    }
+    .SimilarTires.ProDes{
+        padding: 0 0 20px;
+    }
+    .support_product{
+        margin: 30px 0px 0px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right,
+    .custom_product .CategoryTopContent.SizeRow .container .Right > a.SwitchSize{
+        width: 100%;
+    }
+    .ProCompatible .ProCompatibleWrap ul li a{
+        line-height: 24px;
+    }
+    .usedtakeoffshipping, .ProNewUsed .ProNewUsedWrap, .ProCompatible .ProCompatibleWrap, .NewWrapMn, .newshippingTxt , .SpecificationsDetails .SpecificationsList{
+        border-radius: 0px;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent{
+        padding: 15px 0px 0px;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent > p{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .custom_product .CategoryTopContent p{
+        font-size: 17px;
+        margin: 0px 0px 10px;
+    }
+    .custom_product .CategoryTopContent .Left,
+    .custom_product .CategoryTopContent .Right{
+        width: 100%;
+        text-align: center;
+    }
+    .custom_product .CategoryTopContent{
+        padding: 10px 0px;
+    }
+    .NewWrapMn .ProDesMn .FeaturesBenefitsList li{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .NewWrapMn .ProDesMn{
+        padding: 26px 20px 30px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent p{
+        text-align: left;
+        margin-bottom: 0px 0px 2px;
+    }
+    .SwitchSizePop {
+        top: 180px;
+        padding: 30px 15px 15px;
+    }
+    .SwitchSizePop .inner .Top .Right a {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+        width: 230px;
+        padding: 8px 0;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right{
+        margin: 0px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right > a.SwitchSize.is-open{
+        padding: 15px 0px 30px;
+    }
+    .SwitchSizePop .inner .Top .Left{
+        margin: 5px 0px 0px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right .Top .Right{
+        width: auto;
+    }
+    .SwitchSizePop .inner .SwitchSizePopContent ul li{
+        width: 50%;
+    }
+    .SwitchSizePop .inner .SwitchSizePopContent ul li .Vehicle_inner div.Vehicle-Recent-Content{
+        text-align: left;
+    }
+    .pro_static_banner ul{
+        font-size: 0px;
+    }
+    .pro_static_banner ul li{
+        padding-left: 15px;
+    }
+    .pro_static_banner ul li span{
+        font-size: 13px;
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 18px;
+        max-width: 115px;
+    }
+    .SwitchSizePop .inner .SwitchSizePopContent ul li{
+        padding: 10px 15px;
+    }
+    .VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li:last-child{
+        width:134px;
+    }
+    .VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li,
+    .VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li:first-child{
+        margin: 0px 10px 0px 0px;
+        width: 136px;
+    }
+    .VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li > a{
+        font-size: 13px;
+        padding: 8px 8px 8px 8px;
+    }
+    .VehicleTireFitWrapInner.form .Vehicle-MM-Wrap > ul > li > a.is-open{
+        padding: 8px 8px 22px 8px;
+    }
+    .pro_static_banner ul li span{
+        max-width: 115px;
+    }
+    .custom_product .CategoryTopContent .Left, .custom_product .CategoryTopContent .Right{
+        max-width: 100%;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent h1{
+        text-align: left;
+    }
+    .SwitchSizePop .inner .SwitchSizePopContent ul li:nth-child(3n+1){
+        clear: none;
+    }
+    .SwitchSizePop .inner .SwitchSizePopContent ul li:nth-child(2n+1){
+        clear: left;
+    }
+}
+ 
+@media only screen and (max-width: 767px) {
+
+    .custom_product .productView-product .BelowProductName .four_p_price{
+        margin: -13px 0 10px;
+    }
+    .custom_product .productView-price.AfterLogin .price-section:nth-child(3){
+        margin: 0px;
+    }
+    .custom_product .productView-product .BelowProductName .AfterLogin .four_p_price{
+        margin: 0px 0px 10px;
+    }
+    .custom_product .productView-price.AfterLogin .price-section.price-section--saving{
+        margin: 14px 0 0;
+    }
+    .custom_product .ProRight .productView-product .BelowProductName.ProRightRight{
+        margin: 3px 0 0;
+    }
+    .custom_product .ProRight .productView-product .BelowProductName.ProRightRight,
+    .custom_product .ProRight .productView-product .ProRightLeft{
+        width: 100%;padding: 0;
+    } 
+    .custom_product .CategoryTopContent.SizeRow{
+        padding: 10px 0px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left > div.CatImg img{
+        max-height: 60px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right{
+        padding: 10px 0px 0px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent{
+        margin: 0px 0px 0px 5px;
+        text-align:Left;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent p{
+        color: #242424;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right > a.SwitchSize{
+        border-color: #d3d3d3;
+        padding: 8px 0px;
+        height: 35px;
+        color: #232323;
+        font-size: 15px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent span, .custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent h1{
+        font-size: 25px;
+    }
+    .Pro_Not_Compatibe_wrap .container{
+        padding: 0px;
+    }
+    .Pro_Not_Compatibe_wrap{
+        margin:0px;
+    }
+    .Pro_Not_Compatibe{
+        border-right: 0px;
+        border-left: 0px;
+        border-radius: 0px;
+    }
+    .Pro_Not_Compatibe p{
+        padding:15px 0px;
+    }
+    .Pro_Not_Compatibe p a{
+        display: block;
+        margin: 10px auto 0px;
+    }
+    .custom_product .ProWrap{
+        margin:0px;
+    }
+    .custom_product .ProWrap > .container, 
+    .custom_product .productView-images{
+        padding: 0px;
+    }
+    .custom_product .productView{
+        margin: 0 0px 10px;
+    }
+    .custom_product .Sale-Badge{
+        left: 0px;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 3px 10px;
+    }
+    .custom_product .productView-images .productView-image{
+        height: 300px;
+        border-width: 1px 0px 0px 0px;
+    }
+    .custom_product .productView-images .productView-image .productView-img-container img{
+        max-height: 298px;
+    }
+    .productView-image + .productView-thumbnails,
+    .productView-product .BelowProductName .ProTotalWrap .Bottom .ProSubtotal{
+        display: none;
+    }
+    .ProImageTxt {
+        display: block;
+        padding: 0 15px;
+        background: #f6f6f6;
+        margin: 0;
+    }
+    .ProImageTxt p b {
+        font-weight: 400;
+        text-transform: lowercase;
+    }
+    .ProImageTxt p {
+        font-size: 16px;
+        line-height: 23px;
+        margin: 0;
+        display: inline-block;
+        padding: 5px 0px;
+    }
+    .Compatible_Mn{
+        padding: 7px 10px;
+        border: solid #1bbc00;
+        border-width: 1px 0px 1px 0px;
+        margin: 0px 0px 5px;
+        border-radius: 0px;
+    }
+    .productView-product .Tire-Badge-outer{
+        left: -15px;
+        right: -15px;
+        max-width: inherit;
+    }
+    .productView-product .Tire-Badge-outer span{
+        padding: 2px 13px 3px;
+        line-height: 22px;
+    }
+    .productView-product .productView-brand{
+        font-size: 18px;
+        line-height: 24px;
+        margin:0px;
+    }
+    .productView-product .productView-rating{
+        top:0; right:0px; text-align: right;position: absolute;max-width: 92px; padding: 15px 0px 0px;
+    }
+    .mobile_pro_slider .mobile_slider_inner ul li{
+        border-top:1px solid #d3d3d3;border-bottom:1px solid #d3d3d3;position: relative;
+    }
+    .mobile_pro_slider .mobile_slider_inner ul li img{
+        position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;max-height: 188px;
+    }
+    .productView-product .productView-title{
+        max-width: 100%;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .productView-product .BelowProductName .Icon-Air-Pressure-Passed{
+        margin: 2px 0px 10px;text-align: center;
+    }
+
+    .productView-product .BelowProductName .Left,
+    .productView-product .BelowProductName .Right{
+        width: 100%;
+        text-align: left;
+    }
+    .productView-product .BelowProductName .Bottom-Card-Left ul li.Performance-Result, .productView-product .BelowProductName .Bottom-Card-Left ul li.Tire-List-Load-Range, .productView-product .BelowProductName .Bottom-Card-Left ul li.Tire-List-Speed{
+        width: 33.33%;
+        float: left;
+        text-align: center;
+        padding: 0 7.5px;
+        margin: 0px;
+    }
+    .productView-product .BelowProductName .Bottom-Card-Left{
+        border:0px;
+        border-bottom: 1px solid #d5dcde;
+        padding: 0px 0px 15px;
+        margin: 0px 0px 15px;
+    }
+    .productView-product .Price-Per-Tire{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .productView-product .productView-price{
+        font-size: 28px;
+        line-height: 36px;
+        margin: 0px 0px 2px;
+    }
+    .productView-product .productView-price .price.price--withoutTax{
+        line-height: 36px;
+    }
+    .productView-product .form-field--increments{
+        float: right;
+        margin:-56px 0px 0px;
+    }
+    .productView-product .BelowProductName .Right .Top,
+    .productView-product .productView-price,
+    .productView-product .Price-Per-Tire{
+        float: left;
+        clear: left;
+    }
+    .productView-product .BelowProductName .Right{
+        margin:0px 0px 15px;
+    }
+    .productView-product .BelowProductName .Right .stock_level.In-Stock-Btn:before{
+        font-size: 16px;
+        margin-right: 5px;
+    }
+    .productView-product .BelowProductName .Right .stock_level{
+        font-size: 12px;
+        line-height: 18px;
+        margin:6px 0px 0px;
+        text-transform: uppercase;
+    }
+    .productView-product .BelowProductName .Right .four_p_price span{
+        font-size: 16px;
+        line-height: 24px;
+        color: #242424;
+    }
+    .productView-product .BelowProductName .Right .four_p_price span:last-child{
+        font-weight: 700;
+    }
+    .productView-product .BelowProductName .ProTotalWrap .Bottom .Same-Day-Ship-Btn{
+        float: right;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .productView-options .form-action , .custom_product .ProRight .productView-details .Risk-Paypal-Img{
+        width: 100%;
+        text-align: center;
+        margin:0px;
+    }
+    .productView-options .form-action #form-action-addToCart{
+        width: 345px;
+        padding: 17px 50px 17px 129px;
+    }
+    .custom_product .ProStickyBar ul li.is-active:before{
+        display: none;
+    }
+    .custom_product .ProStickyBar{
+        background:#f6f6f6;
+        box-shadow: 0 -1px 0 0 #e2e2e2, 0 1px 0 0 #e2e2e2;
+        border:1px solid #d5dcde;
+        border-left: 0px;
+        border-right: 0px;
+        padding: 30px 0px 15px;
+    }
+    .custom_product .ProStickyBar ul{
+        margin:0 -7.5px;
+    }
+    .custom_product .ProStickyBar ul li{
+        padding:7.5px;
+        margin: 0;
+        width: 33.33%;
+    }
+    .custom_product .ProStickyBar ul li a{
+        width: 100%;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        border-radius: 0px;
+        border:1px solid #3a3839;
+        height: 46px;
+        text-align: center;
+        color: #3a3839;
+        line-height: 18px;
+        font-size: 12px;
+        padding: 0 5px;
+        text-transform:uppercase;
+    }
+    .custom_product .ProStickyBar h3{
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 30px;
+        margin:0px 0px 7.5px;
+        color:#2b2b2b;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .custom_product .ProStickyBar ul li.Sticky-Add{
+        display: inline-block;
+        width:auto;
+        position:fixed;
+        left:0px;
+        right:0px;
+        bottom:0px;
+        padding:0px;
+    }
+    .custom_product .ProStickyBar ul li.Sticky-Add .CustomProAdd{
+        width:100%;
+        padding:17px 0px 17px 0px;
+        height:auto;
+        border-radius:0px;
+        border:0px;
+        font-size:24px;
+        line-height:26px;
+        text-transform:uppercase;
+        background:#efa41f;
+        text-align:center;
+    }
+    .custom_product .ProStickyBar ul li.Sticky-Add .CustomProAdd:hover{
+        background:#d99214;
+    }
+    .custom_product .ProStickyBar ul li.Sticky-Add .CustomProAdd span{
+        background: url(https://www.bestusedtires.com/content/icon-cart-retina.png) left center no-repeat;
+        background-size: auto 26px;
+        padding:0px 0px 0px 42px;
+    }
+    .SpecificationsDetails .SpecificationsList ul li{
+        width: 50%;
+    }
+    .SpecificationsDetails .SpecificationsList ul li:nth-child(3) span{
+        margin:10px 0px 0px;
+    }
+    .SpecificationsDetails .SpecificationsList ul li:nth-child(3n+3),
+    .SpecificationsDetails .SpecificationsList ul li{
+        border:0px;
+    }
+    .custom_product .ProDes h3{
+        margin: 30px 0px 15px;
+        padding: 0 15px;
+        line-height: 30px;
+    }
+    .custom_product .SpecificationsDetails > .container, 
+    .ProShipping > .container,
+    .ProNewUsed > .container,
+    .ProCompatible > .container{
+        padding: 0px;
+    }
+    .SpecificationsDetails .SpecificationsList ul li span{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .SpecificationsDetails .SpecificationsList ul li span.ctm_lable:after{
+        content: ":";
+        display: inline-block;
+        margin-right: 5px;
+        font-weight: 800;
+    }
+    .SpecificationsDetails .SpecificationsList ul li span.ctm_value{
+        float: left;
+    }
+    .ProDescription .UsedTakeOff,
+    .usedtakeoffshipping,
+    .ProNewUsed .ProNewUsedWrap,
+    .ProNewUsedWrap,
+    .ProCompatible .ProCompatibleWrap .car-fits,
+    .NewWrapMn .ProDesMn{
+        padding: 15px; 
+    }
+    .ProDescription .UsedTakeOff h4, .ProNewUsed .ProNewUsedWrap h4, .NewWrapMn .ProDesMn .Right h4{
+        font-size: 20px;
+        line-height: 28px;
+        margin:0px 0px 5px;
+    }
+    .ProDescription .UsedTakeOff h5, .ProNewUsed .ProNewUsedWrap h5, .NewWrapMn .ProDesMn .Right h5{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .ProDescription .UsedTakeOff,
+    .usedtakeoffshipping, .ProNewUsed .ProNewUsedWrap{
+        background:#f0f5f7;
+    }
+    .ProDescription .UsedTakeOff p{
+        margin:0px 0px 15px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-2{
+        width: 100%;
+    }
+    .ProDescription .UsedTakeOff .BottomContent{
+        margin:15px 0px 0px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-2 + .col-2{
+        padding: 0px;
+        width: 100%;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-2 ul{
+        margin:0px 0px 0px 25px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-1{
+        margin:10px 0px 0px;
+        padding: 15px 0px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-1 .Right p{
+        font-size: 16px;
+        line-height: 24px;
+        margin:0px 0px 15px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-1 .Left{
+        width: 100%;
+        text-align: center;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-1 .Right{
+        width: 100%;
+        padding: 0px;
+    }
+    .custom_product .ProCompatible .ProCompatibleWrap + p{
+        padding: 0px 15px;
+        text-align: left;
+    }
+    .custom_product .ProDes.ProductDisclosure h3{
+        padding: 0px;
+        line-height: 28px;
+        font-size: 20px;
+        margin:30px 0px 10px;
+    }
+    .custom_product .ProDes.ProductDisclosure .Left, .custom_product .ProDes.ProductDisclosure .Right{
+        padding: 0px;
+        width: 100%;
+    }
+    .custom_product .ProDes.ProductDisclosure .Left p:last-child{
+        margin:0px 0px 15px;
+    }
+    .SimilarTires.ProDes h3 , .RecentlyViewed.ProDes h3{
+        margin: 15px 0px 10px;
+        padding: 0px;
+    }
+    .SimilarTires.ProDes .productCarousel{
+        margin: 0 -15px;
+        padding-left: 7.5px;
+    }
+    .SimilarTires.ProDes .productCarousel .productCarousel-slide{
+        width: 100%;
+        max-width: 286px;
+        padding: 0px 7.5px;
+    }
+    .SimilarTires.ProDes{
+        padding: 0px;
+        border:0px;
+    }
+    .SimilarTires.ProDes .productCarousel-slide .card-body{
+        text-align: left;
+    }
+    .RecentlyViewed .productCarousel-slide , .usedtakeoffshipping .Right , .usedtakeoffshipping .Left, .NewWrapMn .ProDesMn .Left, .NewWrapMn .ProDesMn .Right{
+        width: 100%;
+    }
+    .RecentlyViewed .productCarousel-slide .card-body{
+        padding: 0 11px 2px 15px;
+        text-align: left;
+    }
+    .RecentlyViewed .productCarousel-slide .card-body .card-title{
+        margin: 0px 0px 7px;
+    }
+    .RecentlyViewed .productCarousel-slide .card-figure{
+        height: 89px;
+    }
+    .RecentlyViewed .productCarousel-slide .card-figure .card-image{
+        max-height: 87px;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent ul li.new-vs-used{
+        display: none;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent ul li.best-used-tires,
+    .ProNewUsed .ProNewUsedWrap .BottomContent ul li.online-stores{
+        width: 50%;
+        padding-top:13px;
+        text-align: left;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent ul li .Newlable.hideDesktop, 
+    .ProNewUsed .ProNewUsedWrap .BottomContent ul li .usedlable.hideDesktop{
+        display: inline-block;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent ul li .Newlable.hideMob,
+    .ProNewUsed .ProNewUsedWrap .BottomContent ul li .usedlable.hideMob{
+        display: none;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent ul li .Newlable, .ProNewUsed .ProNewUsedWrap .BottomContent ul li .usedlable{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent ul li .Newlable + img, .ProNewUsed .ProNewUsedWrap .BottomContent ul li .usedlable + img{
+        margin:0px 0px 10px;
+        max-height: 23px;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent .bottomText h5{
+        font-size: 30px;
+        line-height: 32px;
+        margin:15px 0px 0px;
+    }
+    .ProNewUsed .ProNewUsedWrap .BottomContent ul li p{
+        margin:0px 0px 2px;
+    }
+    .newshippingTxt .TopContent .Left p{
+        float: right;
+        display: inline-block;
+        width: 85%;
+        font-size: 16px;
+        padding-left: 15px;
+        line-height: 24px;
+    }
+    .usedtakeoffshipping .Left > img,
+    .newshippingTxt .TopContent .Left > img {
+        max-width: 80px;
+        float: left;
+        width: 80px;
+    }
+    .usedtakeoffshipping .Left p b,
+    .newshippingTxt .TopContent .Left p b{
+        font-weight: 800;
+    }
+    .usedtakeoffshipping .BottomContent{
+        padding: 15px 0px 15px;
+    }
+    .NewWrapMn .ProDesMn .Left, .NewWrapMn .ProDesMn .Right{
+        padding: 0px;
+    }
+    .NewWrapMn .ProDesMn .FeaturesBenefits{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .NewWrapMn .ProDesMn .FeaturesBenefitsList li:before{
+        font-size: 16px;
+    }
+    .NewWrapMn .ProDesMn .FeaturesBenefitsList li{
+        line-height: 24px;
+        padding: 0px 0px 0px 25px;
+    }
+    .NewWrapMn .ProDesMn .FeaturesBenefitsList + img {
+        margin: 0 0 15px;
+        max-width: 200px;
+    }
+    .NewWrapMn .ProDesMn .Right h5{
+        margin:0px 0px 15px;
+    }
+    .NewWrapMn .ProDesMn .Right h5,
+    .NewWrapMn .ProDesMn .Right p:last-child,
+    .newshippingTxt .TopContent .Right p:last-child{
+        margin:0px 0px 15px;
+    }
+    .NewWrapMn .ProDesMn .Right h4 {
+        line-height: 30px;
+        margin: 0 0 10px;
+    }
+    .newshippingTxt .TopContent .Left, .newshippingTxt .TopContent .Right{
+        padding: 0px;
+        width: 100%;
+    }
+    .newshippingTxt .TopContent{
+        padding: 15px;
+    }
+    .custom_product .productView-images .productView-image{
+        display: none;
+    }
+    .mobile_pro_slider{
+        display: block !important; 
+    }
+    .mobile_pro_slider .mobile_slider_inner {
+        width: 100%;
+        float: left;
+    }
+    .mobile_pro_slider .mobile_slider_inner ul{
+        margin: 0px;
+        list-style: none;
+    }
+    .mobile_pro_slider .mobile_slider_inner ul li{
+        margin: 0px;
+        height: 200px;
+        vertical-align: middle;
+    }
+    .mobile_pro_slider .mobile_slider_inner button{
+        padding: 0px;
+        background:transparent;
+        border:0px;
+        width: auto;
+        margin: 0px;
+    } 
+    .mobile_pro_slider .mobile_slider_inner button.slick-prev:before,
+    .mobile_pro_slider .mobile_slider_inner button.slick-next:before{
+        content: "";
+        height: 50px;
+        width: 50px;
+        background:rgba(0,0,0,0.27);
+        border-radius: 25px;
+        padding: 0px;
+        margin:0px;
+        color: #fff;
+        font-family: "Font Awesome 5 Free";
+        font-size: 30px;
+        line-height: 50px;
+        text-align: center;
+    }
+    .mobile_pro_slider .mobile_slider_inner button.slick-prev{
+        left: 15px;
+    }
+    .mobile_pro_slider .mobile_slider_inner button.slick-next{
+        right: 15px;
+    }
+    .mobile_pro_slider .mobile_slider_inner button.slick-prev:before{
+        content: "";
+    }
+    .productView-product .productView-rating .productView-reviewLink{
+        font-size:10px;
+        
+    }
+    .custom_product .ProRight .productView-product{
+        padding:49px 0 0;
+    }
+    .productView-product .BelowProductName .Bottom-Card-Left ul li.Performance-Result .Performance_mob_Lable{
+        display:inline-block;
+    }
+    .custom_product .ProStickyBar ul li a span{
+        text-transform:uppercase;
+    }
+    br.hideDesktop{
+        display:inline-block;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right .Top .Right{
+        display: none;
+    }
+    .SwitchSizePop .inner .SwitchSizePopContent ul li{
+        width: 100%;
+    }
+    .custom_product .CategoryTopContent .Right a{
+        width: 100%;
+    }
+    .custom_product .ProStickyBar:before{
+        display: none;
+    }
+    .pro_static_banner{
+        margin: 0px;
+    }
+    .SwitchSizePop .inner .Top .Left h3{
+        max-width: 210px;
+        float: left;
+        text-align: left;
+    }
+    .SwitchSizePop .inner .Top .Left{
+        position: relative;
+        width: 100%;
+    }
+    .SwitchSizePop .inner .Top .Left a.ClearAllSearches{
+        width: auto;
+        padding: 4px 15px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .SwitchSizePop .inner .SwitchSizePopContent ul li .size_inner div.Size-Recent-Img img{
+        max-height: 50px;
+    }
+    .SwitchSizePop .inner .SwitchSizePopContent ul li .size_inner div.Size-Recent-Img,
+    .SwitchSizePop .inner .SwitchSizePopContent ul li .Vehicle_inner div{
+        width: 13%;
+    }
+    .CategoryTopContent .container .Right .SwitchSizePop .inner .SwitchSizePopContent ul li .Vehicle_inner div.Vehicle-Recent-Content, 
+    .CategoryTopContent .container .Right .SwitchSizePop .inner .SwitchSizePopContent ul li .size_inner div.Size-Recent-Content{
+        width: 87%;
+    }
+    .CategoryTopContent .container .Right .SwitchSizePop .inner .SwitchSizePopContent ul li .size_inner div.Size-Recent-Content a{
+        width: 67px;
+    }
+    .CategoryTopContent .container .Right>a.SwitchSize {
+        font-size: 12px;
+        color: #232323;
+        line-height: 30px;
+        border-radius: 0;
+        height: 30px;
+        padding: 0;
+        max-width: 345px;
+        margin: 0 auto;
+        border: 1px solid #d3d3d3;
+    }
+    .CategoryTopContent .Left.Vehicle-Search .CatImg {
+        height: 70px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left.Vehicle-Search > div.CatContent {
+        width: calc(100% - 140px);
+        max-width: 100%;
+        margin: 0;
+    }
+    .CategoryTopContent .container .Left>div.CatContent p {
+        margin: 0 0 2px;
+    }
+    .custom_product .CategoryTopContent .container .Left.Vehicle-Search>div.CatContent .SizeValue {
+        margin: 0 0 2px;
+        padding: 0;
+    }
+    .custom_product .CategoryTopContent .container .Left > div.CatContent .ClearSizeSearch, .custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent .ClearSizeSearch{
+        display: none;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left .Tire-Size-Btn{
+        width: calc(100% - 140px);
+        float: right;
+        clear: right;
+        margin: 0;
+        text-align: left;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right > a.SwitchSize{
+        font-size: 12px;
+        color: #232323;
+        line-height: 30px;
+        border-radius: 0px;
+        height: 30px;
+        padding: 0;
+        max-width: 345px;
+        margin: 0 auto;
+        border: 1px solid #d3d3d3;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right > a.SwitchSize.is-open {
+        padding: 0;
+        border-radius: 0px;
+        border-color: #d3d3d3;
+        background: #f6f6f6;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left .Tire-Size-Btn a{
+        background: transparent;
+        border: 0;
+        padding: 0;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .CategoryTopContent .container .Left .Tire-Size-Btn a span.Value{
+        padding-left: 3px;
+    }
+    .custom_product .CategoryTopContent .container .Left>div img {
+        max-width: 130px;
+    }
+    .pro_static_banner ul li{
+        width: 50%;
+        float: left;
+        padding: 0px;
+        border-right-color: #cdcdcd;
+        line-height: 56px;
+    }
+    .pro_static_banner ul li:nth-child(2){
+        border-right: 0px;
+    }
+    .pro_static_banner ul li:nth-child(-n+2){
+        border-bottom: 1px solid #cdcdcd;
+    }
+    .pro_static_banner{
+        background: #fff;
+        padding: 30px 0px;
+		z-index: inherit;
+    }
+    .pro_static_banner ul li img{
+        max-width: 31px;
+        max-height: 33px;
+    }
+    .pro_static_banner ul li span{
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: normal;
+        max-width: 103px;
+        margin-right: 0px;
+        margin-left: 15px;
+    }
+    .custom_product .ProDes p.SimilarTxt {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .SimilarTires.ProDes h3{
+        margin: 30px 0px 10px;
+    }
+    .newshippingTxt .TopContent .Left p b{
+        font-weight: 700;
+    }
+    .custom_product .ProDes.ProReviews h3{
+        padding: 0px;
+    }
+    .pro_static_banner ul{
+        margin: 0px;
+    }
+    .pro_static_banner h3{
+        color: #2b2b2b;
+        font-size: 22px;
+        line-height: 30px;
+        margin: 0px 0px 15px;
+        font-weight: 800;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .Risk-Paypal-Img-Credit{
+        margin: 15px 0px;
+    }
+    .custom_product .FedxImg{
+        width: auto;
+        float: none;
+        display: block;
+        clear: both;
+        margin: 0 -15px;
+        text-align: center;
+    }
+    .productView-product .BelowProductName .Right,
+    .custom_product .ProRight .productView-details,
+    .custom_product .productView{
+        margin: 0px;
+    }
+    .productView-options .form-action{
+        background: #efa41f;
+        width: 100%;
+        max-width: 231px;
+        float: right;
+        text-align: center;
+        display: inline-block;
+        padding: 0px;
+    }
+    .custom_product .LoginClubMSGOuter .form-field.form-field--increments{
+        width: 70px;
+    }
+    .productView-options .form-action #form-action-addToCart{
+        width: 100%; 
+        font-size: 20.5px;
+        padding: 15px 30px 15px 59px;text-align: center;
+    }
+    .custom_product .ProRight .productView-details .productView-options label.form-label{
+        margin: 0px;
+        line-height: 18px;
+        text-align: left; 
+    }
+    .productView-options .form-field,
+    .productView-product .productView-price{
+        margin: 0px 0px 15px;
+    }
+    .productView-price .price-section--saving{
+        font-size: 16.7px;
+        line-height: 20.5px;
+    }
+    .productView-product .BelowProductName .Right .four_p_price span:last-child,
+    .productView-product .BelowProductName .four_p_price{
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .Icon-Air-Pressure-Passed ul li span{
+        font-size: 12px;
+    }
+    .Icon-Air-Pressure-Passed ul{
+        margin: 0px -10px;
+        float: none;
+    }
+    .Icon-Air-Pressure-Passed ul li{
+        width: 50%;
+        padding: 0px 10px;
+    }
+    .custom_product .Icon-Air-Pressure-Passed ul li{
+        width: auto;float: none;display: inline-block;text-align: center;
+    }
+    .productView-product .BelowProductName,
+    .custom_product .ProRight{
+        margin: 15px 0px 0px;
+    }
+    .productView-product .productView-title{
+        margin: 4px 0px 10px;
+    }
+    .custom_product .ProRight .productView-product{
+        padding: 0px;
+    }
+    .Compatible_Mn{
+        margin: 0px 0px 15px;
+        border: 0px;
+    }
+    .productView-product .productView-rating .productView-reviewLink, .yotpo .write-review-btn-hidden{
+        font-size: 10px !important;
+        line-height: 18px !important;
+        position: absolute;
+        right: 0px;
+        top:0px;
+    }
+    .custom_product .ProRight .productView-details .productView-options label.form-label:before{
+        top: 9px;
+    }
+    .custom_product .ProRight .productView-details .productView-options .form-checkbox + .form-label:after{
+        top:14px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left > div.CatContent p{
+        color: #242424;
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0px 0px 2px;
+    }
+    .custom_product .CategoryTopContent .container .Left.Vehicle-Search > div.CatContent .SizeValue{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .custom_product .CategoryTopContent.SizeRow{
+        padding:15px 0px;
+    }
+    .SwitchSizePop{
+        top:126px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .Left.Vehicle-Search .CatImg{
+        height: 70px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .NewWrapMn .ProDesMn .FeaturesBenefits strong{
+        text-transform: uppercase;
+    }
+    .Fast-Free-Shipping {
+    	max-width: 100%;
+    	max-height: 100%;
+    	left: 0;
+    	right: 0;
+    	top: 0 !important;
+    	width: 100%;
+    	transform: none;
+    	overflow: visible;
+    	height:100%;
+    }
+    .Fast-Free-Shipping .modal-header{
+    	display: none;
+    }
+    .Fast-Free-Shipping .TopBarMenu {
+        background: #241f20;
+        float: left;
+        width: 100%;
+        padding: 15px 20px 15px 20px;
+    }
+    .Fast-Free-Shipping .TopBarMenu h3 {
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 28px;
+        margin: 0;
+        color: #ffffff;
+    	display:inline-block;
+    }
+    .Fast-Free-Shipping .modal-body{
+    	max-height: 100% !important;
+    	width: 100%;
+    	margin: 0px;
+    	padding:0px;
+    	height: 100%;
+    	background: #f6f6f6;
+    }
+    .Fast-Free-Shipping .Header_title{
+    	padding: 30px 15px 15px;
+    	border-bottom: 0px;
+    	background: #fff;
+    }
+    .Fast-Free-Shipping .Header_title h3{
+    	text-align: left;
+    }
+    .Fast-Free-Shipping .Fast-Free-Popup{
+    	padding: 15px 15px 30px 15px;
+    	background: #fff;
+    	box-shadow: 0 1px 0 0 #e2e2e2;
+    }
+    .Fast-Free-Shipping .TopBarMenu .modal-close{
+    	float: right;
+        font-size: 24px;
+        font-weight: 400;
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        text-align: center;
+        color: #fff;
+        line-height: 15px;
+        padding: 0 0 0 15px;
+        border-left: 1px solid rgba(255,255,255,.3);
+        position: static;
+    	height: auto;
+    	width: auto;
+    }
+    .Fast-Free-Shipping .TopBarMenu .modal-close span{
+        font-size: 9px;
+        font-weight: 400;
+        line-height: 11px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 4px 0 0;
+        display: block;
+    }
+    .Fast-Free-Shipping .modal-content{
+        height: 100%;
+    }
+    .VehicleTireFitWrapInner{
+        padding: 20px 0px;
+    }
+    .VehicleTireFitWrap .VehicleTireFitWrapInner h3{
+        font-size: 20px;
+        line-height: 28px;
+        margin: 0px 0px 10px;
+        display: block;
+    }
+    .VehicleTireFitWrapInner.form{
+        display: none;
+    }
+    .TireFIt > .container{
+        padding: 0px;
+    }
+    .TireFIt p span{
+        display: block;
+        margin: 0px 0px 10px;
+    }
+    .TireFIt p{
+        padding: 10px 0px;
+    }
+    .pro_static_banner ul li:first-child span{
+        margin-right: 0px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent div{
+        width: 100%;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent .ClearSizeSearch{
+        margin: 0px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left .Tire-Size-Btn{
+        margin: 5px 0px 0px 0px !important;
+    }
+    .custom_product .SwitchSizePop{
+        top: 168px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent div.front_left,
+    .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent div.Rear_left{
+        width: auto;
+        margin-right: 20px;
+    }
+    .custom_product .Front_Rear .SwitchSizePop {
+        top: 132px;
+    }
+    .custom_product .SwitchSizePop {
+        top: 116px;
+    }
+    .custom_product .SizeRow .SwitchSizePop {
+        top: 160px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .ProImageTxt p {
+        font-size: 16px;
+    }
+    .productView-product .BelowProductName{
+        margin: 10px 0 0;
+    }
+    .productView-options .form-action #form-action-addToCart{
+        padding: 15px 0px 15px 32px;background-position: 11% 50%;
+    }
+    .productView-options .form-action #form-action-addToCart:hover{
+        background-position: 11% 50%;
+    }
+    .usedtakeoffshipping .Left p,
+    .newshippingTxt .TopContent .Left p {
+        width: 76%;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left > div.CatImg img{
+        max-height: 40px;
+    } 
+    .custom_product .ProStickyBar ul li a{
+        font-size: 12px;
+    }
+    .SimilarTires.ProDes .productCarousel .productCarousel-slide{
+        width: 100%;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-2 ul li{
+        position: relative;
+        padding: 0px 0px 0px 18px;
+    }
+    .ProCompatible .ProCompatibleWrap ul{
+        margin: 0px;
+    }
+    .ProCompatible .ProCompatibleWrap ul li{
+        padding: 0px 15px 0px 18px;
+    }
+    .ProDescription .UsedTakeOff .BottomContent .col-2 ul li:before,
+    .ProCompatible .ProCompatibleWrap ul li:before{
+        position: absolute;
+        left: 0px;
+        top:8px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent h1, .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent span{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Right > a.SwitchSize{
+        height: 30px;
+        font-size: 12px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent .ClearSizeSearch{
+        display:none;
+    }
+    .productView-product .productView-title{
+        max-width: 100%;font-size: 22px; 
+    }
+    .productView-product .product-sku{
+        font-size: 18px;
+    }
+    .custom_product .ProRight .productView-details .productView-options label.form-label:before{
+        top:15px;
+    }
+    .custom_product .ProRight .productView-details .productView-options .form-checkbox + .form-label::after{
+        top:20px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .Left.Vehicle-Search .CatImg{
+        height: 60px;
+        margin-right: 10px;
+        padding: 0px;
+    }
+    .custom_product .CategoryTopContent .container .Left > div img{
+        max-width: 100px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left .Tire-Size-Btn,
+    .custom_product .CategoryTopContent.SizeRow .container .Left.Vehicle-Search > div.CatContent{
+        width: calc(100% - 76.66px);
+    }
+    .custom_product .CategoryTopContent.Front_Rear .container .Left>div.CatContent{
+        max-width: calc(100% - 80px);
+        width: 100%;
+    }
+    .custom_product .CategoryTopContent.Front_Rear .container .Left>div.CatContent div.front_left {
+        margin-right: 15px;
+    }
+    .custom_product .Front_Rear .SwitchSizePop{
+        top: 118px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent{
+        max-width: calc(100% - 75px);
+    }
+    .CategoryTopContent .container>.Left>div.CatContent .SizeValue{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent h1, .custom_product .CategoryTopContent.SizeRow .container .Left>div.CatContent span{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .custom_product .SwitchSizePop{
+        top: 106px;
+    }
+    .custom_product .SizeRow .SwitchSizePop {
+        top: 216px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .pro_static_banner ul li span{
+        margin-left: 10px;
+        max-width: 97px;
+        font-size: 12px;
+    }
+    .custom_product .ProStickyBar ul li a,
+    .Icon-Air-Pressure-Passed ul li span{
+        font-size: 10px;
+    }
+    .newshippingTxt .TopContent .Left > img{
+        max-width: 60px;
+    }
+    .newshippingTxt .TopContent .Left p b{
+        font-size: 14px;
+    }
+    .SwitchSizePop{
+        top:155px;
+    }
+}

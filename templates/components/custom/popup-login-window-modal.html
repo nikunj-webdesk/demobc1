@@ -1,0 +1,60 @@
+<div id="popupLoginWindow" class="modal modal--small modal--pupuploginWindow" data-reveal>
+	<div class="modal-header">
+		<a href="#" class="modal-close" aria-label="Close" role="button"><span aria-hidden="true"></span></a>
+	</div>
+	<div class="modal-body">
+	    <h2 class="modal-header-title">Login</h2>
+		<div class="alertBox alertBox--error">
+			<div class="alertBox-column alertBox-icon">
+				<icon glyph="ic-error" class="icon" aria-hidden="true">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+				</icon>
+			</div>
+			<p class="alertBox-column alertBox-message"><span>Oops, something went wrong. Please try again.</span></p>
+		</div>
+		<div class="alertBox alertBox--success">
+			<div class="alertBox-column alertBox-icon">
+				<icon glyph="ic-success" class="icon" aria-hidden="true">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+				</icon>
+			</div>
+			<p class="alertBox-column alertBox-message"><span>You are now logged in!</span></p>
+		</div>
+		<form class="form" id="popupLoginWindowForm">
+			<div class="form-field">
+				<label class="form-label" for="login_email">{{lang 'login.field_email'}}</label>
+				<input class="form-input" name="login_email" id="login_email" type="email">
+			</div>
+			<div class="form-field">
+				<label class="form-label" for="login_pass">{{lang 'login.field_password'}}</label>
+				<input class="form-input" id="login_pass" type="password" name="login_pass">
+				<span class="passwordIcon" onclick="ShowPass()"></span>
+			</div>
+			<div class="form-actions">
+				<input type="submit" class="button button--primary" value="{{lang 'login.submit_value' }}">
+				<a class="forgot-password" href="{{urls.auth.forgot_password}}">{{lang 'login.forgot_password' }}</a>
+			</div>
+		</form>
+		{{#if customer}}
+		{{else}}
+    		<div class="newCustomer">
+    		    <h2>NEW CUSTOMER?</h2>
+    		    <a class="button button--primary" href="/login.php?action=create_account">CREATE AN ACCOUNT</a>
+    		</div>
+		{{/if}}
+	</div>
+	<div class="loadingOverlay" style="display: none;"></div>
+</div>
+<script>
+    function ShowPass() {
+      if ($('#login_pass').attr('type') === "password") {
+        $('#login_pass').prop('type','text');
+        $('.passwordIcon').addClass('ShowPass');
+        $('.passwordIcon').text('');
+      } else {
+        $('#login_pass').prop('type','password');
+        $('.passwordIcon').removeClass('ShowPass');
+        $('.passwordIcon').text(''); 
+      } 
+    }
+</script> 

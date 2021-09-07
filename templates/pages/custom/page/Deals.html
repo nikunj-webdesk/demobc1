@@ -1,0 +1,117 @@
+{{#partial "page"}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<main class="page Cms-Content Deals_Content"> 
+	<div class="page-content page-content--centered"> 
+		{{#unless theme_settings.hide_page_heading }} 
+		<h1 class="page-heading">{{ page.title }}</h1> 
+		{{/unless}}
+		 {{#replace '%%Syndicate%%' page.content}}
+		 {{> components/page/rss_feed}} {{else}}
+		  <div> {{{page.content}}} 
+		  	<!--<div class="SignUpHome">
+		  	 <div class="container">
+		  	  <div data-section-type="newsletterSubscription">
+		  	   <div class="SignUpLeft"> <h5 class="footer-info-heading">Don't miss our best Deals!</h5> <p>Get the latest information about new products, special deals, news, top-rated items, promotions and more!</p> </div> <form class="form" action="/subscribe.php" method="post"> <input type="hidden" name="action" value="subscribe" /> <input type="hidden" name="nl_first_name" value="bc" /> <input type="hidden" name="check" value="1" /> <div class="form-field"> <div class="form-wrap"> <input id="nl_email" class="form-input" type="email" name="nl_email" value="" placeholder="Enter email address"/> <input class="button button--primary" type="submit" value="SUBSCRIBE" /> </div> </div> </form> </div> </div> </div> -->
+	<div class="Bottom_Last"> 
+		<div class="container"> 
+			<h2>OUR PROMOTIONS</h2> 
+			<ul> 
+				<li> 
+					<div> 
+						<img class="hideMob" src="/content/winter-tires-promotions.png" alt="" />
+						<img class="hideDesktop" src="/content/winter-tires-promotions.png" alt="" />
+						<div class="Overlay_Content">
+						  <h3>ALL WINTER TIRES SAVE UP TO</h3> 
+						  <p>60% OFF</p>
+						  <a href="/winter-tires/">SHOW WINTER TIRES</a> 
+						</div>
+						<a href="/winter-tires/">&nbsp;</a> 
+					</div> 
+				</li> 
+				<li> 
+					<div> 
+						<img class="hideMob" src="/content/clearance-items.png" alt="" /> 
+						<img class="hideDesktop" src="/content/clearance-items-mob.png" alt="" /> 
+						<div class="Overlay_Content"> 
+							<h3>CLEARANCE ITEMS <br><span class="highest_discount">Highest Discount on the site</span></h3> 
+							<p><span class="up_to">UP TO </span><br>70% OFF</p>
+							<a href="/clearance-tires/">SHOW CLEARANCE TIRES</a> 
+						</div> 
+						<a href="/clearance-tires/">&nbsp;</a> 
+					</div> 
+				</li> 
+				<li> 
+					<div>
+					 <img class="hideMob" src="/content/best-deals-site.png" alt="" /> 
+					 <img class="hideDesktop" src="/content/best-deals-site-mob.png" alt="" /> 
+					 <div class="Overlay_Content"> 
+					 	<h3>BEST DEALS ON <br>THE SITE!</h3> 
+					 	<p><span class="up_to">UP TO </span><br>40% OFF</p>
+					 	<a href="/best-deals/">SHOW BEST DEALS TIRES</a>
+					 </div> 
+					 <a href="/best-deals/">&nbsp;</a>
+					  </div>
+				</li> 
+				<li>
+					<div>
+						<img class="hideMob" src="/content/deal-of-the-week.png" alt="" />
+						<img class="hideDesktop" src="/content/deal-of-the-week-mob.png" alt="" />
+						<div class="Overlay_Content">
+							<h3>DEAL OF THE <br>WEEK</h3> 
+							<p><span class="up_to">UP TO </span><br>50% OFF</p>
+							<a href="/deal-of-the-week/">SHOW TIRES OF THE WEEK</a>
+						 </div> 
+						 <a href="/deal-of-the-week/">&nbsp;</a> 
+					</div> 
+				</li> 
+				
+			</ul>
+			<div class="Social_Btn">
+				<h4>Stay tunned on our Facebook &amp; Instagram for Huge Discounts and Promotions</h4> 
+				<a class="fb" href="https://www.facebook.com/vyc.bestusedtires" target="_blank">FOLLOW US ON FACEBOOK</a> 
+				<a class="insta" href="https://www.instagram.com/bestusedtires_com/" target="_blank">FOLLOW US ON INSTAGRAM</a>
+			</div>
+		</div>
+	</div>
+</div>
+ {{/replace}}
+</div>
+{{> components/common/homepagesection/Support}}
+</main>
+{{/partial}}{{> layout/base}}
+<script>
+	$(".tooltip a").live('click' ,function() {
+	    copyToClipboard($(this).children());
+	});
+	$(".page.Cms-Content.Deals_Content .Discount_banner .tooltip a").mouseout(function() {
+	    outFunc($(this));
+	});
+
+	function copyToClipboard(element) {
+	    var $temp = $("<input>");
+	    $("body").append($temp);
+	    $temp.val($(element).text()).select();
+	    document.execCommand("copy");
+	    var tooltip = $(element).parent().parent().children('.tooltiptext');
+	    tooltip[0].innerHTML = "Copied";
+	    $temp.remove();
+	}
+
+	function outFunc(element) {
+	    var tooltip = $(element).parent().children('.tooltiptext');
+	    tooltip[0].innerHTML = "Copy to clipboard";
+	}
+</script> 
+<style>
+    .footer {
+        margin: 0px;
+    }
+    @media screen and (max-width: 991px){
+        .footer .footerBottom .FooterLeft ul{
+            margin: 0px;
+        }
+        .footer .footerBottom{
+            padding-bottom: 0px;
+        }
+    }
+</style>

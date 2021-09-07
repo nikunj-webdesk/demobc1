@@ -1,0 +1,15 @@
+<div class="SignUpLeft">
+    <h5 class="footer-info-heading">Sign Up For Our Best Deals</h5>
+    <p>Get the latest information about new products, special deals, news, top-rated items, promotions and more!</p>
+</div>
+<form class="form" action="{{urls.subscribe.action}}" method="post">
+    <input type="hidden" name="action" value="subscribe">
+    <input type="hidden" name="nl_first_name" value="Newsletter">
+    <input type="hidden" name="check" value="1">
+    <div class="form-field">
+        <div class="form-wrap">
+            <input class="form-input" id="nl_email" name="nl_email" type="email" value="{{customer.email}}" placeholder="Enter email address">
+            <input class="button button--primary" type="submit" value="SUBSCRIBE">
+        </div>
+    </div>
+</form>

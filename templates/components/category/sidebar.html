@@ -1,0 +1,206 @@
+<div id="searchspring-sidebar">
+<nav> 
+{{!--
+    {{#if category.faceted_search_enabled}}
+        {{> components/faceted-search/index category}}
+    {{else}}
+        {{> components/category/shop-by-price shop_by_price=category.shop_by_price category_url=category.url}}
+    {{/if}}
+ --}}   
+    <div id="facetedSearch" class="facetedSearch sidebarBlock">
+        <div id="facetedSearch-navList" class="facetedSearch-navList blocker-container">
+            <div class="accordion accordion--navList">
+                <div class="accordion-block">
+                    <div class="accordion-navigation toggleLink" data-collapsible="#facetedSearch-content--of-Quick-Filters">
+                        <h5 class="accordion-title">Quick Filters</h5>
+                        <div class="accordion-navigation-actions">
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--off"></span>
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--on"></span>
+                        </div>
+                    </div>
+                
+                    <div id="facetedSearch-content--of-Quick-Filters" class="accordion-content">
+                        <ul id="facetedSearch-navList--of-Quick-Filters" class="navList">
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>On Promotion <span>(2)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Clearance <span>(1)</span></a> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-block">
+                    <div class="accordion-navigation toggleLink" data-collapsible="#facetedSearch-content--Price-Range">
+                        <h5 class="accordion-title">Price Range</h5>
+                        <div class="accordion-navigation-actions">
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--off"></span>
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--on"></span>
+                        </div>
+                    </div>
+                
+                    <div id="facetedSearch-content--Price-Range" class="accordion-content">
+                        <ul id="facetedSearch-navList--Price-Range" class="navList">
+                            <li class="navList-item">
+                                <p>Price Up to $<span id="SelectedPrice">0</span></p>
+                                <input type="text" data-slider="true" value="0.3" data-slider-highlight="true">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-block">
+                    <div class="accordion-navigation toggleLink" data-collapsible="#facetedSearch-content--Brand">
+                        <h5 class="accordion-title">Brand</h5>
+                        <div class="accordion-navigation-actions">
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--off"></span>
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--on"></span>
+                        </div>
+                    </div>
+                
+                    <div id="facetedSearch-content--Brand" class="accordion-content">
+                        <input type="text" class="filterInput" placeholder="Filter Brand…"/>
+                        <ul id="facetedSearch-navList--Brand" class="navList">
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Cooper <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>General <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Goodyear <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Hankook <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Kumho <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Michelin <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Nexen <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Toyo <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Uniroyal <span>(2)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Yokohama <span>(1)</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="accordion-block">
+                    <div class="accordion-navigation toggleLink" data-collapsible="#facetedSearch-content--Tread-Depth">
+                        <h5 class="accordion-title">Tread Depth</h5>
+                        <div class="accordion-navigation-actions">
+                           <span class="icon accordion-indicator toggleLink-text toggleLink-text--off"></span>
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--on"></span>
+                        </div>
+                    </div>
+                
+                    <div id="facetedSearch-content--Tread-Depth" class="accordion-content">
+                        <ul id="facetedSearch-navList--Tread-Depth" class="navList">
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>6-7/32 <span>(8)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>7-8/32 <span>(17)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>8-9/32 <span>(38)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>9-10/32 <span>(19)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>10-11/32 <span>(6)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>11-12/32 <span>(2)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>New <span>(84)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>TakeOff <span>(18)</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-block">
+                    <div class="accordion-navigation toggleLink" data-collapsible="#facetedSearch-content--Tire-Model">
+                        <h5 class="accordion-title">Tire Model</h5>
+                        <div class="accordion-navigation-actions">
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--off"></span>
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--on"></span>
+                        </div>
+                    </div>
+                
+                    <div id="facetedSearch-content--Tire-Model" class="accordion-content">
+                        <input type="text" class="filterInput" placeholder="Filter Tire Model…"/>
+                        <ul id="facetedSearch-navList--Tire-Model" class="navList">
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>4xs <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>868 All Season <span>(3)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>All Season <span>(5)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Assurance All-season <span>(3)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Assurance Comfortred <span>(6)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Assurance Maxlife <span>(3)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Assurance Ultratour <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Atrezzo Sva-1 <span>(1)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>868 All Season <span>(3)</span></a>
+                            </li>
+                        </ul>
+                        <div class="Load-More-Btn">
+                            <a href="javascript:void(0);">Load More <sapn>(+32)</sapn></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-block">
+                    <div class="accordion-navigation toggleLink" data-collapsible="#facetedSearch-content--Season">
+                        <h5 class="accordion-title">Season</h5>
+                        <div class="accordion-navigation-actions">
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--off"></span>
+                            <span class="icon accordion-indicator toggleLink-text toggleLink-text--on"></span>
+                        </div>
+                    </div>
+                
+                    <div id="facetedSearch-content--Season" class="accordion-content">
+                        <ul id="facetedSearch-navList--Season" class="navList">
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>All Season <span>(27)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Summer <span>(20)</span></a>
+                            </li>
+                            <li class="navList-item">
+                                <a href="javascript:void(0)" class="navList-action navList-action--checkbox" data-faceted-search-facet>Winter <span>(4)</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav> 
+</div>

@@ -1,0 +1,20 @@
+<div class="subscribe">
+	<div class="container">
+		<div class="subscribeinner">
+		    <img class="lazyload" src="https://cdn11.bigcommerce.com/s-n0i50vy/stencil/3202b7b0-39f4-0137-efb3-0242ac110027/e/df5744e0-df95-0136-bf4e-0bb47c4548a2/img/loading.svg" data-sizes="auto" data-src="{{cdn 'webdav:newsletter-signup.png'}}">
+		    <h3>Receive exclusive discounts</h3>
+		    <p>Get the latest information about new products, special deals, news, top-rated items, promotions and more!</p>
+		    <form class="form" action="{{urls.subscribe.action}}" method="post">
+			    <input type="hidden" name="action" value="subscribe">
+			    <input type="hidden" name="nl_first_name" value="Newsletter">
+			    <input type="hidden" name="check" value="1">
+			    <div class="form-field">
+			        <div class="form-wrap">
+			            <input class="form-input" id="nl_email" name="nl_email" type="email" value="{{customer.email}}" placeholder="Enter email address">
+			            <input class="button button--primary" type="submit" value="SUBSCRIBE">
+			        </div>
+			    </div>
+		    </form>
+		</div>
+	</div>    
+</div>

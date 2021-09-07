@@ -1,0 +1,31 @@
+{{#partial "page"}}{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}<main id="cms-block" class="page Cms-Content {{ page.title }}"> <div class="page-content page-content--centered"> <div>{{{page.content}}}</div> </div> <div class="policy-block"> <div class="policy-container"> <h2>POLICIES & LEGAL</h2> <div class="policy-list-block"> <div class="policy-btn"> <a href="/shipping-returns/">Shipping</a> </div> <div class="policy-btn"> <a href="/return-policy/">Return Policy</a> </div> <div class="policy-btn"> <a href="/privacy-policy/">Privacy Policy</a> </div> <div class="policy-btn"> <a href="/terms-of-use/">Terms Of Use</a> </div> <div class="policy-btn"> <a href="/terms-of-sale/">Terms of Sale</a> </div> </div> </div> </div> {{> components/common/homepagesection/Support}}</main> {{/partial}}{{> layout/base}}
+<script type="text/javascript">$('#prodAccordion .Block h2').click(function() { $(this).css('outline','none'); if($(this).parent().hasClass('current')) { $(this).siblings('div').slideUp('slow',function() { $(this).parent().removeClass('current'); }); }else{ $('#prodAccordion .Block .prodAccordionContent').slideUp('slow',function() { $(this).parent().removeClass('current'); }); $(this).siblings('div').slideToggle('slow',function() { $(this).parent().toggleClass('current'); }); } return false; });</script>
+<script type="text/javascript">
+	const tabItems = document.querySelectorAll('.tab-item')
+	const contentItems = document.querySelectorAll('.content-item')
+
+	const clearActiveClass = (element, className = 'is-active') => {
+	    element.forEach(item => item.classList.remove(`${ className }`)
+	)}
+
+
+	const setActiveClass = (element, index, className = 'is-active') => {
+	    element[index].classList.add(`${ className }`)
+	}
+
+	const checkoutTabs = (item, index) => {
+	    item.addEventListener('click', () => {
+	        if (item.classList.contains('is-active')) return
+	        
+	        const currentItem = index
+	        
+	        clearActiveClass(tabItems)
+	        clearActiveClass(contentItems)
+	        
+	        setActiveClass(tabItems, currentItem)
+	        setActiveClass(contentItems, currentItem)
+	    })
+	}
+
+	tabItems.forEach(checkoutTabs)
+</script>

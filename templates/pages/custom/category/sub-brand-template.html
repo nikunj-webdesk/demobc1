@@ -1,0 +1,135 @@
+---
+category:
+    shop_by_price: true
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{pagination.category.previous}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{pagination.category.next}}">
+    {{/if}}
+{{/partial}}
+{{#partial "page"}} 
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<div class="Brand-top-block">
+    <div class="container">
+        <h1 class="page-heading">{{category.name}} Tires</h1>
+        <div class="Brand-Image-Left"> <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="{{cdn 'webdav:brandlogos/'}}{{hyphenate (toLowerCase category.name)}}.png?t=2"> </div>
+        <div class="Brand-Content-Right"> {{#if category.description}}
+            <div class="Category-By-Brand"> {{{category.description}}} <a href="javascript:void(0);" class="View-All-Cat-Btn">VIEW ALL {{category.name}} TIRES</a> </div> {{/if}} </div>
+    </div>
+</div>
+<div class="page CatPage Category-By-Brand Sub">
+    <div class="By-Brand-Middle">
+        <div class="container">
+            <div class="By-Brand-Search-Box">
+                <h3>Select Your Model</h3>
+                <div class="form"> <span class="Search-Label">We have {{category.subcategories.length}} Models for {{category.name}}</span>
+                    <fieldset class="form-fieldset">
+                        <div class="form-field">
+                            <input class="form-input" id="search_query" placeholder="Type and Search Models…" val="">
+                            <input class="button search_btn" type="submit" value=""> <a href="javascript:void(0)" class="ClearSearch" style="display: none;"></a> </div>
+                    </fieldset>
+                </div>
+            </div> 
+            {{#if category.subcategories}}
+	            <div class="by_Brand_all_cat">
+	                <ul id="category_price_mm"> 
+	                	{{#each category.subcategories}}
+	                    <li name="{{name}}">
+	                        <div class="by_Brand_cat_list"> <a href="{{url}}">{{name}}</a> </div>
+	                    </li> 
+	                    {{/each}} 
+	                </ul>
+	            </div> 
+        	{{/if}} 
+        </div>
+    </div>
+    <div id="SearchNew" class="modal" data-reveal>
+        <div class="modal-header"> <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button"><span aria-hidden="true"></span></a> </div>
+        <div class="modal-body">
+            <div class="Search-Widget-Inner">
+                <ul class="tabs" data-tab>
+                    <li class="tab is-active"> <a class="tab-title" href="#tab-Search-Widget-Vehicle">Shop Tires By <span>Vehicle</span></a> </li>
+                    <li class="tab"> <a class="tab-title productView-reviewTabLink" href="#tab-Search-Widget-Size">Shop Tires By <span>Size</span></a> </li>
+                </ul>
+                <div class="tabs-contents">
+                    <div class="tab-content is-active" id="tab-Search-Widget-Vehicle"> {{> components/common/searchwidget/byvehiclemmlink}} </div>
+                    <div class="tab-content" id="tab-Search-Widget-Size"> {{> components/common/searchwidget/bysizemmlink}} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="CategoryTopContent">
+        <div class="container">
+            <div class="Left sub_brand">
+                <div class="CatContent">
+                    <h3>You are seeing all tires.</h3>
+                    <h4>Search by Vehicle or Size to see personalized results</h4>
+                </div>
+            </div>
+            <div class="Right">
+                <a href="javascript:void(0)" class="SwitchVSize" data-reveal-id="SearchNew">Search by Vehicle or Size</a>
+                <div class="MenuButtons hideDesktop">
+                    <ul>
+                        <li><a href="javascript:void(0)" data-collapsible="navPages-mob-BySize" aria-expanded="false">Shop By Size</a></li>
+                        <li><a href="javascript:void(0)" data-collapsible="navPages-mob-ByVehicle" aria-expanded="false">Shop By Vehicle</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="CategoryOuter">
+            <div class="LeftBar">
+                <div class="Mob_menu_topbar">
+                    <div class="TopBarMenu">
+                        <h3>Filter & Sort</h3> <a class="closeMenu" href="javascript:void(0)"><span>Close</span></a> </div>
+                </div> {{#if category.faceted_search_enabled}}
+                <aside class="page-sidebar" id="faceted-search-container">
+                    {{> components/category/sidebar}}
+                </aside> {{else if category.subcategories}}
+                <aside class="page-sidebar" id="faceted-search-container"> {{> components/category/sidebar}} </aside> {{else if category.shop_by_price}} {{#if theme_settings.shop_by_price_visibility}}
+                <aside class="page-sidebar" id="faceted-search-container"> {{> components/category/sidebar}} </aside> {{/if}} {{/if}} {{> components/common/category-left-bottom-banner}} 
+           	</div>
+            <div clas="NewAllSearch"></div>
+            <main class="page-content" id="product-listing-container"> 
+                <div id="searchspring-content"> {{> components/category/product-listing}} </div> 
+            </main>
+        </div>
+    </div> {{> components/common/homepagesection/Support}}</div> 
+<div id="previewModalCat" class="modal modal--large" data-reveal>
+<a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button"><span aria-hidden="true">&#215;</span></a>
+<div class="modal-content"></div>
+<div class="loadingOverlay"></div>
+</div>
+{{/partial}}{{> layout/base}}
+
+<script type="text/javascript">
+    $(".View-All-Cat-Btn").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".CategoryTopContent").offset().top
+        }, 1500);
+    });
+</script>
+<script type="text/javascript">
+    $('.By-Brand-Search-Box #search_query').keyup(function() {
+        var get_text, get_cat_name;
+        get_text = $(this).val().toLowerCase();
+        $('#category_price_mm li').each(function() {
+            get_cat_name = $(this).attr('name').toLowerCase();
+            if (get_cat_name.indexOf(get_text) > -1) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+    if ($(window).width() <= 767) {
+        $('.Brand-top-block .page-heading').insertAfter('.Brand-Image-Left');
+    }
+</script>

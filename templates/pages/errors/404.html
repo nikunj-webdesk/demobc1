@@ -1,0 +1,58 @@
+{{#partial "page"}}
+
+{{!> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<main class="ErrorPage"> 
+    {{!--
+    <section class="page-content page-content--centered">
+        <h1 class="page-heading">{{lang 'page_not_found.page_heading'}}</h1>
+        <p class="u-textAlignCenter">
+            {{lang 'page_not_found.message'}}
+        </p>
+        {{!> components/common/search-box}}
+    </section>
+    --}}
+    <div class="ErrorContent">
+        <h3>Sorry! That page doesn't seem to exist.</h3>
+        <p>You may have mistyped the address or the page may have moved.</p>
+        <div class="bottomDiv">
+            <a href="javascript:void(0)" data-reveal-id="SearchNew">Search for Tires by Vehicle or Size</a>
+        </div> 
+    </div>
+    <div class="DealsError"><h3 class="Deals_title">Our Deals</h3></div>
+    <div class="hideDesktop">{{> components/common/homepagesection/RiskFreeBuying}}</div>
+    {{> components/common/homepagesection/DealsPromotions}}
+    {{!> components/common/homepagesection/SignUp}}
+    {{> components/common/homepagesection/ReceiveExclusiveDiscounts}}
+    {{> components/common/homepagesection/Support}} 
+    
+    <div id="SearchNew" class="modal" data-reveal>
+        <div class="modal-header">
+            <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button"><span aria-hidden="true"></span></a>
+        </div>
+        <div class="modal-body">
+        	<div class="Search-Widget-Inner">
+                <ul class="tabs" data-tab>
+                    <li class="tab is-active">
+                        <a class="tab-title" href="#tab-Search-Widget-Vehicle">Shop Tires By <span>Vehicle</span></a>
+                    </li>
+                    <li class="tab">
+                        <a class="tab-title productView-reviewTabLink" href="#tab-Search-Widget-Size">Shop Tires By <span>Size</span></a>
+                    </li>
+                </ul>
+                <div class="tabs-contents">
+                    <div class="tab-content is-active" id="tab-Search-Widget-Vehicle">
+                        {{> components/common/searchwidget/byvehiclemmlink}}    
+                    </div>
+                    <div class="tab-content" id="tab-Search-Widget-Size">
+                        {{> components/common/searchwidget/bysizemmlink}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+{{/partial}}
+{{> layout/base}}

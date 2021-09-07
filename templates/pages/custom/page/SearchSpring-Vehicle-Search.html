@@ -1,0 +1,49 @@
+{{#partial "page"}}{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}<main class="page Vehicle-Search-Single Multi"> <div class="container"> <div class="contentWrap"> <div class="Left"> <div id="searchspring-vehicle-sizes-finder-left"></div> </div> <div class="Right"> <div id="searchspring-vehicle-sizes-finder-right"></div> </div> 
+
+            <!-- START SKELETONS CODE -->
+            <div class="vehicle-search-skeleton" id="vehicle-search-skeleton"> 
+                <div class="vehicle-box-wrap"> 
+                    <div class="vehicle-box">
+                        <div class="vehicle-image mobile"></div>
+                        <div class="vehicle-line"></div>
+                        <div class="vehicle-line"></div>
+                        <div class="clear-float mobile"></div>
+                    </div>
+                </div> 
+                <div class="vehicle-sizes-wrap"> 
+                    <div class="vehicle-line"></div>
+                    <div class="vehicle-line"></div>
+                    <div class="vehicle-line"></div>
+                    <div class="vehicle-line"></div>
+                    <div class="vehicle-line desktop"></div>
+                    <div class="vehicle-line"></div>
+                    <div class="vehicle-line"></div>
+                    <div class="vehicle-lines">
+                        <div class="vehicle-line"></div>
+                        <div class="vehicle-line"></div>
+                        <div class="vehicle-line"></div>
+                    </div>
+                    <div class="vehicle-line"></div>
+                </div> 
+                <div class="clear-float"></div>
+    
+                
+                <script type="text/javascript">
+                
+                function skeletonRemove(el) {
+                    el.parentNode.removeChild(el);
+                }
+            
+                var ssEventPoll = setInterval(function(){
+                    if(SearchSpring){
+                        clearInterval(ssEventPoll);
+                        SearchSpring.Catalog.on('tiresInflated', function () {
+                            skeletonRemove(document.getElementById('vehicle-search-skeleton'));
+                        });
+                    }
+                },100);
+                </script>
+            </div> 
+            <!-- END SKELETONS CODE -->
+
+<div class="bottomDiv"> <a href="javascript:void(0)" data-reveal-id="SearchNew" class="hideMob">Don’t see your tire size?</a> <a href="javascript:void(0)" class="hideDesktop" data-collapsible="navPages-mob-BySize">Don’t see your tire size?</a> </div> </div> </div> {{> components/common/homepagesection/Support}} <div id="SearchNew" class="modal" data-reveal> <div class="modal-header"> <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button"><span aria-hidden="true"></span></a> </div> <div class="modal-body"> <div class="Search-Widget-Inner"> <ul class="tabs" data-tab> <li class="tab is-active"> <a class="tab-title" href="#tab-Search-Widget-Vehicle">Shop Tires By <span>Vehicle</span></a> </li> <li class="tab"> <a class="tab-title productView-reviewTabLink" href="#tab-Search-Widget-Size">Shop Tires By <span>Size</span></a> </li> </ul> <div class="tabs-contents"> <div class="tab-content is-active" id="tab-Search-Widget-Vehicle"> {{> components/common/searchwidget/byvehiclemmlink}} </div> <div class="tab-content" id="tab-Search-Widget-Size"> {{> components/common/searchwidget/bysizemmlink}} </div> </div> </div> </div> </div></main>{{/partial}}{{> layout/base}}<style type="text/css"> .body > .container{ max-width: 100%; padding: 0; }</style> 
